@@ -6,6 +6,9 @@ defaults:
 development:
   loot_homepage: '2c2c3486-a10b-49ce-a305-ebe744746002'
 
+test:
+  loot_homepage: 'bloop'
+
 staging:
   loot_homepage: '90dff472-58c0-4ff3-a791-8f2220aa2a31'
 
