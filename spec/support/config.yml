@@ -1,0 +1,7 @@
+defaults: 
+  my_experiment: "variant1"
+  test_experiment: "variant1"
+  
+test:
+  my_experiment: 'somelongsha'
+  test_experiment: 'c4030a09-cddd-4aa3-aa31-abba462b96fc'
