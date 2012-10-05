@@ -75,7 +75,7 @@ module Moona
           yield
         end
       rescue Exception => e
-        raise e
+        raise e if Moona.env == "test"
         return opts[:default]
       end
     end
