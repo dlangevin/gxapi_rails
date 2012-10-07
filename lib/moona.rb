@@ -12,11 +12,16 @@ module Moona
 
   # get our cache
   def self.cache
+    # if we have an overridden cache, return it
+    return @overridden_cache if defined?(@overridden_cache)
+    # use Rails.cache if it is defined
+    return Rails.cache if defined?(Rails) && Rails.cache
+    # last resort, just use our own cache choice
     @cache ||= ActiveSupport::Cache::MemoryStore.new
   end
 
   def self.cache=(cache)
-    @cache = cache
+    @overridden_cache = cache
   end
 
   def self.cache_namespace
