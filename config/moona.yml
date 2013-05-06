@@ -1,6 +1,6 @@
 
 defaults:
-  loot_homepage: 'new_page'
+  loot_homepage: 'new_page_with_logic_filters'
   loot_details_page: 'old_page'
 
 development:
