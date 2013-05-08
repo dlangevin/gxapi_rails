@@ -12,7 +12,7 @@ test:
   loot_details_page: 'bloop'
 
 staging:
-  loot_homepage: '90dff472-58c0-4ff3-a791-8f2220aa2a31'
+  loot_homepage: 'f19ea43c-31b4-4c78-ad81-4161e52c8a76'
   loot_details_page: '778449df-cc54-4ae2-bdfb-89a9cc125462'
 
 production:
