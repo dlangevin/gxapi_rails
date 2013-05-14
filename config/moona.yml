@@ -2,19 +2,24 @@
 defaults:
   loot_homepage: 'new_page_with_logic_filters'
   loot_details_page: 'old_page'
+  loot_checkout_page: 'default'
 
 development:
   loot_homepage: '2c2c3486-a10b-49ce-a305-ebe744746002'
   loot_details_page: 'a3e1781e-ca03-4cc9-a2a1-138d8534f10b'
+  loot_checkout_page: '04570cb1-53f0-44dd-b79a-f9ee7dab5c45'
 
 test:
   loot_homepage: 'bloop'
   loot_details_page: 'bloop'
+  loot_checkout_page: 'bloop'
 
 staging:
   loot_homepage: 'f19ea43c-31b4-4c78-ad81-4161e52c8a76'
   loot_details_page: '778449df-cc54-4ae2-bdfb-89a9cc125462'
+  loot_checkout_page: '48ddd544-2b1a-4979-ac5f-95a007c0ed43'
 
 production:
   loot_homepage: 'f29a677b-9c6a-45f5-9912-e877bd872b87'
   loot_details_page: '92a07f83-b6e0-4990-98a4-98b36f001b79'
+  loot_checkout_page: 'a8c5ace3-1d28-44e8-8830-0295d730cada'
