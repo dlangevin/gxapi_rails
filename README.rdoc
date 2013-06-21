@@ -1,6 +1,33 @@
-= moona
+= Moona
 
-Description goes here.
+Moona interfaces with Google Analytics Experiments to retrieve data from 
+its API and determine which variant should be presented to a given user
+
+== Installation
+  % gem install moona
+  % rails g moona
+
+== Configuration
+
+First, you must create a Google Analytics Service Account.
+Information can be found here https://developers.google.com/accounts/docs/OAuth2ServiceAccount
+
+Moona uses +#{Rails.root}/config/moona.yml+ to configure variables.  You can
+use different configurations per environment (development/test/production)
+
+=== Example Configuration
+  development:
+    google_analytics:
+      account_id: ACCOUNT_ID
+      profile_id: PROFILE_ID
+      web_property_id: WEB_PROPERTY_ID
+    google:
+      email: SERVICE_ACCOUNT_EMAIL
+      private_key_path: 'PATH_TO_SERVICE_ACCOUNT_PRIVATE_KEY'
+
+=== Where the F do I find all this stuff?
+  
+
 
 == Contributing to moona
  
@@ -14,6 +41,6 @@ Description goes here.
 
 == Copyright
 
-Copyright (c) 2012 Dan Langevin. See LICENSE.txt for
+Copyright (c) 2013 Dan Langevin. See LICENSE.txt for
 further details.
 

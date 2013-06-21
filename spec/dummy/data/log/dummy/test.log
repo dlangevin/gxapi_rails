@@ -1,0 +1,927 @@
+[DEBUG]  98367 2013-06-14 12:36:39 LB -   [1m[36m (17.8ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98367 2013-06-14 12:36:39 LB -   [1m[35m (0.2ms)[0m  select sqlite_version(*)
+[DEBUG]  98367 2013-06-14 12:36:40 LB -   [1m[36m (2.5ms)[0m  [1mDROP TABLE "posts"[0m
+[DEBUG]  98367 2013-06-14 12:36:40 LB -   [1m[35m (0.9ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "user_id" integer, "protected_field" varchar(255), "private_field" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+[DEBUG]  98367 2013-06-14 12:36:40 LB -   [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "posts"[0m
+[DEBUG]  98367 2013-06-14 12:36:40 LB -   [1m[35m (0.1ms)[0m  begin transaction
+[DEBUG]  98367 2013-06-14 12:36:40 LB -   [1m[36mSQL (84.5ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "private_field", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "xyz"], ["created_at", Fri, 14 Jun 2013 16:36:40 UTC +00:00], ["private_field", nil], ["protected_field", nil], ["title", "x"], ["updated_at", Fri, 14 Jun 2013 16:36:40 UTC +00:00], ["user_id", nil]]
+[DEBUG]  98367 2013-06-14 12:36:40 LB -   [1m[35m (2.0ms)[0m  commit transaction
+[DEBUG]  98385 2013-06-14 12:39:19 LB -   [1m[36m (17.7ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98385 2013-06-14 12:39:20 LB -   [1m[35m (0.2ms)[0m  select sqlite_version(*)
+[DEBUG]  98385 2013-06-14 12:39:20 LB -   [1m[36m (2.3ms)[0m  [1mDROP TABLE "posts"[0m
+[DEBUG]  98385 2013-06-14 12:39:20 LB -   [1m[35m (0.8ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "user_id" integer, "protected_field" varchar(255), "private_field" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+[DEBUG]  98385 2013-06-14 12:39:20 LB -   [1m[36mSQL (0.8ms)[0m  [1mDELETE FROM "posts"[0m
+[DEBUG]  98385 2013-06-14 12:39:20 LB -   [1m[35m (0.1ms)[0m  begin transaction
+[DEBUG]  98385 2013-06-14 12:39:20 LB -   [1m[36mSQL (23.3ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "private_field", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "xyz"], ["created_at", Fri, 14 Jun 2013 16:39:20 UTC +00:00], ["private_field", nil], ["protected_field", nil], ["title", "x"], ["updated_at", Fri, 14 Jun 2013 16:39:20 UTC +00:00], ["user_id", nil]]
+[DEBUG]  98385 2013-06-14 12:39:20 LB -   [1m[35m (2.1ms)[0m  commit transaction
+[DEBUG]  98412 2013-06-14 12:47:02 LB -   [1m[36m (17.6ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98412 2013-06-14 12:47:03 LB -   [1m[35m (0.2ms)[0m  select sqlite_version(*)
+[DEBUG]  98412 2013-06-14 12:47:03 LB -   [1m[36m (2.3ms)[0m  [1mDROP TABLE "posts"[0m
+[DEBUG]  98412 2013-06-14 12:47:03 LB -   [1m[35m (1.0ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "user_id" integer, "protected_field" varchar(255), "private_field" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+[DEBUG]  98412 2013-06-14 12:47:03 LB -   [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "posts"[0m
+[DEBUG]  98412 2013-06-14 12:47:03 LB -   [1m[35m (0.1ms)[0m  begin transaction
+[DEBUG]  98412 2013-06-14 12:47:03 LB -   [1m[36mSQL (84.0ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "private_field", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "xyz"], ["created_at", Fri, 14 Jun 2013 16:47:03 UTC +00:00], ["private_field", nil], ["protected_field", nil], ["title", "x"], ["updated_at", Fri, 14 Jun 2013 16:47:03 UTC +00:00], ["user_id", nil]]
+[DEBUG]  98412 2013-06-14 12:47:03 LB -   [1m[35m (2.0ms)[0m  commit transaction
+[DEBUG]  98412 2013-06-14 12:47:03 LB - Cache read: http://www.example.com/posts.xml?
+[ INFO]  98412 2013-06-14 12:47:03 LB - Started GET "/posts.xml" for 127.0.0.1 at 2013-06-14 12:47:03 -0400
+[DEBUG]  98412 2013-06-14 12:47:03 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98412 2013-06-14 12:47:03 LB -   [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" 
+[DEBUG]  98425 2013-06-14 12:47:37 LB -   [1m[36m (18.1ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98425 2013-06-14 12:47:38 LB -   [1m[35m (0.2ms)[0m  select sqlite_version(*)
+[DEBUG]  98425 2013-06-14 12:47:38 LB -   [1m[36m (2.3ms)[0m  [1mDROP TABLE "posts"[0m
+[DEBUG]  98425 2013-06-14 12:47:38 LB -   [1m[35m (0.8ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "user_id" integer, "protected_field" varchar(255), "private_field" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+[DEBUG]  98425 2013-06-14 12:47:38 LB -   [1m[36mSQL (0.8ms)[0m  [1mDELETE FROM "posts"[0m
+[DEBUG]  98425 2013-06-14 12:47:38 LB -   [1m[35m (0.1ms)[0m  begin transaction
+[DEBUG]  98425 2013-06-14 12:47:38 LB -   [1m[36mSQL (23.2ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "private_field", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "xyz"], ["created_at", Fri, 14 Jun 2013 16:47:38 UTC +00:00], ["private_field", nil], ["protected_field", nil], ["title", "x"], ["updated_at", Fri, 14 Jun 2013 16:47:38 UTC +00:00], ["user_id", nil]]
+[DEBUG]  98425 2013-06-14 12:47:38 LB -   [1m[35m (2.1ms)[0m  commit transaction
+[DEBUG]  98425 2013-06-14 12:47:38 LB - Cache read: http://www.example.com/posts.xml?
+[ INFO]  98425 2013-06-14 12:47:38 LB - Started GET "/posts.xml" for 127.0.0.1 at 2013-06-14 12:47:38 -0400
+[DEBUG]  98425 2013-06-14 12:47:38 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98425 2013-06-14 12:47:38 LB -   [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" 
+[DEBUG]  98425 2013-06-14 12:47:38 LB -   [1m[36mSQL (1.1ms)[0m  [1mDELETE FROM "posts"[0m
+[DEBUG]  98425 2013-06-14 12:47:38 LB -   [1m[35m (0.1ms)[0m  begin transaction
+[DEBUG]  98425 2013-06-14 12:47:38 LB -   [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "private_field", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "xyz"], ["created_at", Fri, 14 Jun 2013 16:47:38 UTC +00:00], ["private_field", nil], ["protected_field", nil], ["title", "x"], ["updated_at", Fri, 14 Jun 2013 16:47:38 UTC +00:00], ["user_id", nil]]
+[DEBUG]  98425 2013-06-14 12:47:38 LB -   [1m[35m (0.7ms)[0m  commit transaction
+[DEBUG]  98425 2013-06-14 12:47:38 LB - Cache read: http://www.example.com/posts.xml?
+[ INFO]  98425 2013-06-14 12:47:38 LB - Started GET "/posts.xml" for 127.0.0.1 at 2013-06-14 12:47:38 -0400
+[DEBUG]  98425 2013-06-14 12:47:38 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98425 2013-06-14 12:47:38 LB -   [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" 
+[DEBUG]  98425 2013-06-14 12:47:38 LB - Cache read: http://www.example.com/posts/2.xml?
+[ INFO]  98425 2013-06-14 12:47:38 LB - Started GET "/posts/2.xml" for 127.0.0.1 at 2013-06-14 12:47:38 -0400
+[DEBUG]  98425 2013-06-14 12:47:38 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98425 2013-06-14 12:47:38 LB -   [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "2"]]
+[DEBUG]  98425 2013-06-14 12:47:38 LB -   [1m[36mSQL (0.8ms)[0m  [1mDELETE FROM "posts"[0m
+[DEBUG]  98425 2013-06-14 12:47:38 LB -   [1m[35m (0.1ms)[0m  begin transaction
+[DEBUG]  98425 2013-06-14 12:47:38 LB -   [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "private_field", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "xyz"], ["created_at", Fri, 14 Jun 2013 16:47:38 UTC +00:00], ["private_field", nil], ["protected_field", nil], ["title", "x"], ["updated_at", Fri, 14 Jun 2013 16:47:38 UTC +00:00], ["user_id", nil]]
+[DEBUG]  98425 2013-06-14 12:47:38 LB -   [1m[35m (0.6ms)[0m  commit transaction
+[DEBUG]  98425 2013-06-14 12:47:38 LB - Cache read: http://www.example.com/posts.xml?
+[DEBUG]  98425 2013-06-14 12:47:38 LB - Cache write: d169cc2e8a7f72462c8c031da3420bfc4a2de641
+[DEBUG]  98425 2013-06-14 12:47:38 LB - Cache read: d169cc2e8a7f72462c8c031da3420bfc4a2de641
+[DEBUG]  98425 2013-06-14 12:47:38 LB - Cache read: http://www.example.com/posts.xml?
+[DEBUG]  98425 2013-06-14 12:47:38 LB - Cache write: http://www.example.com/posts.xml?
+[DEBUG]  98425 2013-06-14 12:47:38 LB - Cache read: http://www.example.com/posts?
+[ INFO]  98425 2013-06-14 12:47:38 LB - Started GET "/posts" for 127.0.0.1 at 2013-06-14 12:47:38 -0400
+[DEBUG]  98425 2013-06-14 12:47:38 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98425 2013-06-14 12:47:38 LB -   [1m[35mPost Load (0.9ms)[0m  SELECT "posts".* FROM "posts" 
+[DEBUG]  98425 2013-06-14 12:47:38 LB -   [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "posts"[0m
+[DEBUG]  98425 2013-06-14 12:47:38 LB -   [1m[35m (0.1ms)[0m  begin transaction
+[DEBUG]  98425 2013-06-14 12:47:38 LB -   [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "private_field", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "xyz"], ["created_at", Fri, 14 Jun 2013 16:47:38 UTC +00:00], ["private_field", nil], ["protected_field", nil], ["title", "x"], ["updated_at", Fri, 14 Jun 2013 16:47:38 UTC +00:00], ["user_id", nil]]
+[DEBUG]  98425 2013-06-14 12:47:38 LB -   [1m[35m (0.6ms)[0m  commit transaction
+[DEBUG]  98425 2013-06-14 12:47:38 LB - Cache read: http://www.example.com/posts.xml?
+[DEBUG]  98425 2013-06-14 12:47:38 LB - Cache read: d169cc2e8a7f72462c8c031da3420bfc4a2de641
+[DEBUG]  98425 2013-06-14 12:47:38 LB -   [1m[36mSQL (0.8ms)[0m  [1mDELETE FROM "posts"[0m
+[DEBUG]  98425 2013-06-14 12:47:38 LB -   [1m[35m (0.1ms)[0m  begin transaction
+[DEBUG]  98425 2013-06-14 12:47:38 LB -   [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "private_field", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "xyz"], ["created_at", Fri, 14 Jun 2013 16:47:38 UTC +00:00], ["private_field", nil], ["protected_field", nil], ["title", "x"], ["updated_at", Fri, 14 Jun 2013 16:47:38 UTC +00:00], ["user_id", nil]]
+[DEBUG]  98425 2013-06-14 12:47:38 LB -   [1m[35m (0.8ms)[0m  commit transaction
+[DEBUG]  98425 2013-06-14 12:47:38 LB - Cache read: http://www.example.com/posts.xml?
+[DEBUG]  98425 2013-06-14 12:47:38 LB - Cache read: d169cc2e8a7f72462c8c031da3420bfc4a2de641
+[DEBUG]  98436 2013-06-14 12:48:12 LB -   [1m[36m (17.6ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98436 2013-06-14 12:48:12 LB -   [1m[35m (0.2ms)[0m  select sqlite_version(*)
+[DEBUG]  98436 2013-06-14 12:48:12 LB -   [1m[36m (2.3ms)[0m  [1mDROP TABLE "posts"[0m
+[DEBUG]  98436 2013-06-14 12:48:13 LB -   [1m[35m (0.9ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "user_id" integer, "protected_field" varchar(255), "private_field" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+[DEBUG]  98436 2013-06-14 12:48:13 LB -   [1m[36mSQL (1.1ms)[0m  [1mDELETE FROM "posts"[0m
+[DEBUG]  98436 2013-06-14 12:48:13 LB -   [1m[35m (0.1ms)[0m  begin transaction
+[DEBUG]  98436 2013-06-14 12:48:13 LB -   [1m[36mSQL (24.4ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "private_field", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "xyz"], ["created_at", Fri, 14 Jun 2013 16:48:13 UTC +00:00], ["private_field", nil], ["protected_field", nil], ["title", "x"], ["updated_at", Fri, 14 Jun 2013 16:48:13 UTC +00:00], ["user_id", nil]]
+[DEBUG]  98436 2013-06-14 12:48:13 LB -   [1m[35m (2.1ms)[0m  commit transaction
+[DEBUG]  98436 2013-06-14 12:48:13 LB - Cache read: http://www.example.com/posts.xml?
+[DEBUG]  98436 2013-06-14 12:48:13 LB - Cache read: d169cc2e8a7f72462c8c031da3420bfc4a2de641
+[DEBUG]  98436 2013-06-14 12:48:13 LB -   [1m[36mSQL (0.7ms)[0m  [1mDELETE FROM "posts"[0m
+[DEBUG]  98436 2013-06-14 12:48:13 LB -   [1m[35m (0.1ms)[0m  begin transaction
+[DEBUG]  98436 2013-06-14 12:48:13 LB -   [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "private_field", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "xyz"], ["created_at", Fri, 14 Jun 2013 16:48:13 UTC +00:00], ["private_field", nil], ["protected_field", nil], ["title", "x"], ["updated_at", Fri, 14 Jun 2013 16:48:13 UTC +00:00], ["user_id", nil]]
+[DEBUG]  98436 2013-06-14 12:48:13 LB -   [1m[35m (0.8ms)[0m  commit transaction
+[DEBUG]  98436 2013-06-14 12:48:13 LB - Cache read: http://www.example.com/posts.xml?
+[DEBUG]  98436 2013-06-14 12:48:13 LB - Cache read: d169cc2e8a7f72462c8c031da3420bfc4a2de641
+[DEBUG]  98436 2013-06-14 12:48:13 LB - Cache read: http://www.example.com/posts/2.xml?
+[ INFO]  98436 2013-06-14 12:48:13 LB - Started GET "/posts/2.xml" for 127.0.0.1 at 2013-06-14 12:48:13 -0400
+[DEBUG]  98436 2013-06-14 12:48:13 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98436 2013-06-14 12:48:13 LB -   [1m[35mPost Load (1.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "2"]]
+[DEBUG]  98436 2013-06-14 12:48:13 LB -   [1m[36mSQL (0.8ms)[0m  [1mDELETE FROM "posts"[0m
+[DEBUG]  98436 2013-06-14 12:48:13 LB -   [1m[35m (0.1ms)[0m  begin transaction
+[DEBUG]  98436 2013-06-14 12:48:13 LB -   [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "private_field", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "xyz"], ["created_at", Fri, 14 Jun 2013 16:48:13 UTC +00:00], ["private_field", nil], ["protected_field", nil], ["title", "x"], ["updated_at", Fri, 14 Jun 2013 16:48:13 UTC +00:00], ["user_id", nil]]
+[DEBUG]  98436 2013-06-14 12:48:13 LB -   [1m[35m (0.6ms)[0m  commit transaction
+[DEBUG]  98436 2013-06-14 12:48:13 LB - Cache read: http://www.example.com/posts.xml?
+[DEBUG]  98436 2013-06-14 12:48:13 LB - Cache read: d169cc2e8a7f72462c8c031da3420bfc4a2de641
+[DEBUG]  98436 2013-06-14 12:48:13 LB - Cache read: http://www.example.com/posts?
+[ INFO]  98436 2013-06-14 12:48:13 LB - Started GET "/posts" for 127.0.0.1 at 2013-06-14 12:48:13 -0400
+[DEBUG]  98436 2013-06-14 12:48:13 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98436 2013-06-14 12:48:13 LB -   [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" 
+[DEBUG]  98436 2013-06-14 12:48:13 LB -   [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "posts"[0m
+[DEBUG]  98436 2013-06-14 12:48:13 LB -   [1m[35m (0.1ms)[0m  begin transaction
+[DEBUG]  98436 2013-06-14 12:48:13 LB -   [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "private_field", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "xyz"], ["created_at", Fri, 14 Jun 2013 16:48:13 UTC +00:00], ["private_field", nil], ["protected_field", nil], ["title", "x"], ["updated_at", Fri, 14 Jun 2013 16:48:13 UTC +00:00], ["user_id", nil]]
+[DEBUG]  98436 2013-06-14 12:48:13 LB -   [1m[35m (0.8ms)[0m  commit transaction
+[DEBUG]  98436 2013-06-14 12:48:13 LB - Cache read: http://www.example.com/posts.xml?
+[DEBUG]  98436 2013-06-14 12:48:13 LB - Cache read: d169cc2e8a7f72462c8c031da3420bfc4a2de641
+[DEBUG]  98436 2013-06-14 12:48:13 LB -   [1m[36mSQL (0.9ms)[0m  [1mDELETE FROM "posts"[0m
+[DEBUG]  98436 2013-06-14 12:48:13 LB -   [1m[35m (0.1ms)[0m  begin transaction
+[DEBUG]  98436 2013-06-14 12:48:13 LB -   [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "private_field", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "xyz"], ["created_at", Fri, 14 Jun 2013 16:48:13 UTC +00:00], ["private_field", nil], ["protected_field", nil], ["title", "x"], ["updated_at", Fri, 14 Jun 2013 16:48:13 UTC +00:00], ["user_id", nil]]
+[DEBUG]  98436 2013-06-14 12:48:13 LB -   [1m[35m (0.7ms)[0m  commit transaction
+[DEBUG]  98436 2013-06-14 12:48:13 LB - Cache read: http://www.example.com/posts.xml?
+[DEBUG]  98436 2013-06-14 12:48:13 LB - Cache read: d169cc2e8a7f72462c8c031da3420bfc4a2de641
+[DEBUG]  98447 2013-06-14 12:48:51 LB -   [1m[36m (17.4ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98447 2013-06-14 12:48:51 LB -   [1m[35m (0.2ms)[0m  select sqlite_version(*)
+[DEBUG]  98447 2013-06-14 12:48:51 LB -   [1m[36m (1.9ms)[0m  [1mDROP TABLE "posts"[0m
+[DEBUG]  98447 2013-06-14 12:48:51 LB -   [1m[35m (0.8ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "user_id" integer, "protected_field" varchar(255), "private_field" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+[DEBUG]  98447 2013-06-14 12:48:51 LB -   [1m[36mSQL (0.7ms)[0m  [1mDELETE FROM "posts"[0m
+[DEBUG]  98447 2013-06-14 12:48:51 LB -   [1m[35m (0.1ms)[0m  begin transaction
+[DEBUG]  98447 2013-06-14 12:48:51 LB -   [1m[36mSQL (86.2ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "private_field", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "xyz"], ["created_at", Fri, 14 Jun 2013 16:48:51 UTC +00:00], ["private_field", nil], ["protected_field", nil], ["title", "x"], ["updated_at", Fri, 14 Jun 2013 16:48:51 UTC +00:00], ["user_id", nil]]
+[DEBUG]  98447 2013-06-14 12:48:51 LB -   [1m[35m (1.8ms)[0m  commit transaction
+[DEBUG]  98447 2013-06-14 12:48:51 LB - Cache read: http://www.example.com/posts.xml?
+[DEBUG]  98447 2013-06-14 12:48:51 LB - Cache read: d169cc2e8a7f72462c8c031da3420bfc4a2de641
+[DEBUG]  98447 2013-06-14 12:48:51 LB -   [1m[36mSQL (0.8ms)[0m  [1mDELETE FROM "posts"[0m
+[DEBUG]  98447 2013-06-14 12:48:51 LB -   [1m[35m (0.1ms)[0m  begin transaction
+[DEBUG]  98447 2013-06-14 12:48:51 LB -   [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "private_field", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "xyz"], ["created_at", Fri, 14 Jun 2013 16:48:51 UTC +00:00], ["private_field", nil], ["protected_field", nil], ["title", "x"], ["updated_at", Fri, 14 Jun 2013 16:48:51 UTC +00:00], ["user_id", nil]]
+[DEBUG]  98447 2013-06-14 12:48:51 LB -   [1m[35m (0.5ms)[0m  commit transaction
+[DEBUG]  98447 2013-06-14 12:48:51 LB - Cache read: http://www.example.com/posts.xml?
+[DEBUG]  98447 2013-06-14 12:48:51 LB - Cache read: d169cc2e8a7f72462c8c031da3420bfc4a2de641
+[DEBUG]  98447 2013-06-14 12:48:51 LB - Cache read: http://www.example.com/posts/2.xml?
+[ INFO]  98447 2013-06-14 12:48:51 LB - Started GET "/posts/2.xml" for 127.0.0.1 at 2013-06-14 12:48:51 -0400
+[DEBUG]  98447 2013-06-14 12:48:51 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98447 2013-06-14 12:48:51 LB -   [1m[35mPost Load (1.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "2"]]
+[DEBUG]  98447 2013-06-14 12:48:51 LB -   [1m[36mSQL (0.8ms)[0m  [1mDELETE FROM "posts"[0m
+[DEBUG]  98447 2013-06-14 12:48:51 LB -   [1m[35m (0.1ms)[0m  begin transaction
+[DEBUG]  98447 2013-06-14 12:48:51 LB -   [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "private_field", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "xyz"], ["created_at", Fri, 14 Jun 2013 16:48:51 UTC +00:00], ["private_field", nil], ["protected_field", nil], ["title", "x"], ["updated_at", Fri, 14 Jun 2013 16:48:51 UTC +00:00], ["user_id", nil]]
+[DEBUG]  98447 2013-06-14 12:48:51 LB -   [1m[35m (0.6ms)[0m  commit transaction
+[DEBUG]  98447 2013-06-14 12:48:51 LB - Cache read: http://www.example.com/posts.xml?
+[DEBUG]  98447 2013-06-14 12:48:51 LB - Cache read: d169cc2e8a7f72462c8c031da3420bfc4a2de641
+[DEBUG]  98447 2013-06-14 12:48:52 LB - Cache read: http://www.example.com/posts?
+[DEBUG]  98447 2013-06-14 12:48:52 LB - Cache write: 98b4f1ddd1bd676f048b9f43f3f0764b9245404b
+[DEBUG]  98447 2013-06-14 12:48:52 LB - Cache read: 98b4f1ddd1bd676f048b9f43f3f0764b9245404b
+[DEBUG]  98447 2013-06-14 12:48:52 LB - Cache read: http://www.example.com/posts?
+[DEBUG]  98447 2013-06-14 12:48:52 LB - Cache write: http://www.example.com/posts?
+[DEBUG]  98447 2013-06-14 12:48:52 LB -   [1m[36mSQL (0.8ms)[0m  [1mDELETE FROM "posts"[0m
+[DEBUG]  98447 2013-06-14 12:48:52 LB -   [1m[35m (0.1ms)[0m  begin transaction
+[DEBUG]  98447 2013-06-14 12:48:52 LB -   [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "private_field", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "xyz"], ["created_at", Fri, 14 Jun 2013 16:48:52 UTC +00:00], ["private_field", nil], ["protected_field", nil], ["title", "x"], ["updated_at", Fri, 14 Jun 2013 16:48:52 UTC +00:00], ["user_id", nil]]
+[DEBUG]  98447 2013-06-14 12:48:52 LB -   [1m[35m (0.6ms)[0m  commit transaction
+[DEBUG]  98447 2013-06-14 12:48:52 LB - Cache read: http://www.example.com/posts.xml?
+[DEBUG]  98447 2013-06-14 12:48:52 LB - Cache read: d169cc2e8a7f72462c8c031da3420bfc4a2de641
+[DEBUG]  98447 2013-06-14 12:48:52 LB -   [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "posts"[0m
+[DEBUG]  98447 2013-06-14 12:48:52 LB -   [1m[35m (0.1ms)[0m  begin transaction
+[DEBUG]  98447 2013-06-14 12:48:52 LB -   [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "private_field", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "xyz"], ["created_at", Fri, 14 Jun 2013 16:48:52 UTC +00:00], ["private_field", nil], ["protected_field", nil], ["title", "x"], ["updated_at", Fri, 14 Jun 2013 16:48:52 UTC +00:00], ["user_id", nil]]
+[DEBUG]  98447 2013-06-14 12:48:52 LB -   [1m[35m (0.6ms)[0m  commit transaction
+[DEBUG]  98447 2013-06-14 12:48:52 LB - Cache read: http://www.example.com/posts.xml?
+[DEBUG]  98447 2013-06-14 12:48:52 LB - Cache read: d169cc2e8a7f72462c8c031da3420bfc4a2de641
+[DEBUG]  98465 2013-06-14 12:50:35 LB -   [1m[36m (18.3ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98465 2013-06-14 12:50:35 LB -   [1m[35m (0.2ms)[0m  select sqlite_version(*)
+[DEBUG]  98465 2013-06-14 12:50:35 LB -   [1m[36m (2.4ms)[0m  [1mDROP TABLE "posts"[0m
+[DEBUG]  98465 2013-06-14 12:50:35 LB -   [1m[35m (0.9ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "user_id" integer, "protected_field" varchar(255), "private_field" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+[DEBUG]  98465 2013-06-14 12:50:35 LB -   [1m[36mSQL (0.8ms)[0m  [1mDELETE FROM "posts"[0m
+[DEBUG]  98465 2013-06-14 12:50:35 LB -   [1m[35m (0.1ms)[0m  begin transaction
+[DEBUG]  98465 2013-06-14 12:50:35 LB -   [1m[36mSQL (83.9ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "private_field", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "xyz"], ["created_at", Fri, 14 Jun 2013 16:50:35 UTC +00:00], ["private_field", nil], ["protected_field", nil], ["title", "x"], ["updated_at", Fri, 14 Jun 2013 16:50:35 UTC +00:00], ["user_id", nil]]
+[DEBUG]  98465 2013-06-14 12:50:35 LB -   [1m[35m (2.2ms)[0m  commit transaction
+[DEBUG]  98465 2013-06-14 12:50:36 LB - Cache read: http://www.example.com/posts.xml?
+[DEBUG]  98465 2013-06-14 12:50:36 LB - Cache read: d169cc2e8a7f72462c8c031da3420bfc4a2de641
+[DEBUG]  98465 2013-06-14 12:50:36 LB -   [1m[36mSQL (1.1ms)[0m  [1mDELETE FROM "posts"[0m
+[DEBUG]  98465 2013-06-14 12:50:36 LB -   [1m[35m (0.1ms)[0m  begin transaction
+[DEBUG]  98465 2013-06-14 12:50:36 LB -   [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "private_field", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "xyz"], ["created_at", Fri, 14 Jun 2013 16:50:36 UTC +00:00], ["private_field", nil], ["protected_field", nil], ["title", "x"], ["updated_at", Fri, 14 Jun 2013 16:50:36 UTC +00:00], ["user_id", nil]]
+[DEBUG]  98465 2013-06-14 12:50:36 LB -   [1m[35m (0.6ms)[0m  commit transaction
+[DEBUG]  98465 2013-06-14 12:50:36 LB - Cache read: http://www.example.com/posts.xml?
+[DEBUG]  98465 2013-06-14 12:50:36 LB - Cache read: d169cc2e8a7f72462c8c031da3420bfc4a2de641
+[DEBUG]  98465 2013-06-14 12:50:36 LB - Cache read: http://www.example.com/posts/2.xml?
+[ INFO]  98465 2013-06-14 12:50:36 LB - Started GET "/posts/2.xml" for 127.0.0.1 at 2013-06-14 12:50:36 -0400
+[DEBUG]  98465 2013-06-14 12:50:36 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98465 2013-06-14 12:50:36 LB -   [1m[35mPost Load (1.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "2"]]
+[DEBUG]  98465 2013-06-14 12:50:36 LB -   [1m[36mSQL (0.7ms)[0m  [1mDELETE FROM "posts"[0m
+[DEBUG]  98465 2013-06-14 12:50:36 LB -   [1m[35m (0.1ms)[0m  begin transaction
+[DEBUG]  98465 2013-06-14 12:50:36 LB -   [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "private_field", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "xyz"], ["created_at", Fri, 14 Jun 2013 16:50:36 UTC +00:00], ["private_field", nil], ["protected_field", nil], ["title", "x"], ["updated_at", Fri, 14 Jun 2013 16:50:36 UTC +00:00], ["user_id", nil]]
+[DEBUG]  98465 2013-06-14 12:50:36 LB -   [1m[35m (0.6ms)[0m  commit transaction
+[DEBUG]  98465 2013-06-14 12:50:36 LB - Cache read: http://www.example.com/posts.xml?
+[DEBUG]  98465 2013-06-14 12:50:36 LB - Cache read: d169cc2e8a7f72462c8c031da3420bfc4a2de641
+[DEBUG]  98465 2013-06-14 12:50:36 LB - Cache read: http://www.example.com/posts?
+[DEBUG]  98465 2013-06-14 12:50:36 LB - Cache read: 98b4f1ddd1bd676f048b9f43f3f0764b9245404b
+[DEBUG]  98465 2013-06-14 12:50:36 LB -   [1m[36mSQL (0.9ms)[0m  [1mDELETE FROM "posts"[0m
+[DEBUG]  98465 2013-06-14 12:50:36 LB -   [1m[35m (0.1ms)[0m  begin transaction
+[DEBUG]  98465 2013-06-14 12:50:36 LB -   [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "private_field", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "xyz"], ["created_at", Fri, 14 Jun 2013 16:50:36 UTC +00:00], ["private_field", nil], ["protected_field", nil], ["title", "x"], ["updated_at", Fri, 14 Jun 2013 16:50:36 UTC +00:00], ["user_id", nil]]
+[DEBUG]  98465 2013-06-14 12:50:36 LB -   [1m[35m (0.7ms)[0m  commit transaction
+[DEBUG]  98465 2013-06-14 12:50:36 LB - Cache read: http://www.example.com/posts.xml?
+[DEBUG]  98465 2013-06-14 12:50:36 LB - Cache read: d169cc2e8a7f72462c8c031da3420bfc4a2de641
+[DEBUG]  98465 2013-06-14 12:50:36 LB -   [1m[36mSQL (0.7ms)[0m  [1mDELETE FROM "posts"[0m
+[DEBUG]  98465 2013-06-14 12:50:36 LB -   [1m[35m (0.1ms)[0m  begin transaction
+[DEBUG]  98465 2013-06-14 12:50:36 LB -   [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "private_field", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "xyz"], ["created_at", Fri, 14 Jun 2013 16:50:36 UTC +00:00], ["private_field", nil], ["protected_field", nil], ["title", "x"], ["updated_at", Fri, 14 Jun 2013 16:50:36 UTC +00:00], ["user_id", nil]]
+[DEBUG]  98465 2013-06-14 12:50:36 LB -   [1m[35m (0.6ms)[0m  commit transaction
+[DEBUG]  98465 2013-06-14 12:50:36 LB - Cache read: http://www.example.com/posts.xml?
+[DEBUG]  98465 2013-06-14 12:50:36 LB - Cache read: d169cc2e8a7f72462c8c031da3420bfc4a2de641
+[DEBUG]  98476 2013-06-14 12:51:07 LB -   [1m[36m (17.7ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98476 2013-06-14 12:51:08 LB -   [1m[35m (0.2ms)[0m  select sqlite_version(*)
+[DEBUG]  98476 2013-06-14 12:51:08 LB -   [1m[36m (2.3ms)[0m  [1mDROP TABLE "posts"[0m
+[DEBUG]  98476 2013-06-14 12:51:08 LB -   [1m[35m (0.9ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "user_id" integer, "protected_field" varchar(255), "private_field" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+[DEBUG]  98476 2013-06-14 12:51:08 LB -   [1m[36mSQL (0.8ms)[0m  [1mDELETE FROM "posts"[0m
+[DEBUG]  98476 2013-06-14 12:51:08 LB -   [1m[35m (0.1ms)[0m  begin transaction
+[DEBUG]  98476 2013-06-14 12:51:08 LB -   [1m[36mSQL (85.8ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "private_field", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "xyz"], ["created_at", Fri, 14 Jun 2013 16:51:08 UTC +00:00], ["private_field", nil], ["protected_field", nil], ["title", "x"], ["updated_at", Fri, 14 Jun 2013 16:51:08 UTC +00:00], ["user_id", nil]]
+[DEBUG]  98476 2013-06-14 12:51:08 LB -   [1m[35m (2.0ms)[0m  commit transaction
+[DEBUG]  98476 2013-06-14 12:51:08 LB - Cache read: http://www.example.com/posts.xml?
+[ INFO]  98476 2013-06-14 12:51:08 LB - Started GET "/posts.xml" for 127.0.0.1 at 2013-06-14 12:51:08 -0400
+[DEBUG]  98476 2013-06-14 12:51:08 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98476 2013-06-14 12:51:08 LB -   [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" 
+[DEBUG]  98476 2013-06-14 12:51:08 LB -   [1m[36mSQL (1.1ms)[0m  [1mDELETE FROM "posts"[0m
+[DEBUG]  98476 2013-06-14 12:51:08 LB -   [1m[35m (0.1ms)[0m  begin transaction
+[DEBUG]  98476 2013-06-14 12:51:08 LB -   [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "private_field", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "xyz"], ["created_at", Fri, 14 Jun 2013 16:51:08 UTC +00:00], ["private_field", nil], ["protected_field", nil], ["title", "x"], ["updated_at", Fri, 14 Jun 2013 16:51:08 UTC +00:00], ["user_id", nil]]
+[DEBUG]  98476 2013-06-14 12:51:08 LB -   [1m[35m (0.6ms)[0m  commit transaction
+[DEBUG]  98476 2013-06-14 12:51:08 LB - Cache read: http://www.example.com/posts.xml?
+[ INFO]  98476 2013-06-14 12:51:08 LB - Started GET "/posts.xml" for 127.0.0.1 at 2013-06-14 12:51:08 -0400
+[DEBUG]  98476 2013-06-14 12:51:08 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98476 2013-06-14 12:51:08 LB -   [1m[35mPost Load (0.9ms)[0m  SELECT "posts".* FROM "posts" 
+[DEBUG]  98476 2013-06-14 12:51:08 LB - Cache read: http://www.example.com/posts/2.xml?
+[ INFO]  98476 2013-06-14 12:51:08 LB - Started GET "/posts/2.xml" for 127.0.0.1 at 2013-06-14 12:51:08 -0400
+[DEBUG]  98476 2013-06-14 12:51:08 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98476 2013-06-14 12:51:08 LB -   [1m[35mPost Load (1.6ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "2"]]
+[DEBUG]  98476 2013-06-14 12:51:08 LB -   [1m[36mSQL (0.8ms)[0m  [1mDELETE FROM "posts"[0m
+[DEBUG]  98476 2013-06-14 12:51:08 LB -   [1m[35m (0.1ms)[0m  begin transaction
+[DEBUG]  98476 2013-06-14 12:51:08 LB -   [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "private_field", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "xyz"], ["created_at", Fri, 14 Jun 2013 16:51:08 UTC +00:00], ["private_field", nil], ["protected_field", nil], ["title", "x"], ["updated_at", Fri, 14 Jun 2013 16:51:08 UTC +00:00], ["user_id", nil]]
+[DEBUG]  98476 2013-06-14 12:51:08 LB -   [1m[35m (0.6ms)[0m  commit transaction
+[DEBUG]  98476 2013-06-14 12:51:08 LB - Cache read: http://www.example.com/posts.xml?
+[DEBUG]  98476 2013-06-14 12:51:08 LB - Cache write: 526ddf95df5bb6f846e002fde46ffef29cb21b04
+[DEBUG]  98476 2013-06-14 12:51:08 LB - Cache read: 526ddf95df5bb6f846e002fde46ffef29cb21b04
+[DEBUG]  98476 2013-06-14 12:51:08 LB - Cache read: http://www.example.com/posts.xml?
+[DEBUG]  98476 2013-06-14 12:51:08 LB - Cache write: http://www.example.com/posts.xml?
+[DEBUG]  98476 2013-06-14 12:51:08 LB - Cache read: http://www.example.com/posts?
+[ INFO]  98476 2013-06-14 12:51:08 LB - Started GET "/posts" for 127.0.0.1 at 2013-06-14 12:51:08 -0400
+[DEBUG]  98476 2013-06-14 12:51:08 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98476 2013-06-14 12:51:08 LB -   [1m[35mPost Load (0.9ms)[0m  SELECT "posts".* FROM "posts" 
+[DEBUG]  98476 2013-06-14 12:51:08 LB -   [1m[36mSQL (0.9ms)[0m  [1mDELETE FROM "posts"[0m
+[DEBUG]  98476 2013-06-14 12:51:08 LB -   [1m[35m (0.1ms)[0m  begin transaction
+[DEBUG]  98476 2013-06-14 12:51:08 LB -   [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "private_field", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "xyz"], ["created_at", Fri, 14 Jun 2013 16:51:08 UTC +00:00], ["private_field", nil], ["protected_field", nil], ["title", "x"], ["updated_at", Fri, 14 Jun 2013 16:51:08 UTC +00:00], ["user_id", nil]]
+[DEBUG]  98476 2013-06-14 12:51:08 LB -   [1m[35m (0.6ms)[0m  commit transaction
+[DEBUG]  98476 2013-06-14 12:51:08 LB - Cache read: http://www.example.com/posts.xml?
+[DEBUG]  98476 2013-06-14 12:51:08 LB - Cache read: 526ddf95df5bb6f846e002fde46ffef29cb21b04
+[DEBUG]  98476 2013-06-14 12:51:08 LB -   [1m[36mSQL (0.8ms)[0m  [1mDELETE FROM "posts"[0m
+[DEBUG]  98476 2013-06-14 12:51:08 LB -   [1m[35m (0.1ms)[0m  begin transaction
+[DEBUG]  98476 2013-06-14 12:51:08 LB -   [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "private_field", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "xyz"], ["created_at", Fri, 14 Jun 2013 16:51:08 UTC +00:00], ["private_field", nil], ["protected_field", nil], ["title", "x"], ["updated_at", Fri, 14 Jun 2013 16:51:08 UTC +00:00], ["user_id", nil]]
+[DEBUG]  98476 2013-06-14 12:51:08 LB -   [1m[35m (0.5ms)[0m  commit transaction
+[DEBUG]  98476 2013-06-14 12:51:08 LB - Cache read: http://www.example.com/posts.xml?
+[DEBUG]  98476 2013-06-14 12:51:08 LB - Cache read: 526ddf95df5bb6f846e002fde46ffef29cb21b04
+[DEBUG]  98487 2013-06-14 12:51:56 LB -   [1m[36m (17.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98487 2013-06-14 12:51:56 LB -   [1m[35m (0.2ms)[0m  select sqlite_version(*)
+[DEBUG]  98487 2013-06-14 12:51:56 LB -   [1m[36m (1.0ms)[0m  [1mDROP TABLE "posts"[0m
+[DEBUG]  98487 2013-06-14 12:51:56 LB -   [1m[35m (1.2ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "user_id" integer, "protected_field" varchar(255), "private_field" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+[DEBUG]  98487 2013-06-14 12:52:13 LB -   [1m[36mSQL (2.6ms)[0m  [1mDELETE FROM "posts"[0m
+[DEBUG]  98487 2013-06-14 12:52:13 LB -   [1m[35m (0.1ms)[0m  begin transaction
+[DEBUG]  98487 2013-06-14 12:52:13 LB -   [1m[36mSQL (24.5ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "private_field", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "xyz"], ["created_at", Fri, 14 Jun 2013 16:52:13 UTC +00:00], ["private_field", nil], ["protected_field", nil], ["title", "x"], ["updated_at", Fri, 14 Jun 2013 16:52:13 UTC +00:00], ["user_id", nil]]
+[DEBUG]  98487 2013-06-14 12:52:13 LB -   [1m[35m (0.6ms)[0m  commit transaction
+[DEBUG]  98487 2013-06-14 12:52:13 LB - Cache read: http://www.example.com/posts.xml?
+[ INFO]  98487 2013-06-14 12:52:13 LB - Started GET "/posts.xml" for 127.0.0.1 at 2013-06-14 12:52:13 -0400
+[DEBUG]  98487 2013-06-14 12:52:13 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98487 2013-06-14 12:52:13 LB -   [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" 
+[DEBUG]  98487 2013-06-14 12:52:14 LB -   [1m[36mSQL (2.6ms)[0m  [1mDELETE FROM "posts"[0m
+[DEBUG]  98487 2013-06-14 12:52:14 LB -   [1m[35m (0.1ms)[0m  begin transaction
+[DEBUG]  98487 2013-06-14 12:52:14 LB -   [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "private_field", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "xyz"], ["created_at", Fri, 14 Jun 2013 16:52:14 UTC +00:00], ["private_field", nil], ["protected_field", nil], ["title", "x"], ["updated_at", Fri, 14 Jun 2013 16:52:14 UTC +00:00], ["user_id", nil]]
+[DEBUG]  98487 2013-06-14 12:52:14 LB -   [1m[35m (0.7ms)[0m  commit transaction
+[DEBUG]  98487 2013-06-14 12:52:14 LB - Cache read: http://www.example.com/posts.xml?
+[ INFO]  98487 2013-06-14 12:52:14 LB - Started GET "/posts.xml" for 127.0.0.1 at 2013-06-14 12:52:14 -0400
+[DEBUG]  98487 2013-06-14 12:52:14 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98487 2013-06-14 12:52:14 LB -   [1m[35mPost Load (0.9ms)[0m  SELECT "posts".* FROM "posts" 
+[DEBUG]  98487 2013-06-14 12:52:14 LB - Cache read: http://www.example.com/posts/2.xml?
+[ INFO]  98487 2013-06-14 12:52:14 LB - Started GET "/posts/2.xml" for 127.0.0.1 at 2013-06-14 12:52:14 -0400
+[DEBUG]  98487 2013-06-14 12:52:14 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98487 2013-06-14 12:52:14 LB -   [1m[35mPost Load (1.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "2"]]
+[DEBUG]  98487 2013-06-14 12:52:16 LB -   [1m[36mSQL (2.6ms)[0m  [1mDELETE FROM "posts"[0m
+[DEBUG]  98487 2013-06-14 12:52:16 LB -   [1m[35m (0.1ms)[0m  begin transaction
+[DEBUG]  98487 2013-06-14 12:52:16 LB -   [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "private_field", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "xyz"], ["created_at", Fri, 14 Jun 2013 16:52:16 UTC +00:00], ["private_field", nil], ["protected_field", nil], ["title", "x"], ["updated_at", Fri, 14 Jun 2013 16:52:16 UTC +00:00], ["user_id", nil]]
+[DEBUG]  98487 2013-06-14 12:52:16 LB -   [1m[35m (0.6ms)[0m  commit transaction
+[DEBUG]  98487 2013-06-14 12:52:16 LB - Cache read: http://www.example.com/posts.xml?
+[DEBUG]  98487 2013-06-14 12:52:16 LB - Cache write: 16bc73b5c51473f93c1df552d00d046df5216be2
+[DEBUG]  98487 2013-06-14 12:52:16 LB - Cache read: 16bc73b5c51473f93c1df552d00d046df5216be2
+[DEBUG]  98487 2013-06-14 12:52:16 LB - Cache read: http://www.example.com/posts.xml?
+[DEBUG]  98487 2013-06-14 12:52:16 LB - Cache write: http://www.example.com/posts.xml?
+[DEBUG]  98487 2013-06-14 12:52:16 LB - Cache read: http://www.example.com/posts?
+[ INFO]  98487 2013-06-14 12:52:16 LB - Started GET "/posts" for 127.0.0.1 at 2013-06-14 12:52:16 -0400
+[DEBUG]  98487 2013-06-14 12:52:16 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98487 2013-06-14 12:52:16 LB -   [1m[35mPost Load (0.9ms)[0m  SELECT "posts".* FROM "posts" 
+[DEBUG]  98487 2013-06-14 12:52:17 LB -   [1m[36mSQL (2.4ms)[0m  [1mDELETE FROM "posts"[0m
+[DEBUG]  98487 2013-06-14 12:52:17 LB -   [1m[35m (0.1ms)[0m  begin transaction
+[DEBUG]  98487 2013-06-14 12:52:17 LB -   [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "private_field", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "xyz"], ["created_at", Fri, 14 Jun 2013 16:52:17 UTC +00:00], ["private_field", nil], ["protected_field", nil], ["title", "x"], ["updated_at", Fri, 14 Jun 2013 16:52:17 UTC +00:00], ["user_id", nil]]
+[DEBUG]  98487 2013-06-14 12:52:17 LB -   [1m[35m (0.7ms)[0m  commit transaction
+[DEBUG]  98487 2013-06-14 12:52:17 LB - Cache read: http://www.example.com/posts.xml?
+[ INFO]  98487 2013-06-14 12:52:17 LB - Started GET "/posts.xml" for 127.0.0.1 at 2013-06-14 12:52:17 -0400
+[DEBUG]  98487 2013-06-14 12:52:17 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98487 2013-06-14 12:52:17 LB -   [1m[35mPost Load (1.1ms)[0m  SELECT "posts".* FROM "posts" 
+[DEBUG]  98487 2013-06-14 12:52:18 LB -   [1m[36mSQL (2.6ms)[0m  [1mDELETE FROM "posts"[0m
+[DEBUG]  98487 2013-06-14 12:52:18 LB -   [1m[35m (0.1ms)[0m  begin transaction
+[DEBUG]  98487 2013-06-14 12:52:18 LB -   [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "private_field", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "xyz"], ["created_at", Fri, 14 Jun 2013 16:52:18 UTC +00:00], ["private_field", nil], ["protected_field", nil], ["title", "x"], ["updated_at", Fri, 14 Jun 2013 16:52:18 UTC +00:00], ["user_id", nil]]
+[DEBUG]  98487 2013-06-14 12:52:18 LB -   [1m[35m (0.7ms)[0m  commit transaction
+[DEBUG]  98487 2013-06-14 12:52:18 LB - Cache read: http://www.example.com/posts.xml?
+[ INFO]  98487 2013-06-14 12:52:18 LB - Started GET "/posts.xml" for 127.0.0.1 at 2013-06-14 12:52:18 -0400
+[DEBUG]  98487 2013-06-14 12:52:18 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98487 2013-06-14 12:52:18 LB -   [1m[35mPost Load (0.9ms)[0m  SELECT "posts".* FROM "posts" 
+[DEBUG]  98487 2013-06-14 12:52:18 LB - Cache read: http://www.example.com/posts.xml?
+[ INFO]  98487 2013-06-14 12:52:18 LB - Started GET "/posts.xml" for 127.0.0.1 at 2013-06-14 12:52:18 -0400
+[DEBUG]  98487 2013-06-14 12:52:18 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98487 2013-06-14 12:52:18 LB -   [1m[35mPost Load (0.9ms)[0m  SELECT "posts".* FROM "posts" 
+[DEBUG]  98498 2013-06-14 12:52:46 LB -   [1m[36m (17.4ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98498 2013-06-14 12:52:47 LB -   [1m[35m (0.2ms)[0m  select sqlite_version(*)
+[DEBUG]  98498 2013-06-14 12:52:47 LB -   [1m[36m (0.9ms)[0m  [1mDROP TABLE "posts"[0m
+[DEBUG]  98498 2013-06-14 12:52:47 LB -   [1m[35m (0.8ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "user_id" integer, "protected_field" varchar(255), "private_field" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+[DEBUG]  98498 2013-06-14 12:52:47 LB -   [1m[36mSQL (0.9ms)[0m  [1mDELETE FROM "posts"[0m
+[DEBUG]  98498 2013-06-14 12:52:47 LB -   [1m[35m (0.1ms)[0m  begin transaction
+[DEBUG]  98498 2013-06-14 12:52:47 LB -   [1m[36mSQL (24.2ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "private_field", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "xyz"], ["created_at", Fri, 14 Jun 2013 16:52:47 UTC +00:00], ["private_field", nil], ["protected_field", nil], ["title", "x"], ["updated_at", Fri, 14 Jun 2013 16:52:47 UTC +00:00], ["user_id", nil]]
+[DEBUG]  98498 2013-06-14 12:52:47 LB -   [1m[35m (0.9ms)[0m  commit transaction
+[DEBUG]  98498 2013-06-14 12:52:47 LB - Cache read: http://www.example.com/posts.xml?
+[ INFO]  98498 2013-06-14 12:52:47 LB - Started GET "/posts.xml" for 127.0.0.1 at 2013-06-14 12:52:47 -0400
+[DEBUG]  98498 2013-06-14 12:52:47 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98498 2013-06-14 12:52:47 LB -   [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" 
+[DEBUG]  98498 2013-06-14 12:52:47 LB -   [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "posts"[0m
+[DEBUG]  98498 2013-06-14 12:52:47 LB -   [1m[35m (0.1ms)[0m  begin transaction
+[DEBUG]  98498 2013-06-14 12:52:47 LB -   [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "private_field", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "xyz"], ["created_at", Fri, 14 Jun 2013 16:52:47 UTC +00:00], ["private_field", nil], ["protected_field", nil], ["title", "x"], ["updated_at", Fri, 14 Jun 2013 16:52:47 UTC +00:00], ["user_id", nil]]
+[DEBUG]  98498 2013-06-14 12:52:47 LB -   [1m[35m (0.6ms)[0m  commit transaction
+[DEBUG]  98498 2013-06-14 12:52:47 LB - Cache read: http://www.example.com/posts.xml?
+[ INFO]  98498 2013-06-14 12:52:47 LB - Started GET "/posts.xml" for 127.0.0.1 at 2013-06-14 12:52:47 -0400
+[DEBUG]  98498 2013-06-14 12:52:47 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98498 2013-06-14 12:52:47 LB -   [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" 
+[DEBUG]  98498 2013-06-14 12:52:47 LB - Cache read: http://www.example.com/posts/2.xml?
+[ INFO]  98498 2013-06-14 12:52:47 LB - Started GET "/posts/2.xml" for 127.0.0.1 at 2013-06-14 12:52:47 -0400
+[DEBUG]  98498 2013-06-14 12:52:47 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98498 2013-06-14 12:52:47 LB -   [1m[35mPost Load (1.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "2"]]
+[DEBUG]  98498 2013-06-14 12:52:47 LB -   [1m[36mSQL (0.7ms)[0m  [1mDELETE FROM "posts"[0m
+[DEBUG]  98498 2013-06-14 12:52:47 LB -   [1m[35m (0.1ms)[0m  begin transaction
+[DEBUG]  98498 2013-06-14 12:52:47 LB -   [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "private_field", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "xyz"], ["created_at", Fri, 14 Jun 2013 16:52:47 UTC +00:00], ["private_field", nil], ["protected_field", nil], ["title", "x"], ["updated_at", Fri, 14 Jun 2013 16:52:47 UTC +00:00], ["user_id", nil]]
+[DEBUG]  98498 2013-06-14 12:52:47 LB -   [1m[35m (0.5ms)[0m  commit transaction
+[DEBUG]  98498 2013-06-14 12:52:47 LB - Cache read: http://www.example.com/posts.xml?
+[DEBUG]  98498 2013-06-14 12:52:47 LB - Cache write: f685077da00eff8a1cf89cce0441242055670507
+[DEBUG]  98498 2013-06-14 12:52:47 LB - Cache read: f685077da00eff8a1cf89cce0441242055670507
+[DEBUG]  98498 2013-06-14 12:52:47 LB - Cache read: http://www.example.com/posts.xml?
+[DEBUG]  98498 2013-06-14 12:52:47 LB - Cache write: http://www.example.com/posts.xml?
+[DEBUG]  98498 2013-06-14 12:52:47 LB - Cache read: http://www.example.com/posts?
+[ INFO]  98498 2013-06-14 12:52:47 LB - Started GET "/posts" for 127.0.0.1 at 2013-06-14 12:52:47 -0400
+[DEBUG]  98498 2013-06-14 12:52:47 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98498 2013-06-14 12:52:47 LB -   [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" 
+[DEBUG]  98498 2013-06-14 12:52:47 LB -   [1m[36mSQL (0.8ms)[0m  [1mDELETE FROM "posts"[0m
+[DEBUG]  98498 2013-06-14 12:52:47 LB -   [1m[35m (0.1ms)[0m  begin transaction
+[DEBUG]  98498 2013-06-14 12:52:47 LB -   [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "private_field", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "xyz"], ["created_at", Fri, 14 Jun 2013 16:52:47 UTC +00:00], ["private_field", nil], ["protected_field", nil], ["title", "x"], ["updated_at", Fri, 14 Jun 2013 16:52:47 UTC +00:00], ["user_id", nil]]
+[DEBUG]  98498 2013-06-14 12:52:47 LB -   [1m[35m (0.6ms)[0m  commit transaction
+[DEBUG]  98498 2013-06-14 12:52:47 LB - Cache read: http://www.example.com/posts.xml?
+[ INFO]  98498 2013-06-14 12:52:47 LB - Started GET "/posts.xml" for 127.0.0.1 at 2013-06-14 12:52:47 -0400
+[DEBUG]  98498 2013-06-14 12:52:47 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98498 2013-06-14 12:52:47 LB -   [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" 
+[DEBUG]  98498 2013-06-14 12:52:47 LB -   [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "posts"[0m
+[DEBUG]  98498 2013-06-14 12:52:47 LB -   [1m[35m (0.1ms)[0m  begin transaction
+[DEBUG]  98498 2013-06-14 12:52:47 LB -   [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "private_field", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "xyz"], ["created_at", Fri, 14 Jun 2013 16:52:47 UTC +00:00], ["private_field", nil], ["protected_field", nil], ["title", "x"], ["updated_at", Fri, 14 Jun 2013 16:52:47 UTC +00:00], ["user_id", nil]]
+[DEBUG]  98498 2013-06-14 12:52:47 LB -   [1m[35m (0.5ms)[0m  commit transaction
+[DEBUG]  98498 2013-06-14 12:52:47 LB - Cache read: http://www.example.com/posts.xml?
+[ INFO]  98498 2013-06-14 12:52:47 LB - Started GET "/posts.xml" for 127.0.0.1 at 2013-06-14 12:52:47 -0400
+[DEBUG]  98498 2013-06-14 12:52:47 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98498 2013-06-14 12:52:47 LB -   [1m[35mPost Load (0.9ms)[0m  SELECT "posts".* FROM "posts" 
+[DEBUG]  98498 2013-06-14 12:52:47 LB - Cache read: http://www.example.com/posts.xml?
+[ INFO]  98498 2013-06-14 12:52:47 LB - Started GET "/posts.xml" for 127.0.0.1 at 2013-06-14 12:52:47 -0400
+[DEBUG]  98498 2013-06-14 12:52:47 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98498 2013-06-14 12:52:47 LB -   [1m[35mPost Load (0.9ms)[0m  SELECT "posts".* FROM "posts" 
+[DEBUG]  98515 2013-06-14 12:53:12 LB -   [1m[36m (17.7ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98515 2013-06-14 12:53:13 LB -   [1m[35m (0.2ms)[0m  SELECT current_value FROM system_parameters WHERE parameter = 'time_offset'
+[DEBUG]  98515 2013-06-14 12:53:13 LB - Cache read: UserLogin::Permissions::2b95653afc0ea6cf08476febab09caf2cf9ad71f0899f419798136cad1ce58eb ({:expires_in=>5 seconds})
+[DEBUG]  98515 2013-06-14 12:53:13 LB - Cache generate: UserLogin::Permissions::2b95653afc0ea6cf08476febab09caf2cf9ad71f0899f419798136cad1ce58eb ({:expires_in=>5 seconds})
+[DEBUG]  98515 2013-06-14 12:53:13 LB::PostsController - Fetching and caching token 2b95653afc0ea6cf08476febab09caf2cf9ad71f0899f419798136cad1ce58eb for 5 seconds
+[DEBUG]  98515 2013-06-14 12:53:13 LB - Cache write: UserLogin::Permissions::2b95653afc0ea6cf08476febab09caf2cf9ad71f0899f419798136cad1ce58eb ({:expires_in=>5 seconds})
+[DEBUG]  98515 2013-06-14 12:53:13 LB::PostsController - Authenticated :: http://test.host/posts/restricted.json?token=2b95653afc0ea6cf08476febab09caf2cf9ad71f0899f419798136cad1ce58eb
+[DEBUG]  98515 2013-06-14 12:53:13 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98515 2013-06-14 12:53:13 LB - Cache read: UserLogin::Permissions::2b95653afc0ea6cf08476febab09caf2cf9ad71f0899f419798136cad1ce58eb ({:expires_in=>5 seconds})
+[DEBUG]  98515 2013-06-14 12:53:13 LB - Cache fetch_hit: UserLogin::Permissions::2b95653afc0ea6cf08476febab09caf2cf9ad71f0899f419798136cad1ce58eb ({:expires_in=>5 seconds})
+[DEBUG]  98515 2013-06-14 12:53:13 LB::PostsController - Authenticated :: http://test.host/posts/restricted.json?token=2b95653afc0ea6cf08476febab09caf2cf9ad71f0899f419798136cad1ce58eb
+[DEBUG]  98515 2013-06-14 12:53:14 LB -   [1m[35m (0.2ms)[0m  SELECT current_value FROM system_parameters WHERE parameter = 'time_offset'
+[DEBUG]  98515 2013-06-14 12:53:14 LB::PostsController - Authenticated Provider::1 http://test.host/posts/restricted.json?token=token
+[DEBUG]  98515 2013-06-14 12:53:14 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98515 2013-06-14 12:53:14 LB -   [1m[35m (0.2ms)[0m  select sqlite_version(*)
+[DEBUG]  98515 2013-06-14 12:53:14 LB -   [1m[36m (8.8ms)[0m  [1mDROP TABLE "system_parameters"[0m
+[DEBUG]  98515 2013-06-14 12:53:14 LB -   [1m[35m (4.5ms)[0m  CREATE TABLE "system_parameters" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "parameter" varchar(255), "current_value" integer) 
+[DEBUG]  98515 2013-06-14 12:53:14 LB -   [1m[36m (1.3ms)[0m  [1mINSERT INTO system_parameters (parameter, current_value) VALUES ('time_offset', 0)[0m
+[DEBUG]  98515 2013-06-14 12:53:14 LB -   [1m[35m (0.7ms)[0m  UPDATE system_parameters SET current_value = '0' WHERE parameter = 'time_offset'
+[DEBUG]  98515 2013-06-14 12:53:14 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98515 2013-06-14 12:53:14 LB -   [1m[35m (0.7ms)[0m  UPDATE system_parameters SET current_value = '247' WHERE parameter = 'time_offset'
+[DEBUG]  98515 2013-06-14 12:53:14 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98515 2013-06-14 12:57:21 LB -   [1m[35m (0.7ms)[0m  UPDATE system_parameters SET current_value = '0' WHERE parameter = 'time_offset'
+[DEBUG]  98515 2013-06-14 12:53:14 LB -   [1m[36m (0.3ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[ INFO]  98515 2013-06-14 12:53:14 LB::Object - Test
+[ INFO]  98515 2013-06-14 12:53:14 LB::Object - Test
+[DEBUG]  98515 2013-06-14 12:53:15 LB -   [1m[35m (2.5ms)[0m  DROP TABLE "posts"
+[DEBUG]  98515 2013-06-14 12:53:15 LB -   [1m[36m (1.2ms)[0m  [1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "user_id" integer, "protected_field" varchar(255), "private_field" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+[DEBUG]  98515 2013-06-14 12:53:15 LB -   [1m[35m (1.1ms)[0m  DROP TABLE "users"
+[DEBUG]  98515 2013-06-14 12:53:15 LB -   [1m[36m (0.9ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "bday" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+[DEBUG]  98515 2013-06-14 12:53:15 LB -   [1m[35m (1.1ms)[0m  DROP TABLE "comments"
+[DEBUG]  98515 2013-06-14 12:53:15 LB -   [1m[36m (1.1ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" text, "post_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "type" varchar(255)) [0m
+[DEBUG]  98515 2013-06-14 12:53:15 LB -   [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" 
+[DEBUG]  98515 2013-06-14 12:53:15 LB -   [1m[36mSQL (0.8ms)[0m  [1mDELETE FROM "posts"[0m
+[DEBUG]  98515 2013-06-14 12:53:15 LB -   [1m[35mSQL (0.8ms)[0m  DELETE FROM "posts"
+[DEBUG]  98515 2013-06-14 12:53:15 LB -   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+[DEBUG]  98515 2013-06-14 12:53:15 LB -   [1m[35mSQL (25.1ms)[0m  INSERT INTO "posts" ("body", "created_at", "private_field", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)  [["body", "Body"], ["created_at", Fri, 14 Jun 2013 16:53:15 UTC +00:00], ["private_field", nil], ["protected_field", nil], ["title", "Post"], ["updated_at", Fri, 14 Jun 2013 16:53:15 UTC +00:00], ["user_id", nil]]
+[DEBUG]  98515 2013-06-14 12:53:15 LB -   [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+[DEBUG]  98515 2013-06-14 12:53:15 LB -   [1m[35m (0.1ms)[0m  begin transaction
+[DEBUG]  98515 2013-06-14 12:53:15 LB -   [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "private_field", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "test"], ["created_at", Fri, 14 Jun 2013 16:53:15 UTC +00:00], ["private_field", nil], ["protected_field", nil], ["title", "test"], ["updated_at", Fri, 14 Jun 2013 16:53:15 UTC +00:00], ["user_id", nil]]
+[DEBUG]  98515 2013-06-14 12:53:15 LB -   [1m[35m (1.0ms)[0m  commit transaction
+[DEBUG]  98515 2013-06-14 12:53:15 LB -   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+[DEBUG]  98515 2013-06-14 12:53:15 LB -   [1m[35m (0.3ms)[0m  UPDATE "posts" SET "protected_field" = 'Test', "updated_at" = '2013-06-14 16:53:15.613175' WHERE "posts"."id" = 2
+[DEBUG]  98515 2013-06-14 12:53:15 LB -   [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+[DEBUG]  98515 2013-06-14 12:53:15 LB -   [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 2]]
+[DEBUG]  98515 2013-06-14 12:53:15 LB -   [1m[36m (1.1ms)[0m  [1mDROP TABLE "posts"[0m
+[DEBUG]  98515 2013-06-14 12:53:15 LB -   [1m[35m (0.9ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "user_id" integer, "protected_field" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+[DEBUG]  98515 2013-06-14 12:53:15 LB - Cache read: http://www.example.com/posts.json?
+[ INFO]  98515 2013-06-14 12:53:15 LB - Started GET "/posts.json" for 127.0.0.1 at 2013-06-14 12:53:15 -0400
+[DEBUG]  98515 2013-06-14 12:53:15 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98515 2013-06-14 12:53:15 LB -   [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" 
+[DEBUG]  98515 2013-06-14 12:53:15 LB - Cache read: http://www.example.com/posts.xml?
+[ INFO]  98515 2013-06-14 12:53:15 LB - Started GET "/posts.xml" for 127.0.0.1 at 2013-06-14 12:53:15 -0400
+[DEBUG]  98515 2013-06-14 12:53:15 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98515 2013-06-14 12:53:15 LB -   [1m[35mPost Load (0.9ms)[0m  SELECT "posts".* FROM "posts" 
+[DEBUG]  98515 2013-06-14 12:53:15 LB - Cache read: http://www.example.com/posts.html?
+[ INFO]  98515 2013-06-14 12:53:15 LB - Started GET "/posts.html" for 127.0.0.1 at 2013-06-14 12:53:15 -0400
+[DEBUG]  98515 2013-06-14 12:53:15 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98515 2013-06-14 12:53:15 LB -   [1m[35mPost Load (0.9ms)[0m  SELECT "posts".* FROM "posts" 
+[DEBUG]  98515 2013-06-14 12:53:15 LB - Cache read: http://www.example.com/posts.json?post%5Bbody%5D=The+body&post%5Btitle%5D=My+Post&post%5Buser_id%5D=1
+[ INFO]  98515 2013-06-14 12:53:15 LB - Started POST "/posts.json?post%5Bbody%5D=The+body&post%5Btitle%5D=My+Post&post%5Buser_id%5D=1" for 127.0.0.1 at 2013-06-14 12:53:15 -0400
+[DEBUG]  98515 2013-06-14 12:53:15 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98515 2013-06-14 12:53:15 LB -   [1m[35m (1.0ms)[0m  begin transaction
+[DEBUG]  98515 2013-06-14 12:53:15 LB -   [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["body", "The body"], ["created_at", Fri, 14 Jun 2013 16:53:15 UTC +00:00], ["protected_field", nil], ["title", "My Post"], ["updated_at", Fri, 14 Jun 2013 16:53:15 UTC +00:00], ["user_id", 1]]
+[DEBUG]  98515 2013-06-14 12:53:15 LB -   [1m[35m (0.6ms)[0m  commit transaction
+[DEBUG]  98515 2013-06-14 12:53:15 LB -   [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT 1[0m
+[DEBUG]  98515 2013-06-14 12:53:15 LB - Cache read: http://www.example.com/posts/1.html?
+[ INFO]  98515 2013-06-14 12:53:15 LB - Started GET "/posts/1.html" for 127.0.0.1 at 2013-06-14 12:53:15 -0400
+[DEBUG]  98515 2013-06-14 12:53:15 LB -   [1m[35m (0.3ms)[0m  SELECT current_value FROM system_parameters WHERE parameter = 'time_offset'
+[DEBUG]  98515 2013-06-14 12:53:15 LB -   [1m[36mPost Load (1.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+[DEBUG]  98515 2013-06-14 12:53:16 LB - Cache read: http://www.example.com/posts.json?post%5Bbody%5D=The+body&post%5Btitle%5D=My+Post&post%5Buser_id%5D=1
+[ INFO]  98515 2013-06-14 12:53:16 LB - Started POST "/posts.json?post%5Bbody%5D=The+body&post%5Btitle%5D=My+Post&post%5Buser_id%5D=1" for 127.0.0.1 at 2013-06-14 12:53:16 -0400
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[35m (0.2ms)[0m  SELECT current_value FROM system_parameters WHERE parameter = 'time_offset'
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[35mSQL (0.7ms)[0m  INSERT INTO "posts" ("body", "created_at", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["body", "The body"], ["created_at", Fri, 14 Jun 2013 16:53:16 UTC +00:00], ["protected_field", nil], ["title", "My Post"], ["updated_at", Fri, 14 Jun 2013 16:53:16 UTC +00:00], ["user_id", 1]]
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT 1
+[DEBUG]  98515 2013-06-14 12:53:16 LB - Cache read: http://www.example.com/posts/2.html?
+[ INFO]  98515 2013-06-14 12:53:16 LB - Started GET "/posts/2.html" for 127.0.0.1 at 2013-06-14 12:53:16 -0400
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[35mPost Load (0.9ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "2"]]
+[DEBUG]  98515 2013-06-14 12:53:16 LB - Cache read: http://www.example.com/posts.json?post%5Bbody%5D=The+body&post%5Btitle%5D=My+Post&post%5Buser_id%5D=1
+[ INFO]  98515 2013-06-14 12:53:16 LB - Started POST "/posts.json?post%5Bbody%5D=The+body&post%5Btitle%5D=My+Post&post%5Buser_id%5D=1" for 127.0.0.1 at 2013-06-14 12:53:16 -0400
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[35m (0.9ms)[0m  begin transaction
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["body", "The body"], ["created_at", Fri, 14 Jun 2013 16:53:16 UTC +00:00], ["protected_field", nil], ["title", "My Post"], ["updated_at", Fri, 14 Jun 2013 16:53:16 UTC +00:00], ["user_id", 1]]
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[35m (0.6ms)[0m  commit transaction
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT 1[0m
+[DEBUG]  98515 2013-06-14 12:53:16 LB - Cache read: http://www.example.com/posts.json?post%5Bbody%5D=The+body&post%5Buser_id%5D=1
+[ INFO]  98515 2013-06-14 12:53:16 LB - Started POST "/posts.json?post%5Bbody%5D=The+body&post%5Buser_id%5D=1" for 127.0.0.1 at 2013-06-14 12:53:16 -0400
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[35m (0.2ms)[0m  SELECT current_value FROM system_parameters WHERE parameter = 'time_offset'
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[36m (0.9ms)[0m  [1mbegin transaction[0m
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[35m (0.1ms)[0m  rollback transaction
+[DEBUG]  98515 2013-06-14 12:53:16 LB::PostsController - Failed Saving Post::0 - {:title=>["can't be blank"]}
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[35mSQL (0.7ms)[0m  INSERT INTO "posts" ("body", "created_at", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["body", "The body"], ["created_at", Fri, 14 Jun 2013 16:53:16 UTC +00:00], ["protected_field", nil], ["title", "My Post"], ["updated_at", Fri, 14 Jun 2013 16:53:16 UTC +00:00], ["user_id", 1]]
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT 1
+[DEBUG]  98515 2013-06-14 12:53:16 LB - Cache read: http://www.example.com/posts/4.json?post%5Bbody%5D=The+body&post%5Btitle%5D=My+New+Title&post%5Buser_id%5D=1
+[ INFO]  98515 2013-06-14 12:53:16 LB - Started PUT "/posts/4.json?post%5Bbody%5D=The+body&post%5Btitle%5D=My+New+Title&post%5Buser_id%5D=1" for 127.0.0.1 at 2013-06-14 12:53:16 -0400
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[35mPost Load (0.9ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "4"]]
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[35m (0.3ms)[0m  UPDATE "posts" SET "title" = 'My New Title', "updated_at" = '2013-06-14 16:53:16.094374' WHERE "posts"."id" = 4
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT 1
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[35mSQL (0.7ms)[0m  INSERT INTO "posts" ("body", "created_at", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["body", "The body"], ["created_at", Fri, 14 Jun 2013 16:53:16 UTC +00:00], ["protected_field", nil], ["title", "My Post"], ["updated_at", Fri, 14 Jun 2013 16:53:16 UTC +00:00], ["user_id", 1]]
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT 1
+[DEBUG]  98515 2013-06-14 12:53:16 LB - Cache read: http://www.example.com/posts/5.json?post%5Bbody%5D=The+body&post%5Btitle%5D=&post%5Buser_id%5D=1
+[ INFO]  98515 2013-06-14 12:53:16 LB - Started PUT "/posts/5.json?post%5Bbody%5D=The+body&post%5Btitle%5D=&post%5Buser_id%5D=1" for 127.0.0.1 at 2013-06-14 12:53:16 -0400
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[35mPost Load (0.9ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "5"]]
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[35m (0.1ms)[0m  rollback transaction
+[DEBUG]  98515 2013-06-14 12:53:16 LB::PostsController - Failed Saving Post::5 - {:title=>["can't be blank"]}
+[DEBUG]  98515 2013-06-14 12:53:16 LB - Cache read: http://www.example.com/posts/create_with_response.json?post%5Bbody%5D=The+body&post%5Btitle%5D=My+Post&post%5Buser_id%5D=1
+[ INFO]  98515 2013-06-14 12:53:16 LB - Started POST "/posts/create_with_response.json?post%5Bbody%5D=The+body&post%5Btitle%5D=My+Post&post%5Buser_id%5D=1" for 127.0.0.1 at 2013-06-14 12:53:16 -0400
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[35m (1.0ms)[0m  begin transaction
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["body", "The body"], ["created_at", Fri, 14 Jun 2013 16:53:16 UTC +00:00], ["protected_field", nil], ["title", "My Post"], ["updated_at", Fri, 14 Jun 2013 16:53:16 UTC +00:00], ["user_id", 1]]
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[35m (0.7ms)[0m  commit transaction
+[DEBUG]  98515 2013-06-14 12:53:16 LB - Cache read: http://www.example.com/posts/create_with_response.json?
+[ INFO]  98515 2013-06-14 12:53:16 LB - Started POST "/posts/create_with_response.json" for 127.0.0.1 at 2013-06-14 12:53:16 -0400
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[35m (1.0ms)[0m  begin transaction
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+[DEBUG]  98515 2013-06-14 12:53:16 LB::PostsController - Failed Saving Post::0 - {:title=>["can't be blank"]}
+[DEBUG]  98515 2013-06-14 12:53:16 LB - Cache read: http://www.example.com/posts.json?post%5Bbody%5D=The+body&post%5Btitle%5D=My+Post&post%5Buser_id%5D=1
+[ INFO]  98515 2013-06-14 12:53:16 LB - Started POST "/posts.json?post%5Bbody%5D=The+body&post%5Btitle%5D=My+Post&post%5Buser_id%5D=1" for 127.0.0.1 at 2013-06-14 12:53:16 -0400
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[35m (0.2ms)[0m  SELECT current_value FROM system_parameters WHERE parameter = 'time_offset'
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[35mSQL (0.7ms)[0m  INSERT INTO "posts" ("body", "created_at", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["body", "The body"], ["created_at", Fri, 14 Jun 2013 16:53:16 UTC +00:00], ["protected_field", nil], ["title", "My Post"], ["updated_at", Fri, 14 Jun 2013 16:53:16 UTC +00:00], ["user_id", 1]]
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT 1
+[DEBUG]  98515 2013-06-14 12:53:16 LB - Cache read: http://www.example.com/posts/7.json?callback=my_callback
+[ INFO]  98515 2013-06-14 12:53:16 LB - Started GET "/posts/7.json?callback=my_callback" for 127.0.0.1 at 2013-06-14 12:53:16 -0400
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "7"]]
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT 1[0m
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "posts" 
+[DEBUG]  98515 2013-06-14 12:53:16 LB - Cache read: http://www.example.com/posts.json?post%5Bbody%5D=The+body&post%5Buser_id%5D=1
+[ INFO]  98515 2013-06-14 12:53:16 LB - Started POST "/posts.json?post%5Bbody%5D=The+body&post%5Buser_id%5D=1" for 127.0.0.1 at 2013-06-14 12:53:16 -0400
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[35m (0.9ms)[0m  begin transaction
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["body", "The body"], ["created_at", Fri, 14 Jun 2013 16:53:16 UTC +00:00], ["protected_field", nil], ["title", "My Post"], ["updated_at", Fri, 14 Jun 2013 16:53:16 UTC +00:00], ["user_id", 1]]
+[DEBUG]  98515 2013-06-14 12:53:16 LB::PostsController - Failed Saving Post::0 - {:title=>["can't be blank"]}
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[35m (0.5ms)[0m  rollback transaction
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "posts" [0m
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[35m (0.1ms)[0m  begin transaction
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["body", "The body"], ["created_at", Fri, 14 Jun 2013 16:53:16 UTC +00:00], ["protected_field", nil], ["title", "My Post"], ["updated_at", Fri, 14 Jun 2013 16:53:16 UTC +00:00], ["user_id", 1]]
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[35m (0.6ms)[0m  commit transaction
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "posts" [0m
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT 1
+[DEBUG]  98515 2013-06-14 12:53:16 LB - Cache read: http://www.example.com/posts/8.json?post%5Bbody%5D=The+body&post%5Btitle%5D=&post%5Buser_id%5D=1
+[ INFO]  98515 2013-06-14 12:53:16 LB - Started PUT "/posts/8.json?post%5Bbody%5D=The+body&post%5Btitle%5D=&post%5Buser_id%5D=1" for 127.0.0.1 at 2013-06-14 12:53:16 -0400
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[35mPost Load (0.9ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "8"]]
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[35mSQL (0.7ms)[0m  INSERT INTO "posts" ("body", "created_at", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["body", "The body"], ["created_at", Fri, 14 Jun 2013 16:53:16 UTC +00:00], ["protected_field", nil], ["title", "My Post"], ["updated_at", Fri, 14 Jun 2013 16:53:16 UTC +00:00], ["user_id", 1]]
+[DEBUG]  98515 2013-06-14 12:53:16 LB::PostsController - Failed Saving Post::8 - {:title=>["can't be blank"]}
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "posts" 
+[DEBUG]  98515 2013-06-14 12:53:16 LB - Cache read: http://www.example.com/posts.json?post%5Bbody%5D=The+body&post%5Btitle%5D=My+Post&post%5Buser_id%5D=1
+[ INFO]  98515 2013-06-14 12:53:16 LB - Started POST "/posts.json?post%5Bbody%5D=The+body&post%5Btitle%5D=My+Post&post%5Buser_id%5D=1" for 127.0.0.1 at 2013-06-14 12:53:16 -0400
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[35m (0.9ms)[0m  begin transaction
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["body", "The body"], ["created_at", Fri, 14 Jun 2013 16:53:16 UTC +00:00], ["protected_field", nil], ["title", "My Post"], ["updated_at", Fri, 14 Jun 2013 16:53:16 UTC +00:00], ["user_id", 1]]
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[35m (0.6ms)[0m  commit transaction
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT 1[0m
+[DEBUG]  98515 2013-06-14 12:53:16 LB - Cache read: http://www.example.com/posts/restricted.json?
+[ INFO]  98515 2013-06-14 12:53:16 LB - Started GET "/posts/restricted.json" for 127.0.0.1 at 2013-06-14 12:53:16 -0400
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[35m (0.2ms)[0m  SELECT current_value FROM system_parameters WHERE parameter = 'time_offset'
+[DEBUG]  98515 2013-06-14 12:53:16 LB::PostsController - Attempted to access http://www.example.com/posts/restricted.json without a token
+[DEBUG]  98515 2013-06-14 12:53:16 LB - Cache read: http://www.example.com/posts/restricted.json?token=invalidtoken
+[ INFO]  98515 2013-06-14 12:53:16 LB - Started GET "/posts/restricted.json?token=invalidtoken" for 127.0.0.1 at 2013-06-14 12:53:16 -0400
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98515 2013-06-14 12:53:16 LB::PostsController - Authentication failure invalidtoken http://www.example.com/posts/restricted.json?token=invalidtoken
+[DEBUG]  98515 2013-06-14 12:53:16 LB::PostsController - Access denied for http://www.example.com/posts/restricted.json?token=invalidtoken using token 'invalidtoken'
+[DEBUG]  98515 2013-06-14 12:53:16 LB - Cache read: http://www.example.com/posts/restricted.json?token=token
+[ INFO]  98515 2013-06-14 12:53:16 LB - Started GET "/posts/restricted.json?token=token" for 127.0.0.1 at 2013-06-14 12:53:16 -0400
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[35m (0.2ms)[0m  SELECT current_value FROM system_parameters WHERE parameter = 'time_offset'
+[DEBUG]  98515 2013-06-14 12:53:16 LB::PostsController - Authenticated Provider::1 http://www.example.com/posts/restricted.json?token=token
+[DEBUG]  98515 2013-06-14 12:53:16 LB - Cache read: http://www.example.com/posts/restricted.json?
+[ INFO]  98515 2013-06-14 12:53:16 LB - Started GET "/posts/restricted.json" for 127.0.0.1 at 2013-06-14 12:53:16 -0400
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98515 2013-06-14 12:53:16 LB::PostsController - Authenticated Provider::1 http://www.example.com/posts/restricted.json
+[DEBUG]  98515 2013-06-14 12:53:16 LB - Cache read: http://www.example.com/posts/restricted.html?
+[ INFO]  98515 2013-06-14 12:53:16 LB - Started GET "/posts/restricted.html" for 127.0.0.1 at 2013-06-14 12:53:16 -0400
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[35m (0.2ms)[0m  SELECT current_value FROM system_parameters WHERE parameter = 'time_offset'
+[DEBUG]  98515 2013-06-14 12:53:16 LB::PostsController - Attempted to access http://www.example.com/posts/restricted.html without a token
+[DEBUG]  98515 2013-06-14 12:53:16 LB - Cache read: http://www.example.com/posts/special_access.json?token=token
+[ INFO]  98515 2013-06-14 12:53:16 LB - Started GET "/posts/special_access.json?token=token" for 127.0.0.1 at 2013-06-14 12:53:16 -0400
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98515 2013-06-14 12:53:16 LB::PostsController - Authenticated Provider::1 http://www.example.com/posts/special_access.json?token=token
+[DEBUG]  98515 2013-06-14 12:53:16 LB::PostsController - Access denied for http://www.example.com/posts/special_access.json?token=token using token 'token'
+[DEBUG]  98515 2013-06-14 12:53:16 LB - Cache read: http://www.example.com/posts/cookies_action.json?
+[ INFO]  98515 2013-06-14 12:53:16 LB - Started GET "/posts/cookies_action.json" for 127.0.0.1 at 2013-06-14 12:53:16 -0400
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[35m (0.2ms)[0m  SELECT current_value FROM system_parameters WHERE parameter = 'time_offset'
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[36mSQL (2.4ms)[0m  [1mDELETE FROM "posts"[0m
+[DEBUG]  98515 2013-06-14 12:53:16 LB - Cache read: http://www.example.com/posts/123.json?
+[ INFO]  98515 2013-06-14 12:53:16 LB - Started GET "/posts/123.json" for 127.0.0.1 at 2013-06-14 12:53:16 -0400
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[35m (0.3ms)[0m  SELECT current_value FROM system_parameters WHERE parameter = 'time_offset'
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[36mPost Load (1.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "123"]]
+[ERROR]  98515 2013-06-14 12:53:16 LB::PostsController - Couldn't find Post with id=123
+[ERROR]  98515 2013-06-14 12:53:16 LB::PostsController - 
+	/Users/dlangevin/Documents/Projects/lifebooker_common/spec/dummy/app/controllers/posts_controller.rb:26:in `show'
+	/Users/dlangevin/Documents/Projects/lifebooker_common/spec/requests/rescue_from_spec.rb:20:in `block (3 levels) in <top (required)>'
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[35mSQL (1.0ms)[0m  DELETE FROM "posts"
+[DEBUG]  98515 2013-06-14 12:53:16 LB - Cache read: http://www.example.com/no_method_error.json?
+[ INFO]  98515 2013-06-14 12:53:16 LB - Started GET "/no_method_error.json" for 127.0.0.1 at 2013-06-14 12:53:16 -0400
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[ERROR]  98515 2013-06-14 12:53:16 LB::ErrorController - Some Message
+[ERROR]  98515 2013-06-14 12:53:16 LB::ErrorController - 
+	/Users/dlangevin/Documents/Projects/lifebooker_common/spec/dummy/app/controllers/error_controller.rb:5:in `no_method_error'
+	/Users/dlangevin/Documents/Projects/lifebooker_common/spec/requests/rescue_from_spec.rb:28:in `block (3 levels) in <top (required)>'
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[35mSQL (0.8ms)[0m  DELETE FROM "posts"
+[DEBUG]  98515 2013-06-14 12:53:16 LB - Cache read: http://www.example.com/argument_error.json?
+[ INFO]  98515 2013-06-14 12:53:16 LB - Started GET "/argument_error.json" for 127.0.0.1 at 2013-06-14 12:53:16 -0400
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[ERROR]  98515 2013-06-14 12:53:16 LB::ErrorController - Another Message
+[ERROR]  98515 2013-06-14 12:53:16 LB::ErrorController - 
+	/Users/dlangevin/Documents/Projects/lifebooker_common/spec/dummy/app/controllers/error_controller.rb:8:in `argument_error'
+	/Users/dlangevin/Documents/Projects/lifebooker_common/spec/requests/rescue_from_spec.rb:35:in `block (3 levels) in <top (required)>'
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[35m (0.9ms)[0m  DROP TABLE "posts"
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[36m (0.8ms)[0m  [1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "user_id" integer, "protected_field" varchar(255), "private_field" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[35mSQL (0.7ms)[0m  DELETE FROM "posts"
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[35mSQL (0.8ms)[0m  INSERT INTO "posts" ("body", "created_at", "private_field", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)  [["body", "xyz"], ["created_at", Fri, 14 Jun 2013 16:53:16 UTC +00:00], ["private_field", nil], ["protected_field", nil], ["title", "x"], ["updated_at", Fri, 14 Jun 2013 16:53:16 UTC +00:00], ["user_id", nil]]
+[DEBUG]  98515 2013-06-14 12:53:16 LB -   [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+[DEBUG]  98515 2013-06-14 12:53:16 LB - Cache read: http://www.example.com/posts.xml?
+[DEBUG]  98515 2013-06-14 12:53:16 LB - Cache write: 73cbb812fe55113096639e8006848703096a343b
+[DEBUG]  98515 2013-06-14 12:53:16 LB - Cache read: 73cbb812fe55113096639e8006848703096a343b
+[DEBUG]  98515 2013-06-14 12:53:16 LB - Cache read: http://www.example.com/posts.xml?
+[DEBUG]  98515 2013-06-14 12:53:17 LB - Cache write: http://www.example.com/posts.xml?
+[DEBUG]  98515 2013-06-14 12:53:17 LB -   [1m[35mSQL (0.7ms)[0m  DELETE FROM "posts"
+[DEBUG]  98515 2013-06-14 12:53:17 LB -   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+[DEBUG]  98515 2013-06-14 12:53:17 LB -   [1m[35mSQL (0.7ms)[0m  INSERT INTO "posts" ("body", "created_at", "private_field", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)  [["body", "xyz"], ["created_at", Fri, 14 Jun 2013 16:53:17 UTC +00:00], ["private_field", nil], ["protected_field", nil], ["title", "x"], ["updated_at", Fri, 14 Jun 2013 16:53:17 UTC +00:00], ["user_id", nil]]
+[DEBUG]  98515 2013-06-14 12:53:17 LB -   [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+[DEBUG]  98515 2013-06-14 12:53:17 LB - Cache read: http://www.example.com/posts.xml?
+[ INFO]  98515 2013-06-14 12:53:17 LB - Started GET "/posts.xml" for 127.0.0.1 at 2013-06-14 12:53:17 -0400
+[DEBUG]  98515 2013-06-14 12:53:17 LB -   [1m[35m (0.2ms)[0m  SELECT current_value FROM system_parameters WHERE parameter = 'time_offset'
+[DEBUG]  98515 2013-06-14 12:53:17 LB -   [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+[DEBUG]  98515 2013-06-14 12:53:17 LB - Cache read: http://www.example.com/posts/2.xml?
+[ INFO]  98515 2013-06-14 12:53:17 LB - Started GET "/posts/2.xml" for 127.0.0.1 at 2013-06-14 12:53:17 -0400
+[DEBUG]  98515 2013-06-14 12:53:17 LB -   [1m[35m (0.2ms)[0m  SELECT current_value FROM system_parameters WHERE parameter = 'time_offset'
+[DEBUG]  98515 2013-06-14 12:53:17 LB -   [1m[36mPost Load (0.9ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "2"]]
+[DEBUG]  98515 2013-06-14 12:53:17 LB -   [1m[35mSQL (0.8ms)[0m  DELETE FROM "posts"
+[DEBUG]  98515 2013-06-14 12:53:17 LB -   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+[DEBUG]  98515 2013-06-14 12:53:17 LB -   [1m[35mSQL (0.8ms)[0m  INSERT INTO "posts" ("body", "created_at", "private_field", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)  [["body", "xyz"], ["created_at", Fri, 14 Jun 2013 16:53:17 UTC +00:00], ["private_field", nil], ["protected_field", nil], ["title", "x"], ["updated_at", Fri, 14 Jun 2013 16:53:17 UTC +00:00], ["user_id", nil]]
+[DEBUG]  98515 2013-06-14 12:53:17 LB -   [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+[DEBUG]  98515 2013-06-14 12:53:17 LB - Cache read: http://www.example.com/posts.xml?
+[DEBUG]  98515 2013-06-14 12:53:17 LB - Cache write: 647ab89483df35737ea29c492c896e28d301653b
+[DEBUG]  98515 2013-06-14 12:53:17 LB - Cache read: 647ab89483df35737ea29c492c896e28d301653b
+[DEBUG]  98515 2013-06-14 12:53:17 LB - Cache read: http://www.example.com/posts.xml?
+[DEBUG]  98515 2013-06-14 12:53:17 LB - Cache write: http://www.example.com/posts.xml?
+[DEBUG]  98515 2013-06-14 12:53:17 LB - Cache read: http://www.example.com/posts?
+[ INFO]  98515 2013-06-14 12:53:17 LB - Started GET "/posts" for 127.0.0.1 at 2013-06-14 12:53:17 -0400
+[DEBUG]  98515 2013-06-14 12:53:17 LB -   [1m[35m (0.2ms)[0m  SELECT current_value FROM system_parameters WHERE parameter = 'time_offset'
+[DEBUG]  98515 2013-06-14 12:53:17 LB -   [1m[36mPost Load (0.9ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+[DEBUG]  98515 2013-06-14 12:53:17 LB -   [1m[35mSQL (0.8ms)[0m  DELETE FROM "posts"
+[DEBUG]  98515 2013-06-14 12:53:17 LB -   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+[DEBUG]  98515 2013-06-14 12:53:17 LB -   [1m[35mSQL (0.8ms)[0m  INSERT INTO "posts" ("body", "created_at", "private_field", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)  [["body", "xyz"], ["created_at", Fri, 14 Jun 2013 16:53:17 UTC +00:00], ["private_field", nil], ["protected_field", nil], ["title", "x"], ["updated_at", Fri, 14 Jun 2013 16:53:17 UTC +00:00], ["user_id", nil]]
+[DEBUG]  98515 2013-06-14 12:53:17 LB -   [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+[DEBUG]  98515 2013-06-14 12:53:17 LB - Cache read: http://www.example.com/posts.xml?
+[ INFO]  98515 2013-06-14 12:53:17 LB - Started GET "/posts.xml" for 127.0.0.1 at 2013-06-14 12:53:17 -0400
+[DEBUG]  98515 2013-06-14 12:53:17 LB -   [1m[35m (0.2ms)[0m  SELECT current_value FROM system_parameters WHERE parameter = 'time_offset'
+[DEBUG]  98515 2013-06-14 12:53:17 LB -   [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+[DEBUG]  98515 2013-06-14 12:53:17 LB -   [1m[35mSQL (0.9ms)[0m  DELETE FROM "posts"
+[DEBUG]  98515 2013-06-14 12:53:17 LB -   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+[DEBUG]  98515 2013-06-14 12:53:17 LB -   [1m[35mSQL (0.7ms)[0m  INSERT INTO "posts" ("body", "created_at", "private_field", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)  [["body", "xyz"], ["created_at", Fri, 14 Jun 2013 16:53:17 UTC +00:00], ["private_field", nil], ["protected_field", nil], ["title", "x"], ["updated_at", Fri, 14 Jun 2013 16:53:17 UTC +00:00], ["user_id", nil]]
+[DEBUG]  98515 2013-06-14 12:53:17 LB -   [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+[DEBUG]  98515 2013-06-14 12:53:17 LB - Cache read: http://www.example.com/posts.xml?
+[ INFO]  98515 2013-06-14 12:53:17 LB - Started GET "/posts.xml" for 127.0.0.1 at 2013-06-14 12:53:17 -0400
+[DEBUG]  98515 2013-06-14 12:53:17 LB -   [1m[35m (0.3ms)[0m  SELECT current_value FROM system_parameters WHERE parameter = 'time_offset'
+[DEBUG]  98515 2013-06-14 12:53:17 LB -   [1m[36mPost Load (1.3ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+[DEBUG]  98515 2013-06-14 12:53:17 LB - Cache read: http://www.example.com/posts.xml?
+[ INFO]  98515 2013-06-14 12:53:17 LB - Started GET "/posts.xml" for 127.0.0.1 at 2013-06-14 12:53:17 -0400
+[DEBUG]  98515 2013-06-14 12:53:17 LB -   [1m[35m (0.2ms)[0m  SELECT current_value FROM system_parameters WHERE parameter = 'time_offset'
+[DEBUG]  98515 2013-06-14 12:53:17 LB -   [1m[36mPost Load (0.9ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+[DEBUG]  99446 2013-06-14 16:01:26 LB -   [1m[36m (22.8ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  99446 2013-06-14 16:01:27 LB -   [1m[35m (0.2ms)[0m  SELECT current_value FROM system_parameters WHERE parameter = 'time_offset'
+[DEBUG]  99446 2013-06-14 16:01:27 LB - Cache read: UserLogin::Permissions::2b95653afc0ea6cf08476febab09caf2cf9ad71f0899f419798136cad1ce58eb ({:expires_in=>5 seconds})
+[DEBUG]  99446 2013-06-14 16:01:27 LB - Cache generate: UserLogin::Permissions::2b95653afc0ea6cf08476febab09caf2cf9ad71f0899f419798136cad1ce58eb ({:expires_in=>5 seconds})
+[DEBUG]  99446 2013-06-14 16:01:27 LB::PostsController - Fetching and caching token 2b95653afc0ea6cf08476febab09caf2cf9ad71f0899f419798136cad1ce58eb for 5 seconds
+[DEBUG]  99446 2013-06-14 16:01:27 LB - Cache write: UserLogin::Permissions::2b95653afc0ea6cf08476febab09caf2cf9ad71f0899f419798136cad1ce58eb ({:expires_in=>5 seconds})
+[DEBUG]  99446 2013-06-14 16:01:27 LB::PostsController - Authenticated :: http://test.host/posts/restricted.json?token=2b95653afc0ea6cf08476febab09caf2cf9ad71f0899f419798136cad1ce58eb
+[DEBUG]  99446 2013-06-14 16:01:27 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  99446 2013-06-14 16:01:27 LB - Cache read: UserLogin::Permissions::2b95653afc0ea6cf08476febab09caf2cf9ad71f0899f419798136cad1ce58eb ({:expires_in=>5 seconds})
+[DEBUG]  99446 2013-06-14 16:01:27 LB - Cache fetch_hit: UserLogin::Permissions::2b95653afc0ea6cf08476febab09caf2cf9ad71f0899f419798136cad1ce58eb ({:expires_in=>5 seconds})
+[DEBUG]  99446 2013-06-14 16:01:27 LB::PostsController - Authenticated :: http://test.host/posts/restricted.json?token=2b95653afc0ea6cf08476febab09caf2cf9ad71f0899f419798136cad1ce58eb
+[DEBUG]  99446 2013-06-14 16:01:28 LB -   [1m[35m (0.2ms)[0m  SELECT current_value FROM system_parameters WHERE parameter = 'time_offset'
+[DEBUG]  99446 2013-06-14 16:01:28 LB::PostsController - Authenticated Provider::1 http://test.host/posts/restricted.json?token=token
+[DEBUG]  99446 2013-06-14 16:01:28 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  99446 2013-06-14 16:01:28 LB -   [1m[35m (0.2ms)[0m  select sqlite_version(*)
+[DEBUG]  99446 2013-06-14 16:01:28 LB -   [1m[36m (1.1ms)[0m  [1mDROP TABLE "system_parameters"[0m
+[DEBUG]  99446 2013-06-14 16:01:28 LB -   [1m[35m (0.9ms)[0m  CREATE TABLE "system_parameters" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "parameter" varchar(255), "current_value" integer) 
+[DEBUG]  99446 2013-06-14 16:01:28 LB -   [1m[36m (0.7ms)[0m  [1mINSERT INTO system_parameters (parameter, current_value) VALUES ('time_offset', 0)[0m
+[DEBUG]  99446 2013-06-14 16:01:28 LB -   [1m[35m (0.7ms)[0m  UPDATE system_parameters SET current_value = '0' WHERE parameter = 'time_offset'
+[DEBUG]  99446 2013-06-14 16:01:28 LB -   [1m[36m (0.1ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  99446 2013-06-14 16:01:28 LB -   [1m[35m (0.8ms)[0m  UPDATE system_parameters SET current_value = '247' WHERE parameter = 'time_offset'
+[DEBUG]  99446 2013-06-14 16:01:28 LB -   [1m[36m (0.1ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  99446 2013-06-14 16:05:35 LB -   [1m[35m (1.1ms)[0m  UPDATE system_parameters SET current_value = '0' WHERE parameter = 'time_offset'
+[DEBUG]  99446 2013-06-14 16:01:28 LB -   [1m[36m (0.3ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[ INFO]  99446 2013-06-14 16:01:28 LB::Object - Test
+[ INFO]  99446 2013-06-14 16:01:28 LB::Object - Test
+[DEBUG]  99446 2013-06-14 16:01:29 LB -   [1m[35m (2.4ms)[0m  DROP TABLE "posts"
+[DEBUG]  99446 2013-06-14 16:01:29 LB -   [1m[36m (0.9ms)[0m  [1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "user_id" integer, "protected_field" varchar(255), "private_field" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+[DEBUG]  99446 2013-06-14 16:01:29 LB -   [1m[35m (0.7ms)[0m  DROP TABLE "users"
+[DEBUG]  99446 2013-06-14 16:01:29 LB -   [1m[36m (0.9ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "bday" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+[DEBUG]  99446 2013-06-14 16:01:29 LB -   [1m[35m (0.9ms)[0m  DROP TABLE "comments"
+[DEBUG]  99446 2013-06-14 16:01:29 LB -   [1m[36m (0.9ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" text, "post_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "type" varchar(255)) [0m
+[DEBUG]  99446 2013-06-14 16:01:29 LB -   [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" 
+[DEBUG]  99446 2013-06-14 16:01:29 LB -   [1m[36mSQL (2.4ms)[0m  [1mDELETE FROM "posts"[0m
+[DEBUG]  99446 2013-06-14 16:01:29 LB -   [1m[35mSQL (0.8ms)[0m  DELETE FROM "posts"
+[DEBUG]  99446 2013-06-14 16:01:29 LB -   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+[DEBUG]  99446 2013-06-14 16:01:29 LB -   [1m[35mSQL (26.0ms)[0m  INSERT INTO "posts" ("body", "created_at", "private_field", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)  [["body", "Body"], ["created_at", Fri, 14 Jun 2013 20:01:29 UTC +00:00], ["private_field", nil], ["protected_field", nil], ["title", "Post"], ["updated_at", Fri, 14 Jun 2013 20:01:29 UTC +00:00], ["user_id", nil]]
+[DEBUG]  99446 2013-06-14 16:01:29 LB -   [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+[DEBUG]  99446 2013-06-14 16:01:29 LB -   [1m[35m (0.1ms)[0m  begin transaction
+[DEBUG]  99446 2013-06-14 16:01:29 LB -   [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "private_field", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["body", "test"], ["created_at", Fri, 14 Jun 2013 20:01:29 UTC +00:00], ["private_field", nil], ["protected_field", nil], ["title", "test"], ["updated_at", Fri, 14 Jun 2013 20:01:29 UTC +00:00], ["user_id", nil]]
+[DEBUG]  99446 2013-06-14 16:01:29 LB -   [1m[35m (0.6ms)[0m  commit transaction
+[DEBUG]  99446 2013-06-14 16:01:29 LB -   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+[DEBUG]  99446 2013-06-14 16:01:29 LB -   [1m[35m (0.3ms)[0m  UPDATE "posts" SET "protected_field" = 'Test', "updated_at" = '2013-06-14 20:01:29.655635' WHERE "posts"."id" = 2
+[DEBUG]  99446 2013-06-14 16:01:29 LB -   [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+[DEBUG]  99446 2013-06-14 16:01:29 LB -   [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 2]]
+[DEBUG]  99446 2013-06-14 16:01:29 LB -   [1m[36m (0.9ms)[0m  [1mDROP TABLE "posts"[0m
+[DEBUG]  99446 2013-06-14 16:01:29 LB -   [1m[35m (0.7ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "user_id" integer, "protected_field" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+[DEBUG]  99446 2013-06-14 16:01:29 LB - Cache read: http://www.example.com/posts.json?
+[ INFO]  99446 2013-06-14 16:01:29 LB - Started GET "/posts.json" for 127.0.0.1 at 2013-06-14 16:01:29 -0400
+[DEBUG]  99446 2013-06-14 16:01:29 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  99446 2013-06-14 16:01:29 LB -   [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" 
+[DEBUG]  99446 2013-06-14 16:01:29 LB - Cache read: http://www.example.com/posts.xml?
+[ INFO]  99446 2013-06-14 16:01:29 LB - Started GET "/posts.xml" for 127.0.0.1 at 2013-06-14 16:01:29 -0400
+[DEBUG]  99446 2013-06-14 16:01:29 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  99446 2013-06-14 16:01:29 LB -   [1m[35mPost Load (0.9ms)[0m  SELECT "posts".* FROM "posts" 
+[DEBUG]  99446 2013-06-14 16:01:29 LB - Cache read: http://www.example.com/posts.html?
+[ INFO]  99446 2013-06-14 16:01:29 LB - Started GET "/posts.html" for 127.0.0.1 at 2013-06-14 16:01:29 -0400
+[DEBUG]  99446 2013-06-14 16:01:29 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  99446 2013-06-14 16:01:29 LB -   [1m[35mPost Load (0.9ms)[0m  SELECT "posts".* FROM "posts" 
+[DEBUG]  99446 2013-06-14 16:01:30 LB - Cache read: http://www.example.com/posts.json?post%5Bbody%5D=The+body&post%5Btitle%5D=My+Post&post%5Buser_id%5D=1
+[ INFO]  99446 2013-06-14 16:01:30 LB - Started POST "/posts.json?post%5Bbody%5D=The+body&post%5Btitle%5D=My+Post&post%5Buser_id%5D=1" for 127.0.0.1 at 2013-06-14 16:01:30 -0400
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[35m (1.1ms)[0m  begin transaction
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["body", "The body"], ["created_at", Fri, 14 Jun 2013 20:01:30 UTC +00:00], ["protected_field", nil], ["title", "My Post"], ["updated_at", Fri, 14 Jun 2013 20:01:30 UTC +00:00], ["user_id", 1]]
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[35m (0.5ms)[0m  commit transaction
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT 1[0m
+[DEBUG]  99446 2013-06-14 16:01:30 LB - Cache read: http://www.example.com/posts/1.html?
+[ INFO]  99446 2013-06-14 16:01:30 LB - Started GET "/posts/1.html" for 127.0.0.1 at 2013-06-14 16:01:30 -0400
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[35m (0.2ms)[0m  SELECT current_value FROM system_parameters WHERE parameter = 'time_offset'
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+[DEBUG]  99446 2013-06-14 16:01:30 LB - Cache read: http://www.example.com/posts.json?post%5Bbody%5D=The+body&post%5Btitle%5D=My+Post&post%5Buser_id%5D=1
+[ INFO]  99446 2013-06-14 16:01:30 LB - Started POST "/posts.json?post%5Bbody%5D=The+body&post%5Btitle%5D=My+Post&post%5Buser_id%5D=1" for 127.0.0.1 at 2013-06-14 16:01:30 -0400
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[35m (0.2ms)[0m  SELECT current_value FROM system_parameters WHERE parameter = 'time_offset'
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[36m (1.1ms)[0m  [1mbegin transaction[0m
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[35mSQL (0.7ms)[0m  INSERT INTO "posts" ("body", "created_at", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["body", "The body"], ["created_at", Fri, 14 Jun 2013 20:01:30 UTC +00:00], ["protected_field", nil], ["title", "My Post"], ["updated_at", Fri, 14 Jun 2013 20:01:30 UTC +00:00], ["user_id", 1]]
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT 1
+[DEBUG]  99446 2013-06-14 16:01:30 LB - Cache read: http://www.example.com/posts/2.html?
+[ INFO]  99446 2013-06-14 16:01:30 LB - Started GET "/posts/2.html" for 127.0.0.1 at 2013-06-14 16:01:30 -0400
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[36m (0.1ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[35mPost Load (0.8ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "2"]]
+[DEBUG]  99446 2013-06-14 16:01:30 LB - Cache read: http://www.example.com/posts.json?post%5Bbody%5D=The+body&post%5Btitle%5D=My+Post&post%5Buser_id%5D=1
+[ INFO]  99446 2013-06-14 16:01:30 LB - Started POST "/posts.json?post%5Bbody%5D=The+body&post%5Btitle%5D=My+Post&post%5Buser_id%5D=1" for 127.0.0.1 at 2013-06-14 16:01:30 -0400
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[36m (0.3ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[35m (1.4ms)[0m  begin transaction
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["body", "The body"], ["created_at", Fri, 14 Jun 2013 20:01:30 UTC +00:00], ["protected_field", nil], ["title", "My Post"], ["updated_at", Fri, 14 Jun 2013 20:01:30 UTC +00:00], ["user_id", 1]]
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[35m (0.7ms)[0m  commit transaction
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT 1[0m
+[DEBUG]  99446 2013-06-14 16:01:30 LB - Cache read: http://www.example.com/posts.json?post%5Bbody%5D=The+body&post%5Buser_id%5D=1
+[ INFO]  99446 2013-06-14 16:01:30 LB - Started POST "/posts.json?post%5Bbody%5D=The+body&post%5Buser_id%5D=1" for 127.0.0.1 at 2013-06-14 16:01:30 -0400
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[35m (0.2ms)[0m  SELECT current_value FROM system_parameters WHERE parameter = 'time_offset'
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[35m (0.1ms)[0m  rollback transaction
+[DEBUG]  99446 2013-06-14 16:01:30 LB::PostsController - Failed Saving Post::0 - {:title=>["can't be blank"]}
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[35mSQL (0.7ms)[0m  INSERT INTO "posts" ("body", "created_at", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["body", "The body"], ["created_at", Fri, 14 Jun 2013 20:01:30 UTC +00:00], ["protected_field", nil], ["title", "My Post"], ["updated_at", Fri, 14 Jun 2013 20:01:30 UTC +00:00], ["user_id", 1]]
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT 1
+[DEBUG]  99446 2013-06-14 16:01:30 LB - Cache read: http://www.example.com/posts/4.json?post%5Bbody%5D=The+body&post%5Btitle%5D=My+New+Title&post%5Buser_id%5D=1
+[ INFO]  99446 2013-06-14 16:01:30 LB - Started PUT "/posts/4.json?post%5Bbody%5D=The+body&post%5Btitle%5D=My+New+Title&post%5Buser_id%5D=1" for 127.0.0.1 at 2013-06-14 16:01:30 -0400
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[35mPost Load (0.9ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "4"]]
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[35m (0.3ms)[0m  UPDATE "posts" SET "title" = 'My New Title', "updated_at" = '2013-06-14 20:01:30.253165' WHERE "posts"."id" = 4
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT 1
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[35mSQL (0.8ms)[0m  INSERT INTO "posts" ("body", "created_at", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["body", "The body"], ["created_at", Fri, 14 Jun 2013 20:01:30 UTC +00:00], ["protected_field", nil], ["title", "My Post"], ["updated_at", Fri, 14 Jun 2013 20:01:30 UTC +00:00], ["user_id", 1]]
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT 1
+[DEBUG]  99446 2013-06-14 16:01:30 LB - Cache read: http://www.example.com/posts/5.json?post%5Bbody%5D=The+body&post%5Btitle%5D=&post%5Buser_id%5D=1
+[ INFO]  99446 2013-06-14 16:01:30 LB - Started PUT "/posts/5.json?post%5Bbody%5D=The+body&post%5Btitle%5D=&post%5Buser_id%5D=1" for 127.0.0.1 at 2013-06-14 16:01:30 -0400
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[35mPost Load (0.9ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "5"]]
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[35m (0.1ms)[0m  rollback transaction
+[DEBUG]  99446 2013-06-14 16:01:30 LB::PostsController - Failed Saving Post::5 - {:title=>["can't be blank"]}
+[DEBUG]  99446 2013-06-14 16:01:30 LB - Cache read: http://www.example.com/posts/create_with_response.json?post%5Bbody%5D=The+body&post%5Btitle%5D=My+Post&post%5Buser_id%5D=1
+[ INFO]  99446 2013-06-14 16:01:30 LB - Started POST "/posts/create_with_response.json?post%5Bbody%5D=The+body&post%5Btitle%5D=My+Post&post%5Buser_id%5D=1" for 127.0.0.1 at 2013-06-14 16:01:30 -0400
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[35m (0.9ms)[0m  begin transaction
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["body", "The body"], ["created_at", Fri, 14 Jun 2013 20:01:30 UTC +00:00], ["protected_field", nil], ["title", "My Post"], ["updated_at", Fri, 14 Jun 2013 20:01:30 UTC +00:00], ["user_id", 1]]
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[35m (0.5ms)[0m  commit transaction
+[DEBUG]  99446 2013-06-14 16:01:30 LB - Cache read: http://www.example.com/posts/create_with_response.json?
+[ INFO]  99446 2013-06-14 16:01:30 LB - Started POST "/posts/create_with_response.json" for 127.0.0.1 at 2013-06-14 16:01:30 -0400
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[35m (0.9ms)[0m  begin transaction
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+[DEBUG]  99446 2013-06-14 16:01:30 LB::PostsController - Failed Saving Post::0 - {:title=>["can't be blank"]}
+[DEBUG]  99446 2013-06-14 16:01:30 LB - Cache read: http://www.example.com/posts.json?post%5Bbody%5D=The+body&post%5Btitle%5D=My+Post&post%5Buser_id%5D=1
+[ INFO]  99446 2013-06-14 16:01:30 LB - Started POST "/posts.json?post%5Bbody%5D=The+body&post%5Btitle%5D=My+Post&post%5Buser_id%5D=1" for 127.0.0.1 at 2013-06-14 16:01:30 -0400
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[35m (0.2ms)[0m  SELECT current_value FROM system_parameters WHERE parameter = 'time_offset'
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[36m (0.9ms)[0m  [1mbegin transaction[0m
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[35mSQL (0.7ms)[0m  INSERT INTO "posts" ("body", "created_at", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["body", "The body"], ["created_at", Fri, 14 Jun 2013 20:01:30 UTC +00:00], ["protected_field", nil], ["title", "My Post"], ["updated_at", Fri, 14 Jun 2013 20:01:30 UTC +00:00], ["user_id", 1]]
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT 1
+[DEBUG]  99446 2013-06-14 16:01:30 LB - Cache read: http://www.example.com/posts/7.json?callback=my_callback
+[ INFO]  99446 2013-06-14 16:01:30 LB - Started GET "/posts/7.json?callback=my_callback" for 127.0.0.1 at 2013-06-14 16:01:30 -0400
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[35mPost Load (0.8ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "7"]]
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT 1[0m
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "posts" 
+[DEBUG]  99446 2013-06-14 16:01:30 LB - Cache read: http://www.example.com/posts.json?post%5Bbody%5D=The+body&post%5Buser_id%5D=1
+[ INFO]  99446 2013-06-14 16:01:30 LB - Started POST "/posts.json?post%5Bbody%5D=The+body&post%5Buser_id%5D=1" for 127.0.0.1 at 2013-06-14 16:01:30 -0400
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[35m (0.8ms)[0m  begin transaction
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["body", "The body"], ["created_at", Fri, 14 Jun 2013 20:01:30 UTC +00:00], ["protected_field", nil], ["title", "My Post"], ["updated_at", Fri, 14 Jun 2013 20:01:30 UTC +00:00], ["user_id", 1]]
+[DEBUG]  99446 2013-06-14 16:01:30 LB::PostsController - Failed Saving Post::0 - {:title=>["can't be blank"]}
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[35m (0.3ms)[0m  rollback transaction
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "posts" [0m
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[35m (0.1ms)[0m  begin transaction
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["body", "The body"], ["created_at", Fri, 14 Jun 2013 20:01:30 UTC +00:00], ["protected_field", nil], ["title", "My Post"], ["updated_at", Fri, 14 Jun 2013 20:01:30 UTC +00:00], ["user_id", 1]]
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[35m (0.5ms)[0m  commit transaction
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts" [0m
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT 1
+[DEBUG]  99446 2013-06-14 16:01:30 LB - Cache read: http://www.example.com/posts/8.json?post%5Bbody%5D=The+body&post%5Btitle%5D=&post%5Buser_id%5D=1
+[ INFO]  99446 2013-06-14 16:01:30 LB - Started PUT "/posts/8.json?post%5Bbody%5D=The+body&post%5Btitle%5D=&post%5Buser_id%5D=1" for 127.0.0.1 at 2013-06-14 16:01:30 -0400
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[35mPost Load (0.8ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "8"]]
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[35mSQL (0.7ms)[0m  INSERT INTO "posts" ("body", "created_at", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["body", "The body"], ["created_at", Fri, 14 Jun 2013 20:01:30 UTC +00:00], ["protected_field", nil], ["title", "My Post"], ["updated_at", Fri, 14 Jun 2013 20:01:30 UTC +00:00], ["user_id", 1]]
+[DEBUG]  99446 2013-06-14 16:01:30 LB::PostsController - Failed Saving Post::8 - {:title=>["can't be blank"]}
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "posts" 
+[DEBUG]  99446 2013-06-14 16:01:30 LB - Cache read: http://www.example.com/posts.json?post%5Bbody%5D=The+body&post%5Btitle%5D=My+Post&post%5Buser_id%5D=1
+[ INFO]  99446 2013-06-14 16:01:30 LB - Started POST "/posts.json?post%5Bbody%5D=The+body&post%5Btitle%5D=My+Post&post%5Buser_id%5D=1" for 127.0.0.1 at 2013-06-14 16:01:30 -0400
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[35m (1.1ms)[0m  begin transaction
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("body", "created_at", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["body", "The body"], ["created_at", Fri, 14 Jun 2013 20:01:30 UTC +00:00], ["protected_field", nil], ["title", "My Post"], ["updated_at", Fri, 14 Jun 2013 20:01:30 UTC +00:00], ["user_id", 1]]
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[35m (2.1ms)[0m  commit transaction
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT 1[0m
+[DEBUG]  99446 2013-06-14 16:01:30 LB - Cache read: http://www.example.com/posts/restricted.json?
+[ INFO]  99446 2013-06-14 16:01:30 LB - Started GET "/posts/restricted.json" for 127.0.0.1 at 2013-06-14 16:01:30 -0400
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[35m (0.2ms)[0m  SELECT current_value FROM system_parameters WHERE parameter = 'time_offset'
+[DEBUG]  99446 2013-06-14 16:01:30 LB::PostsController - Attempted to access http://www.example.com/posts/restricted.json without a token
+[DEBUG]  99446 2013-06-14 16:01:30 LB - Cache read: http://www.example.com/posts/restricted.json?token=invalidtoken
+[ INFO]  99446 2013-06-14 16:01:30 LB - Started GET "/posts/restricted.json?token=invalidtoken" for 127.0.0.1 at 2013-06-14 16:01:30 -0400
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  99446 2013-06-14 16:01:30 LB::PostsController - Authentication failure invalidtoken http://www.example.com/posts/restricted.json?token=invalidtoken
+[DEBUG]  99446 2013-06-14 16:01:30 LB::PostsController - Access denied for http://www.example.com/posts/restricted.json?token=invalidtoken using token 'invalidtoken'
+[DEBUG]  99446 2013-06-14 16:01:30 LB - Cache read: http://www.example.com/posts/restricted.json?token=token
+[ INFO]  99446 2013-06-14 16:01:30 LB - Started GET "/posts/restricted.json?token=token" for 127.0.0.1 at 2013-06-14 16:01:30 -0400
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[35m (0.2ms)[0m  SELECT current_value FROM system_parameters WHERE parameter = 'time_offset'
+[DEBUG]  99446 2013-06-14 16:01:30 LB::PostsController - Authenticated Provider::1 http://www.example.com/posts/restricted.json?token=token
+[DEBUG]  99446 2013-06-14 16:01:30 LB - Cache read: http://www.example.com/posts/restricted.json?
+[ INFO]  99446 2013-06-14 16:01:30 LB - Started GET "/posts/restricted.json" for 127.0.0.1 at 2013-06-14 16:01:30 -0400
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  99446 2013-06-14 16:01:30 LB::PostsController - Authenticated Provider::1 http://www.example.com/posts/restricted.json
+[DEBUG]  99446 2013-06-14 16:01:30 LB - Cache read: http://www.example.com/posts/restricted.html?
+[ INFO]  99446 2013-06-14 16:01:30 LB - Started GET "/posts/restricted.html" for 127.0.0.1 at 2013-06-14 16:01:30 -0400
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[35m (0.2ms)[0m  SELECT current_value FROM system_parameters WHERE parameter = 'time_offset'
+[DEBUG]  99446 2013-06-14 16:01:30 LB::PostsController - Attempted to access http://www.example.com/posts/restricted.html without a token
+[DEBUG]  99446 2013-06-14 16:01:30 LB - Cache read: http://www.example.com/posts/special_access.json?token=token
+[ INFO]  99446 2013-06-14 16:01:30 LB - Started GET "/posts/special_access.json?token=token" for 127.0.0.1 at 2013-06-14 16:01:30 -0400
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  99446 2013-06-14 16:01:30 LB::PostsController - Authenticated Provider::1 http://www.example.com/posts/special_access.json?token=token
+[DEBUG]  99446 2013-06-14 16:01:30 LB::PostsController - Access denied for http://www.example.com/posts/special_access.json?token=token using token 'token'
+[DEBUG]  99446 2013-06-14 16:01:30 LB - Cache read: http://www.example.com/posts/cookies_action.json?
+[ INFO]  99446 2013-06-14 16:01:30 LB - Started GET "/posts/cookies_action.json" for 127.0.0.1 at 2013-06-14 16:01:30 -0400
+[DEBUG]  99446 2013-06-14 16:01:30 LB -   [1m[35m (0.2ms)[0m  SELECT current_value FROM system_parameters WHERE parameter = 'time_offset'
+[DEBUG]  99446 2013-06-14 16:01:31 LB -   [1m[36mSQL (2.1ms)[0m  [1mDELETE FROM "posts"[0m
+[DEBUG]  99446 2013-06-14 16:01:31 LB - Cache read: http://www.example.com/posts/123.json?
+[ INFO]  99446 2013-06-14 16:01:31 LB - Started GET "/posts/123.json" for 127.0.0.1 at 2013-06-14 16:01:31 -0400
+[DEBUG]  99446 2013-06-14 16:01:31 LB -   [1m[35m (0.2ms)[0m  SELECT current_value FROM system_parameters WHERE parameter = 'time_offset'
+[DEBUG]  99446 2013-06-14 16:01:31 LB -   [1m[36mPost Load (1.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "123"]]
+[ERROR]  99446 2013-06-14 16:01:31 LB::PostsController - Couldn't find Post with id=123
+[ERROR]  99446 2013-06-14 16:01:31 LB::PostsController - 
+	/Users/dlangevin/Documents/Projects/lifebooker_common/spec/dummy/app/controllers/posts_controller.rb:26:in `show'
+	/Users/dlangevin/Documents/Projects/lifebooker_common/spec/requests/rescue_from_spec.rb:20:in `block (3 levels) in <top (required)>'
+[DEBUG]  99446 2013-06-14 16:01:31 LB -   [1m[35mSQL (0.8ms)[0m  DELETE FROM "posts"
+[DEBUG]  99446 2013-06-14 16:01:31 LB - Cache read: http://www.example.com/no_method_error.json?
+[ INFO]  99446 2013-06-14 16:01:31 LB - Started GET "/no_method_error.json" for 127.0.0.1 at 2013-06-14 16:01:31 -0400
+[DEBUG]  99446 2013-06-14 16:01:31 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[ERROR]  99446 2013-06-14 16:01:31 LB::ErrorController - Some Message
+[ERROR]  99446 2013-06-14 16:01:31 LB::ErrorController - 
+	/Users/dlangevin/Documents/Projects/lifebooker_common/spec/dummy/app/controllers/error_controller.rb:5:in `no_method_error'
+	/Users/dlangevin/Documents/Projects/lifebooker_common/spec/requests/rescue_from_spec.rb:28:in `block (3 levels) in <top (required)>'
+[DEBUG]  99446 2013-06-14 16:01:31 LB -   [1m[35mSQL (0.7ms)[0m  DELETE FROM "posts"
+[DEBUG]  99446 2013-06-14 16:01:31 LB - Cache read: http://www.example.com/argument_error.json?
+[ INFO]  99446 2013-06-14 16:01:31 LB - Started GET "/argument_error.json" for 127.0.0.1 at 2013-06-14 16:01:31 -0400
+[DEBUG]  99446 2013-06-14 16:01:31 LB -   [1m[36m (0.2ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[ERROR]  99446 2013-06-14 16:01:31 LB::ErrorController - Another Message
+[ERROR]  99446 2013-06-14 16:01:31 LB::ErrorController - 
+	/Users/dlangevin/Documents/Projects/lifebooker_common/spec/dummy/app/controllers/error_controller.rb:8:in `argument_error'
+	/Users/dlangevin/Documents/Projects/lifebooker_common/spec/requests/rescue_from_spec.rb:35:in `block (3 levels) in <top (required)>'
+[DEBUG]  99446 2013-06-14 16:01:31 LB -   [1m[35m (0.9ms)[0m  DROP TABLE "posts"
+[DEBUG]  99446 2013-06-14 16:01:31 LB -   [1m[36m (0.8ms)[0m  [1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "user_id" integer, "protected_field" varchar(255), "private_field" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+[DEBUG]  99446 2013-06-14 16:01:31 LB -   [1m[35mSQL (0.7ms)[0m  DELETE FROM "posts"
+[DEBUG]  99446 2013-06-14 16:01:31 LB -   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+[DEBUG]  99446 2013-06-14 16:01:31 LB -   [1m[35mSQL (0.9ms)[0m  INSERT INTO "posts" ("body", "created_at", "private_field", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)  [["body", "xyz"], ["created_at", Fri, 14 Jun 2013 20:01:31 UTC +00:00], ["private_field", nil], ["protected_field", nil], ["title", "x"], ["updated_at", Fri, 14 Jun 2013 20:01:31 UTC +00:00], ["user_id", nil]]
+[DEBUG]  99446 2013-06-14 16:01:31 LB -   [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+[DEBUG]  99446 2013-06-14 16:01:31 LB - Cache read: http://www.example.com/posts.xml?
+[DEBUG]  99446 2013-06-14 16:01:31 LB - Cache write: 73cbb812fe55113096639e8006848703096a343b
+[DEBUG]  99446 2013-06-14 16:01:31 LB - Cache read: 73cbb812fe55113096639e8006848703096a343b
+[DEBUG]  99446 2013-06-14 16:01:31 LB - Cache read: http://www.example.com/posts.xml?
+[DEBUG]  99446 2013-06-14 16:01:31 LB - Cache write: http://www.example.com/posts.xml?
+[DEBUG]  99446 2013-06-14 16:01:31 LB -   [1m[35mSQL (0.9ms)[0m  DELETE FROM "posts"
+[DEBUG]  99446 2013-06-14 16:01:31 LB -   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+[DEBUG]  99446 2013-06-14 16:01:31 LB -   [1m[35mSQL (0.7ms)[0m  INSERT INTO "posts" ("body", "created_at", "private_field", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)  [["body", "xyz"], ["created_at", Fri, 14 Jun 2013 20:01:31 UTC +00:00], ["private_field", nil], ["protected_field", nil], ["title", "x"], ["updated_at", Fri, 14 Jun 2013 20:01:31 UTC +00:00], ["user_id", nil]]
+[DEBUG]  99446 2013-06-14 16:01:31 LB -   [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+[DEBUG]  99446 2013-06-14 16:01:31 LB - Cache read: http://www.example.com/posts.xml?
+[ INFO]  99446 2013-06-14 16:01:31 LB - Started GET "/posts.xml" for 127.0.0.1 at 2013-06-14 16:01:31 -0400
+[DEBUG]  99446 2013-06-14 16:01:31 LB -   [1m[35m (0.3ms)[0m  SELECT current_value FROM system_parameters WHERE parameter = 'time_offset'
+[DEBUG]  99446 2013-06-14 16:01:31 LB -   [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+[DEBUG]  99446 2013-06-14 16:01:31 LB - Cache read: http://www.example.com/posts/2.xml?
+[ INFO]  99446 2013-06-14 16:01:31 LB - Started GET "/posts/2.xml" for 127.0.0.1 at 2013-06-14 16:01:31 -0400
+[DEBUG]  99446 2013-06-14 16:01:31 LB -   [1m[35m (0.2ms)[0m  SELECT current_value FROM system_parameters WHERE parameter = 'time_offset'
+[DEBUG]  99446 2013-06-14 16:01:31 LB -   [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "2"]]
+[DEBUG]  99446 2013-06-14 16:01:31 LB -   [1m[35mSQL (0.7ms)[0m  DELETE FROM "posts"
+[DEBUG]  99446 2013-06-14 16:01:31 LB -   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+[DEBUG]  99446 2013-06-14 16:01:31 LB -   [1m[35mSQL (0.7ms)[0m  INSERT INTO "posts" ("body", "created_at", "private_field", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)  [["body", "xyz"], ["created_at", Fri, 14 Jun 2013 20:01:31 UTC +00:00], ["private_field", nil], ["protected_field", nil], ["title", "x"], ["updated_at", Fri, 14 Jun 2013 20:01:31 UTC +00:00], ["user_id", nil]]
+[DEBUG]  99446 2013-06-14 16:01:31 LB -   [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+[DEBUG]  99446 2013-06-14 16:01:31 LB - Cache read: http://www.example.com/posts.xml?
+[DEBUG]  99446 2013-06-14 16:01:31 LB - Cache write: 2246b0bcecabd0fb8e7480f446a38fa02d696e08
+[DEBUG]  99446 2013-06-14 16:01:31 LB - Cache read: 2246b0bcecabd0fb8e7480f446a38fa02d696e08
+[DEBUG]  99446 2013-06-14 16:01:31 LB - Cache read: http://www.example.com/posts.xml?
+[DEBUG]  99446 2013-06-14 16:01:31 LB - Cache write: http://www.example.com/posts.xml?
+[DEBUG]  99446 2013-06-14 16:01:31 LB - Cache read: http://www.example.com/posts?
+[ INFO]  99446 2013-06-14 16:01:31 LB - Started GET "/posts" for 127.0.0.1 at 2013-06-14 16:01:31 -0400
+[DEBUG]  99446 2013-06-14 16:01:31 LB -   [1m[35m (0.2ms)[0m  SELECT current_value FROM system_parameters WHERE parameter = 'time_offset'
+[DEBUG]  99446 2013-06-14 16:01:31 LB -   [1m[36mPost Load (0.9ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+[DEBUG]  99446 2013-06-14 16:01:31 LB -   [1m[35mSQL (1.1ms)[0m  DELETE FROM "posts"
+[DEBUG]  99446 2013-06-14 16:01:31 LB -   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+[DEBUG]  99446 2013-06-14 16:01:31 LB -   [1m[35mSQL (0.7ms)[0m  INSERT INTO "posts" ("body", "created_at", "private_field", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)  [["body", "xyz"], ["created_at", Fri, 14 Jun 2013 20:01:31 UTC +00:00], ["private_field", nil], ["protected_field", nil], ["title", "x"], ["updated_at", Fri, 14 Jun 2013 20:01:31 UTC +00:00], ["user_id", nil]]
+[DEBUG]  99446 2013-06-14 16:01:31 LB -   [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+[DEBUG]  99446 2013-06-14 16:01:31 LB - Cache read: http://www.example.com/posts.xml?
+[ INFO]  99446 2013-06-14 16:01:31 LB - Started GET "/posts.xml" for 127.0.0.1 at 2013-06-14 16:01:31 -0400
+[DEBUG]  99446 2013-06-14 16:01:31 LB -   [1m[35m (0.2ms)[0m  SELECT current_value FROM system_parameters WHERE parameter = 'time_offset'
+[DEBUG]  99446 2013-06-14 16:01:31 LB -   [1m[36mPost Load (0.9ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+[DEBUG]  99446 2013-06-14 16:01:31 LB -   [1m[35mSQL (0.8ms)[0m  DELETE FROM "posts"
+[DEBUG]  99446 2013-06-14 16:01:31 LB -   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+[DEBUG]  99446 2013-06-14 16:01:31 LB -   [1m[35mSQL (0.7ms)[0m  INSERT INTO "posts" ("body", "created_at", "private_field", "protected_field", "title", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)  [["body", "xyz"], ["created_at", Fri, 14 Jun 2013 20:01:31 UTC +00:00], ["private_field", nil], ["protected_field", nil], ["title", "x"], ["updated_at", Fri, 14 Jun 2013 20:01:31 UTC +00:00], ["user_id", nil]]
+[DEBUG]  99446 2013-06-14 16:01:31 LB -   [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+[DEBUG]  99446 2013-06-14 16:01:31 LB - Cache read: http://www.example.com/posts.xml?
+[ INFO]  99446 2013-06-14 16:01:31 LB - Started GET "/posts.xml" for 127.0.0.1 at 2013-06-14 16:01:31 -0400
+[DEBUG]  99446 2013-06-14 16:01:31 LB -   [1m[35m (0.2ms)[0m  SELECT current_value FROM system_parameters WHERE parameter = 'time_offset'
+[DEBUG]  99446 2013-06-14 16:01:31 LB -   [1m[36mPost Load (0.9ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+[DEBUG]  99446 2013-06-14 16:01:31 LB - Cache read: http://www.example.com/posts.xml?
+[ INFO]  99446 2013-06-14 16:01:31 LB - Started GET "/posts.xml" for 127.0.0.1 at 2013-06-14 16:01:31 -0400
+[DEBUG]  99446 2013-06-14 16:01:31 LB -   [1m[35m (0.2ms)[0m  SELECT current_value FROM system_parameters WHERE parameter = 'time_offset'
+[DEBUG]  99446 2013-06-14 16:01:31 LB -   [1m[36mPost Load (0.9ms)[0m  [1mSELECT "posts".* FROM "posts" [0m

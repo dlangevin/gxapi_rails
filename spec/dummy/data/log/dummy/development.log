@@ -1,0 +1,113 @@
+[DEBUG]  98561 2013-06-14 12:58:31 LB -   [1m[36m (0.3ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[ INFO]  98561 2013-06-14 12:58:39 LB - 
+[ INFO]  98561 2013-06-14 12:58:39 LB - 
+[ INFO]  98561 2013-06-14 12:58:39 LB - Started GET "/posts" for 127.0.0.1 at 2013-06-14 12:58:39 -0400
+[DEBUG]  98561 2013-06-14 12:58:39 LB -   [1m[35m (0.3ms)[0m  SELECT current_value FROM system_parameters WHERE parameter = 'time_offset'
+[DEBUG]  98561 2013-06-14 12:58:39 LB - SQLite3::SQLException: no such table: system_parameters: SELECT current_value FROM system_parameters WHERE parameter = 'time_offset'
+[ERROR]  98561 2013-06-14 12:58:39 LB::PostsController - Could not find table 'posts'
+[ERROR]  98561 2013-06-14 12:58:39 LB::PostsController - 
+	/Users/dlangevin/Documents/Projects/lifebooker_common/spec/dummy/app/controllers/posts_controller.rb:16:in `index'
+	/Users/dlangevin/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+	/Users/dlangevin/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+	/Users/dlangevin/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+[FATAL]  98561 2013-06-14 12:58:39 LB - 
+ActiveRecord::StatementInvalid (Could not find table 'posts'):
+  app/controllers/posts_controller.rb:16:in `index'
+
+
+[DEBUG]  98575 2013-06-14 12:59:42 LB -   [1m[36m (0.3ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[DEBUG]  98591 2013-06-14 13:00:17 LB -   [1m[36m (0.4ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[ INFO]  98591 2013-06-14 13:00:20 LB - 
+[ INFO]  98591 2013-06-14 13:00:20 LB - 
+[ INFO]  98591 2013-06-14 13:00:20 LB - Started GET "/posts" for 127.0.0.1 at 2013-06-14 13:00:20 -0400
+[DEBUG]  98591 2013-06-14 13:00:20 LB -   [1m[35m (0.3ms)[0m  SELECT current_value FROM system_parameters WHERE parameter = 'time_offset'
+[DEBUG]  98591 2013-06-14 13:00:20 LB - SQLite3::SQLException: no such table: system_parameters: SELECT current_value FROM system_parameters WHERE parameter = 'time_offset'
+[DEBUG]  98591 2013-06-14 13:00:20 LB -   [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+[DEBUG]  98591 2013-06-14 13:00:20 LB - Cache read: sprockets/357970feca3ac29060c1e3861e2c0953
+[DEBUG]  98591 2013-06-14 13:00:20 LB - Cache read: sprockets/d771ace226fc8215a3572e0aa35bb0d6
+[DEBUG]  98591 2013-06-14 13:00:20 LB - Cache read: sprockets/323b1a586d52e4c630c3a64b6fca77b9
+[ERROR]  98591 2013-06-14 13:00:20 LB::PostsController - no such file to load -- sass
+  (in /Users/dlangevin/Documents/Projects/lifebooker_common/spec/dummy/app/assets/stylesheets/test/test.scss)
+[ERROR]  98591 2013-06-14 13:00:20 LB::PostsController - 
+	/Users/dlangevin/Documents/Projects/lifebooker_common/spec/dummy/app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__1654845286069940017_70221013125900'
+	/Users/dlangevin/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/benchmark.rb:310:in `realtime'
+	/Users/dlangevin/Documents/Projects/lifebooker_common/spec/dummy/app/controllers/posts_controller.rb:18:in `block in index'
+	/Users/dlangevin/Documents/Projects/lifebooker_common/lib/lifebooker_common/controller/api_response.rb:97:in `html_or_api_response'
+	/Users/dlangevin/Documents/Projects/lifebooker_common/spec/dummy/app/controllers/posts_controller.rb:17:in `index'
+	/Users/dlangevin/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+	/Users/dlangevin/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+	/Users/dlangevin/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+[FATAL]  98591 2013-06-14 13:00:20 LB - 
+LoadError (no such file to load -- sass
+  (in /Users/dlangevin/Documents/Projects/lifebooker_common/spec/dummy/app/assets/stylesheets/test/test.scss)):
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__1654845286069940017_70221013125900'
+  app/controllers/posts_controller.rb:18:in `block in index'
+  app/controllers/posts_controller.rb:17:in `index'
+
+
+[DEBUG]  98827 2013-06-14 14:22:45 LB -   [1m[36m (0.4ms)[0m  [1mSELECT current_value FROM system_parameters WHERE parameter = 'time_offset'[0m
+[ INFO]  98827 2013-06-14 14:22:47 LB - 
+[ INFO]  98827 2013-06-14 14:22:47 LB - 
+[ INFO]  98827 2013-06-14 14:22:47 LB - Started GET "/posts" for 127.0.0.1 at 2013-06-14 14:22:47 -0400
+[DEBUG]  98827 2013-06-14 14:22:47 LB -   [1m[35m (0.3ms)[0m  SELECT current_value FROM system_parameters WHERE parameter = 'time_offset'
+[DEBUG]  98827 2013-06-14 14:22:47 LB - SQLite3::SQLException: no such table: system_parameters: SELECT current_value FROM system_parameters WHERE parameter = 'time_offset'
+[DEBUG]  98827 2013-06-14 14:22:47 LB -   [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+[DEBUG]  98827 2013-06-14 14:22:47 LB - Cache read: sprockets/357970feca3ac29060c1e3861e2c0953
+[DEBUG]  98827 2013-06-14 14:22:47 LB - Cache read: sprockets/d771ace226fc8215a3572e0aa35bb0d6
+[DEBUG]  98827 2013-06-14 14:22:47 LB - Cache read: sprockets/323b1a586d52e4c630c3a64b6fca77b9
+[DEBUG]  98827 2013-06-14 14:22:47 LB - Cache write: sprockets/323b1a586d52e4c630c3a64b6fca77b9
+[DEBUG]  98827 2013-06-14 14:22:47 LB - Cache write: sprockets/d21006c8d49a25c28b7c721b0c33b05d
+[DEBUG]  98827 2013-06-14 14:22:47 LB - Cache write: sprockets/d771ace226fc8215a3572e0aa35bb0d6
+[DEBUG]  98827 2013-06-14 14:22:47 LB - Cache write: sprockets/13fe41fee1fe35b49d145bcc06610705
+[DEBUG]  98827 2013-06-14 14:22:47 LB - Cache write: sprockets/357970feca3ac29060c1e3861e2c0953
+[DEBUG]  98827 2013-06-14 14:22:47 LB - Cache write: sprockets/13fe41fee1fe35b49d145bcc06610705
+[DEBUG]  98827 2013-06-14 14:22:47 LB - Cache read: sprockets/8f72dc67b32e7cbec6b9feb5cec51d57
+[DEBUG]  98827 2013-06-14 14:22:47 LB - Cache read: sprockets/323b1a586d52e4c630c3a64b6fca77b9
+[DEBUG]  98827 2013-06-14 14:22:47 LB - Cache write: sprockets/8f72dc67b32e7cbec6b9feb5cec51d57
+[DEBUG]  98827 2013-06-14 14:22:47 LB - Cache write: sprockets/d21006c8d49a25c28b7c721b0c33b05d
+[DEBUG]  98827 2013-06-14 14:22:47 LB - Cache read: sprockets/cffd775d018f68ce5dba1ee0d951a994
+[DEBUG]  98827 2013-06-14 14:22:47 LB - Cache read: sprockets/f7cbd26ba1d28d48de824f0e94586655
+[ERROR]  98827 2013-06-14 14:22:47 LB::PostsController - couldn't find file 'jquery'
+  (in /Users/dlangevin/Documents/Projects/lifebooker_common/spec/dummy/app/assets/javascripts/application.js:13)
+[ERROR]  98827 2013-06-14 14:22:47 LB::PostsController - 
+	/Users/dlangevin/Documents/Projects/lifebooker_common/spec/dummy/app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__1548404307642673437_70227654492260'
+	/Users/dlangevin/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/benchmark.rb:310:in `realtime'
+	/Users/dlangevin/Documents/Projects/lifebooker_common/spec/dummy/app/controllers/posts_controller.rb:18:in `block in index'
+	/Users/dlangevin/Documents/Projects/lifebooker_common/lib/lifebooker_common/controller/api_response.rb:97:in `html_or_api_response'
+	/Users/dlangevin/Documents/Projects/lifebooker_common/spec/dummy/app/controllers/posts_controller.rb:17:in `index'
+	/Users/dlangevin/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+	/Users/dlangevin/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+	/Users/dlangevin/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+[FATAL]  98827 2013-06-14 14:22:47 LB - 
+Sprockets::FileNotFound (couldn't find file 'jquery'
+  (in /Users/dlangevin/Documents/Projects/lifebooker_common/spec/dummy/app/assets/javascripts/application.js:13)):
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__1548404307642673437_70227654492260'
+  app/controllers/posts_controller.rb:18:in `block in index'
+  app/controllers/posts_controller.rb:17:in `index'
+
+
+[ INFO]  98827 2013-06-14 14:23:13 LB - 
+[ INFO]  98827 2013-06-14 14:23:13 LB - 
+[ INFO]  98827 2013-06-14 14:23:13 LB - Started GET "/posts" for 127.0.0.1 at 2013-06-14 14:23:13 -0400
+[DEBUG]  98827 2013-06-14 14:23:13 LB -   [1m[35m (0.2ms)[0m  SELECT current_value FROM system_parameters WHERE parameter = 'time_offset'
+[DEBUG]  98827 2013-06-14 14:23:13 LB - SQLite3::SQLException: no such table: system_parameters: SELECT current_value FROM system_parameters WHERE parameter = 'time_offset'
+[DEBUG]  98827 2013-06-14 14:23:13 LB -   [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+[DEBUG]  98827 2013-06-14 14:23:13 LB - Cache read: sprockets/cffd775d018f68ce5dba1ee0d951a994
+[DEBUG]  98827 2013-06-14 14:23:13 LB - Cache read: sprockets/f7cbd26ba1d28d48de824f0e94586655
+[DEBUG]  98827 2013-06-14 14:23:13 LB - Cache write: sprockets/f7cbd26ba1d28d48de824f0e94586655
+[DEBUG]  98827 2013-06-14 14:23:13 LB - Cache write: sprockets/2f5173deea6c795b8fdde723bb4b63af
+[DEBUG]  98827 2013-06-14 14:23:13 LB - Cache write: sprockets/cffd775d018f68ce5dba1ee0d951a994
+[DEBUG]  98827 2013-06-14 14:23:13 LB - Cache write: sprockets/2f5173deea6c795b8fdde723bb4b63af
+[ INFO]  98827 2013-06-14 14:23:14 LB - 
+[ INFO]  98827 2013-06-14 14:23:14 LB - 
+[ INFO]  98827 2013-06-14 14:23:14 LB - Started GET "/assets/test/test.css?body=1" for 127.0.0.1 at 2013-06-14 14:23:14 -0400
+[DEBUG]  98827 2013-06-14 14:23:14 LB - Cache read: sprockets/323b1a586d52e4c630c3a64b6fca77b9
+[ INFO]  98827 2013-06-14 14:23:14 LB - 
+[ INFO]  98827 2013-06-14 14:23:14 LB - 
+[ INFO]  98827 2013-06-14 14:23:14 LB - Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-14 14:23:14 -0400
+[DEBUG]  98827 2013-06-14 14:23:14 LB - Cache read: sprockets/d771ace226fc8215a3572e0aa35bb0d6
+[DEBUG]  98827 2013-06-14 14:23:14 LB - Cache read: sprockets/323b1a586d52e4c630c3a64b6fca77b9
+[ INFO]  98827 2013-06-14 14:23:14 LB - 
+[ INFO]  98827 2013-06-14 14:23:14 LB - 
+[ INFO]  98827 2013-06-14 14:23:14 LB - Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-14 14:23:14 -0400
+[DEBUG]  98827 2013-06-14 14:23:14 LB - Cache read: sprockets/f7cbd26ba1d28d48de824f0e94586655

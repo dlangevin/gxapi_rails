@@ -1,0 +1,111 @@
+# common to all environments
+default: &default
+  adapter: mysql2
+  port: 3306
+  host: localhost
+  database: lb_development
+  username: root
+  password:
+  reconnect: true
+
+# dev
+development: &development
+  <<: *default
+  # host: localhost
+  # #username: lifebooker_prod
+  # #password: lbcup45_p
+  # database: lb_development
+  # # delayed_jobs:
+  # #   <<: *default
+  # #   host: localhost
+  # #   username: lifebooker_prod
+  # #   password: lbcup45_p
+  # #   database: delayed_jobs
+  
+  host: 174.129.253.40
+  username: lifebooker
+  password: 725014d3a774e7c91f243b6df352c15
+  database: lb_production
+  delayed_jobs:
+    <<: *default
+    host: ec2-107-22-92-104.compute-1.amazonaws.com
+    username: lifebooker
+    password: 725014d3a774e7c91f243b6df352c15
+    database: loot_scores_delayed_jobs
+  
+# staging
+staging:
+  <<: *default
+  host: 10.82.6.113
+  username: lifebooker
+  password: 725014d3a774e7c91f243b6df352c15
+  database: lb_production
+  delayed_jobs:
+    <<: *default
+    host: ec2-107-22-92-104.compute-1.amazonaws.com
+    username: lifebooker
+    password: 725014d3a774e7c91f243b6df352c15
+    database: loot_scores_delayed_jobs
+
+# dev ie6
+ie6:
+  <<: *default
+  host: ec2-184-73-53-30.compute-1.amazonaws.com
+  username: lifebooker_prod
+  password: lbcup45_p
+  database: lb_production
+
+
+test:
+  <<: *default
+  host: localhost
+  username: root
+  password: 
+  database: lb_test
+  delayed_jobs:
+    <<: *default
+    host: localhost
+    username: root
+    password: 
+    database: lb_test
+  loot_scores:
+    <<: *default
+    host: localhost
+    username: root
+    password: 
+    database: lb_test
+    
+# prod credentials
+default_prod: &default_prod
+  <<: *default
+  host: 10.87.155.110
+  username: lifebooker
+  password: 725014d3a774e7c91f243b6df352c15
+  database: lb_production
+  delayed_jobs:
+    <<: *default
+    host: 10.38.55.125
+    username: lifebooker
+    password: 725014d3a774e7c91f243b6df352c15
+    database: delayed_jobs
+
+default_slave: &default_slave
+  <<: *default
+  username: lifebooker
+  password: 725014d3a774e7c91f243b6df352c15
+  database: lb_production
+  host: 10.120.21.13
+
+# production with replication
+production:
+  <<: *default_prod
+  slave_database:
+    <<: *default_slave
+
+# same as prod, but without a slave database
+production_master:
+  <<: *default_prod
+
+# same as prod but with only the slave db
+production_slave:
+  <<: *default_slave

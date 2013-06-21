@@ -1,0 +1,17 @@
+development:
+  google_analytics:
+    account_id: 2633140
+    profile_id: 73788770
+    web_property_id: UA-2633140-6
+  google:
+    email: 211964556496-8mbenq3f33ectl10v6sq9druaphhu7q6@developer.gserviceaccount.com
+    private_key_path: '<%= Rails.root.join("config", "test.p12").to_s %>'
+
+test:
+  google_analytics:
+    account_id: 2633140
+    profile_id: 73788770
+    web_property_id: UA-2633140-6
+  google:
+    email: 211964556496-8mbenq3f33ectl10v6sq9druaphhu7q6@developer.gserviceaccount.com
+    private_key_path: '<%= Rails.root.join("config", "test.p12").to_s %>'

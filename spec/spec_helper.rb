@@ -1,14 +1,17 @@
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 
-require 'active_support'
-require 'rspec'
-require 'mocha'
-require 'ruby-debug'
-Debugger.start
+ENV["RAILS_ENV"] ||= 'test'
+require File.expand_path("../../spec/dummy/config/environment", __FILE__)
 
 require 'moona'
 
+require 'rspec/rails'
+require 'rails/engine'
+require 'mocha/setup'
+
+require 'ruby-debug'
+Debugger.start
 
 # Requires supporting files with custom matchers and macros, etc,
 # in ./support/ and its subdirectories.

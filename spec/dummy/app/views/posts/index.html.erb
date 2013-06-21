@@ -1,0 +1,31 @@
+<h1>Listing posts</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Body</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% if @posts.present? %>
+  <% @posts.each do |post| %>
+    <tr>
+      <td><%= post.title %></td>
+      <td><%= post.body %></td>
+      <td><%= link_to 'Show', post %></td>
+      <td><%= link_to 'Edit', edit_post_path(post) %></td>
+      <td><%= link_to 'Destroy', post, :data => {:confirm => 'Are you sure?'}, :method => :delete %></td>
+    </tr>
+  <% end %>
+<% end -%>
+</table>
+
+<br />
+
+<%= link_to 'New Post', new_post_path %>
+
+
+<%= moona_experiment_js(:variant1) %>
+<%= moona_experiment_js(:test) %>
