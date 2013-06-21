@@ -2,25 +2,25 @@ require 'spec_helper'
 
 describe MoonaHelper do
 
-  context "#moona_version" do
+  context "#moona_variant_name" do
 
     it "returns default if the variable is not set" do
-      helper.moona_version.should eql "default"
+      helper.moona_variant_name.should eql "default"
     end
 
     it "returns the name of the vairant if it is set" do
       assign(:variant, stub(:value => stub(:name => "x")))
-      helper.moona_version.should eql("x")
+      helper.moona_variant_name.should eql("x")
     end
 
     it "handles different vairant names" do
       assign(:variantx, stub(:value => stub(:name => "x")))
-      helper.moona_version(:variantx).should eql("x")
+      helper.moona_variant_name(:variantx).should eql("x")
     end
 
     it "handles params for the variant" do
       helper.stubs(:params => {:variant => "test"})
-      helper.moona_version.should eql("test")
+      helper.moona_variant_name.should eql("test")
     end
 
   end

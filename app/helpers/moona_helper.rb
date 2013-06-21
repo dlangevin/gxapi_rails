@@ -2,7 +2,7 @@ module MoonaHelper
 
   # get the version for a given variant
   # @return [String]
-  def moona_version(ivar_name = :variant)
+  def moona_variant_name(ivar_name = :variant)
     # if we have params[ivar], we just use it
     return params[ivar_name] if params[ivar_name].present?
     return "default" unless variant = instance_variable_get("@#{ivar_name}")
