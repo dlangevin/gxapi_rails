@@ -30,7 +30,7 @@ module MoonaHelper
     ret += javascript_tag{
       "cxApi.setChosenVariation(
         #{variant.value.index}, 
-        '#{escape_javascript(variant.value.experiment_id}'
+        '#{escape_javascript(variant.value.experiment_id)}'
       );"
     }
     ret.html_safe
