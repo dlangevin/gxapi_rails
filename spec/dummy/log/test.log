@@ -10057,3 +10057,5 @@ Google::APIClient::Request Sending API request get https://www.googleapis.com/an
 Google::APIClient::Request Result: 200 {"expires"=>"Fri, 21 Jun 2013 16:48:41 GMT", "date"=>"Fri, 21 Jun 2013 16:48:41 GMT", "cache-control"=>"private, max-age=0, must-revalidate, no-transform", "etag"=>"\"VB2V-YLZlD2d47FwNAG80gwR66o/AY1ok-SnzMKmiDcm5ZadMNt1hQU\"", "content-type"=>"application/json; charset=UTF-8", "x-content-type-options"=>"nosniff", "x-frame-options"=>"SAMEORIGIN", "x-xss-protection"=>"1; mode=block", "server"=>"GSE", "connection"=>"close"}
 Connecting to database specified by database.yml
 Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml

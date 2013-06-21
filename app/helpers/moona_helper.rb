@@ -31,7 +31,7 @@ module MoonaHelper
       "cxApi.setChosenVariation(
         #{variant.value.index}, 
         '#{escape_javascript(variant.value.experiment_id)}'
-      );"
+      );".html_safe
     }
     ret.html_safe
   end
