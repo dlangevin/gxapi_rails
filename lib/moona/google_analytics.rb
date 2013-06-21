@@ -6,12 +6,14 @@ module Moona
     CACHE_KEY = "moona-google-analytics-experiments"
 
     # gets the experiment that has this name
+    # @param name [String] Name of the experiment
+    # @return Ostruct
     def get_experiment(name)
       self.get_experiments.find{|experiment| experiment.name == name}
     end
 
     # return a list of all experiments
-    # @return Array [Ostruct]
+    # @return Array<Ostruct>
     def get_experiments
       @experiments ||= begin
         # fetch our data from the cache
@@ -66,7 +68,6 @@ module Moona
         :name => "default", :index => -1, :experiment_id => nil
       )
     end
-
 
     # reset and return a list of all experiments
     # @return Array [Ostruct]

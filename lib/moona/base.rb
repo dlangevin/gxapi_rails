@@ -9,9 +9,14 @@ module Moona
     end
 
     # get the {Moona.env}
-    # 
     def env
       Moona.env
+    end
+
+    # get all experiments
+    # @return Array<Ostruct>
+    def get_experiments
+      @interface.get_experiments
     end
 
     # return a variant value
@@ -24,6 +29,11 @@ module Moona
       Celluloid::Future.new do
         self.get_variant_value(experiment_name)
       end
+    end
+
+    # reload the experiment cache from the remote
+    def reset_experiments
+      @interface.reset_experiments
     end
 
     protected
