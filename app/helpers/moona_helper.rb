@@ -31,7 +31,10 @@ module MoonaHelper
       ret += "\n"
       # set domain name if present
       if opts[:domain]
-        ret += "cxApi.setDomainName('#{escape_javascript(opts[:domain])}');"
+        domain_call = javascript_tag{
+          "cxApi.setDomainName('#{escape_javascript(opts[:domain])}');".html_safe
+        }
+        ret += domain_call.html_safe
         ret += "\n"
       end
     end
