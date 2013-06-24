@@ -8,4 +8,6 @@ if Rails::VERSION::MAJOR >= 3
       end
     end
   end
+else
+  require File.expand_path('../../app/helpers/moona_helper', __FILE__)
 end
