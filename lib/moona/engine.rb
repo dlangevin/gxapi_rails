@@ -8,8 +8,4 @@ if Rails::VERSION::MAJOR >= 3
       end
     end
   end
-else
-  Rails.configuration.after_initialize do
-    ApplicationHelper.send(:include, MoonaHelper)
-  end
 end
