@@ -25,9 +25,15 @@ module Moona
     #   variant.value => 
     #     # Ostruct.new(:experiment_id => "x", :index => 1, :name => "name")
     # @return Celluloid::Future
-    def get_variant(experiment_name)
+    def get_variant(experiment_name, override = nil)
       Celluloid::Future.new do
-        self.get_variant_value(experiment_name)
+        # allows us to override and get back a variant
+        # easily that conforms to the api
+        if override.nil?
+          self.get_variant_value(experiment_name)
+        else
+          Ostruct.new(:name => override, :index => -1, :experiment_id => nil)
+        end
       end
     end
 

@@ -26,6 +26,8 @@ use different configurations per environment (development/test/production)
       private_key_path: 'PATH_TO_SERVICE_ACCOUNT_PRIVATE_KEY'
 
 === Where the F do I find all this stuff?
+
+Creating the proper key
   
 
 

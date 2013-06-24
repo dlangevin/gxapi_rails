@@ -12,7 +12,7 @@ describe Moona::Base do
   end
 
   let(:valid_variants) do
-    ["original", "version1"]
+    ["original", "variant1"]
   end
 
   let(:test_experiment_name) do
@@ -54,6 +54,16 @@ describe Moona::Base do
       # make sure we return the default value
       variant.value.name.should eql("default")
       (Time.now - start_time).should be < 1.5
+    end
+
+    it "should allow a user to override the chosen variant" do
+
+      variant = subject.get_variant(test_experiment_name, "fakeval")
+
+      variant.value.experiment_id.should be_nil
+      variant.value.name.should eql("fakeval")
+      variant.value.index.should eql -1
+
     end
 
 
