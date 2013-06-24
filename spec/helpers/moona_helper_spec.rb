@@ -27,24 +27,35 @@ describe MoonaHelper do
 
   context "#moona_experiment_js" do
 
-    it "adds the javascript src for Google analytics only once
-      but does the js call each time the method is called" do
+    context "with variant set" do
 
-      assign(
-        :variant, 
-        stub(
-          :value => stub(
-            :name => "x", 
-            :experiment_id => "y",
-            :index => 1
+      before(:each) do
+        assign(
+          :variant, 
+          stub(
+            :value => stub(
+              :name => "x", 
+              :experiment_id => "y",
+              :index => 1
+            )
           )
         )
-      )
+      end
 
-      ret = helper.moona_experiment_js + helper.moona_experiment_js
+      it "adds the javascript src for Google analytics only once
+        but does the js call each time the method is called" do
 
-      ret.scan(/google\-analytics\.com/).length.should eql(1)
-      ret.scan(/setChosenVariation/).length.should eql(2)
+        ret = helper.moona_experiment_js + helper.moona_experiment_js
+
+        ret.scan(/google\-analytics\.com/).length.should eql(1)
+        ret.scan(/setChosenVariation/).length.should eql(2)
+
+      end
+
+      it "should add the domain if an option is passed" do
+        ret = helper.moona_experiment_js(:domain => ".example.com")
+        ret.should =~ /setDomainName/
+      end
 
     end
 
