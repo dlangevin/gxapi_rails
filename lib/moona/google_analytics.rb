@@ -40,7 +40,9 @@ module Moona
     # @return Ostruct
     def get_variant(experiment_name)
       # pull in an experiment
-      if experiment = self.get_experiment(experiment_name)
+      experiment = self.get_experiment(experiment_name)
+
+      if self.run_experiment?(experiment)
         # starts off at 0
         accum = 0.0
         sample = Kernel.rand
@@ -84,7 +86,7 @@ module Moona
     end
 
     # google api client
-    # @return GoogleAPIClient
+    # @return [Google::APIClient]
     def client
       @client ||= begin
         client = Google::APIClient.new
@@ -105,6 +107,19 @@ module Moona
         client.authorization.fetch_access_token!
         client
       end
+    end
+
+    # should we run this experiment under the current conditions?
+    # @return [Boolean] should_run
+    def run_experiment?(experiment)
+      # a blank experiment can't run
+      return false if experiment.nil?
+      
+      # get a random value - a 100% coverage is represented
+      # as 1.0, so Kernel.rand works for us as its max is
+      # 1.0
+      return experiment.traffic_coverage >= Kernel.rand
+
     end
 
   end

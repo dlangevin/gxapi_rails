@@ -20,7 +20,11 @@ describe Moona do
         Moona.cache.should be Rails.cache
       end
 
-      it "should still allow you to override the cache"
+      it "should still allow you to override the cache" do
+        my_cache = stub()
+        Moona.cache = my_cache
+        Moona.cache.should eql(my_cache)
+      end
 
     end
   end

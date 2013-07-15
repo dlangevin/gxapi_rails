@@ -21,7 +21,6 @@ module Moona
 
       it "should filter by name" do 
         experiment = subject.get_experiments.first
-
         subject.get_experiment(experiment.name).should eql(experiment)
       end
 
@@ -34,6 +33,7 @@ module Moona
           :get_experiment => Ostruct.new({
             :id => "123",
             :name => "X",
+            :traffic_coverage => 1.0,
             :variations => [
               Ostruct.new(
                 :name => "original", 
@@ -54,6 +54,13 @@ module Moona
         variant = subject.get_variant("fakename")
         ["original", "variation1"].should include variant.name
         [0, 1].should include variant.index
+      end
+
+      it "returns the default if traffic_coverage is 0" do
+        subject.get_experiment.stubs(:traffic_coverage => 0)
+        variant = subject.get_variant("fakename")
+        variant.name.should eql("default")
+        variant.index.should eql(-1)
       end
 
     end

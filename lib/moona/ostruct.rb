@@ -7,6 +7,8 @@ module Moona
 
       self.send(:extend, self.generated_methods)
       hash.each_pair do |key, val|
+        # set the key to an underscored verison of itself
+        key = self.underscore(key)
         self.define_accessors(key)
         self.send("#{key}=", self.convert_value_to_ostruct(val))
       end
@@ -39,7 +41,7 @@ module Moona
       when Ostruct
         data.to_hash
       when Array
-        data.collect{|val| self.convert_from_ostruct(data)}
+        data.collect{|val| self.convert_value_from_ostruct(data)}
       else
         data
       end
@@ -47,6 +49,7 @@ module Moona
 
     # define accessors for an attribute
     def define_accessors(field)
+      # add the generated method
       self.generated_methods.module_eval do 
         define_method(field) do
           @hash[field]
@@ -69,6 +72,14 @@ module Moona
         return self.send(meth, *args, &block)
       end
       super
+    end
+
+    # take a string an convert it from
+    # camelCase to under_scored
+    def underscore(string)
+      string = string.to_s
+      string = string[0].downcase + string[1..-1].gsub(/([A-Z])/,'_\1')
+      string.downcase
     end
 
   end

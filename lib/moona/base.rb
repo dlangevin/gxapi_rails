@@ -53,7 +53,7 @@ module Moona
     # from the cache or from myna
     def get_variant_value(experiment_name)
       data = Moona.with_error_handling do
-        Timeout::timeout(4.0) do
+        Timeout::timeout(1.0) do
           Moona.cache.fetch(self.cache_key(experiment_name)) do
             @interface.get_variant(experiment_name).to_hash
           end
