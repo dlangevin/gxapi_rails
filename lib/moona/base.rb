@@ -22,8 +22,8 @@ module Moona
     # return a variant value
     # @example
     #   variant = @moona.get_variant("my_experiment")
-    #   variant.value => 
-    #     # Ostruct.new(:experiment_id => "x", :index => 1, :name => "name")
+    #   variant.value =>
+    #     # Ostruct.new(experiment_id: "x", index: 1, name: "name")
     # @return Celluloid::Future
     def get_variant(experiment_name, override = nil)
       Celluloid::Future.new do
@@ -32,7 +32,7 @@ module Moona
         if override.nil?
           self.get_variant_value(experiment_name)
         else
-          Ostruct.new(:name => override, :index => -1, :experiment_id => nil)
+          Ostruct.new(self.default_values.merge(name: override))
         end
       end
     end
@@ -49,6 +49,11 @@ module Moona
       "#{Moona.cache_namespace}#{self.user_key}_#{experiment_name}"
     end
 
+    # Default hash values for when a variant isn't found
+    def default_values
+      {name: "default", index: -1, experiment_id: nil}
+    end
+
     # protected method to make the actual calls to get values
     # from the cache or from myna
     def get_variant_value(experiment_name)
@@ -60,7 +65,7 @@ module Moona
         end
       end
       Ostruct.new(
-        data || {:name => "default", :index => -1, :experiment_id => nil}
+        data.is_a?(Hash) ? data : self.default_values
       )
     end
   end

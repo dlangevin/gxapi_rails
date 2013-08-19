@@ -33,7 +33,7 @@ describe Moona::Base do
       [0, 1].should include variant.value.index
     end
 
-    it "should set a key in the rails cache for a given 
+    it "should set a key in the rails cache for a given
       uuid/experiment combo" do
 
       variant = subject.get_variant(test_experiment_name)
@@ -50,7 +50,7 @@ describe Moona::Base do
       start_time = Time.now
 
       variant = subject.get_variant(test_experiment_name)
-      
+
       # make sure we return the default value
       variant.value.name.should eql("default")
       (Time.now - start_time).should be < 1.5
@@ -71,7 +71,7 @@ describe Moona::Base do
 
 
   context "#user_key" do
-    
+
     it "should set up its user_key" do
       subject.user_key.should eql user_key
     end
