@@ -2,7 +2,6 @@ require 'active_support'
 require 'celluloid'
 require 'erb'
 require 'json'
-require 'rest_client'
 require 'yaml'
 
 require File.expand_path('../moona/base', __FILE__)
@@ -45,7 +44,7 @@ module Moona
     @cache_namespace = val
   end
 
-  # Moona config - this is loaded based on the 
+  # Moona config - this is loaded based on the
   # {Moona.config_path}
   # @return Moona::Ostruct
   def self.config
@@ -62,18 +61,18 @@ module Moona
   def self.config_path
     @config_path ||= File.join(Rails.root, "config/moona.yml")
   end
-  
+
   # setter for config path
   # @return String value of {Moona.config_path}
   def self.config_path=(val)
     @config_path = val
   end
-  
+
   # our environment - defaults to Rails.env or test
   def self.env
     @env ||= defined?(::Rails) ? ::Rails.env : "test"
   end
-  
+
   # Set the value of {Moona.env}
   # @return String environment
   def self.env=(val)
