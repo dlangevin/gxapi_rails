@@ -1,5 +1,7 @@
 # Gxapi
 
+[![Code Climate](https://codeclimate.com/repos/5276603656b10215e9014c80/badges/ddae4ab98746f66abf45/gpa.png)](https://codeclimate.com/repos/5276603656b10215e9014c80/feed)
+
 Gxapi interfaces with Google Analytics Experiments to retrieve data from
 its API and determine which variant should be presented to a given user
 
