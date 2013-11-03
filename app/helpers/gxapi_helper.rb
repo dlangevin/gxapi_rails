@@ -7,36 +7,6 @@
 module GxapiHelper
 
   #
-  # Get the version for a given variant
-  # @return [String]
-  def gxapi_variant_name(ivar_name = :variant)
-    # if we have params[ivar], we just use it
-    return "default" unless variant = instance_variable_get("@#{ivar_name}")
-    return variant.value.try(:name) || "default"
-  end
-
-  #
-  # Get the variant if it exists and has an experiment_id
-  #
-  # @param  ivar_name [String] Name of the instance variable for the
-  # variant
-  #
-  # @return [Gxapi::Ostruct, false] Variant if it exists, false otherwise
-  def get_variant(ivar_name)
-    # make sure we have our variant
-    unless variant = instance_variable_get("@#{ivar_name}")
-      Gxapi.logger.debug { "No variant found - #{ivar_name}" }
-      return false
-    end
-    # and a valid experiment id
-    unless variant.value.experiment_id.present?
-      Gxapi.logger.debug { "No experiment_id found : #{variant.value} "}
-      return false
-    end
-    return variant
-  end
-
-  #
   # Get the HTMl to load script from Google Ananlytics
   # and setChosenVariation to tell it which one we served
   #
@@ -60,17 +30,58 @@ module GxapiHelper
     end
 
     @gxapi_experiment_called = true
+    ret += self.get_variant_js(variant)
 
-    ret += javascript_tag{
+    Gxapi.logger.debug { "#{ivar_name} is now #{variant.value.name}" }
+
+    ret.html_safe
+  end
+
+  #
+  # Get the version for a given variant
+  # @return [String]
+  def gxapi_variant_name(ivar_name = :variant)
+    # if we have params[ivar], we just use it
+    return "default" unless variant = instance_variable_get("@#{ivar_name}")
+    return variant.value.try(:name) || "default"
+  end
+
+  protected
+
+  #
+  # Get the variant if it exists and has an experiment_id
+  #
+  # @param  ivar_name [String] Name of the instance variable for the
+  # variant
+  #
+  # @return [Gxapi::Ostruct, false] Variant if it exists, false otherwise
+  def get_variant(ivar_name)
+    # make sure we have our variant
+    unless variant = instance_variable_get("@#{ivar_name}")
+      Gxapi.logger.debug { "No variant found - #{ivar_name}" }
+      return false
+    end
+    # and a valid experiment id
+    unless variant.value.experiment_id.present?
+      Gxapi.logger.debug { "No experiment_id found : #{variant.value} "}
+      return false
+    end
+    return variant
+  end
+
+  #
+  # Get the JS for a variant
+  #
+  # @param  variant [Ostruct] Variant definition
+  #
+  # @return [String] JS to render
+  def get_variant_js(variant)
+    javascript_tag{
       "cxApi.setChosenVariation(
         #{variant.value.index},
         '#{escape_javascript(variant.value.experiment_id)}'
       );".html_safe
     }
-
-    Gxapi.logger.debug { "#{ivar_name} is now #{variant.value.name}" }
-
-    ret.html_safe
   end
 
   #
@@ -94,5 +105,4 @@ module GxapiHelper
     end
     ret
   end
-
 end
