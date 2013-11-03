@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    gxapi_rails (0.0.3)
+    gxapi_rails (0.0.4)
       activesupport
       celluloid
       google-api-client
