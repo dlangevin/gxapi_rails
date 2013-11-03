@@ -1,6 +1,7 @@
 if Rails::VERSION::MAJOR >= 3
   module Gxapi
     class Engine < Rails::Engine
+
       config.after_initialize do
         Gxapi.cache = Rails.cache
         # add our helper

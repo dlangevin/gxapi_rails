@@ -1,0 +1,18 @@
+defaults: &defaults
+  google_analytics:
+    account_id: <%= options[:account_id] || '1234567' %>
+    profile_id: <%= options[:profile_id] || '12345678' %>
+    web_property_id: <%= options[:web_property_id] || 'UA-XXXXXXX-1' %>
+  google:
+    email: <%= options[:email] || 'YOUREMAIL@developer.gserviceaccount.com' %>
+    private_key_path: '<%%= Rails.root.join("config", "google.p12").to_s %>'
+
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults

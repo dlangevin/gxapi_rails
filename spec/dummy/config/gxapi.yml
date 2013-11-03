@@ -15,3 +15,4 @@ test:
   google:
     email: 211964556496-8mbenq3f33ectl10v6sq9druaphhu7q6@developer.gserviceaccount.com
     private_key_path: '<%= Rails.root.join("config", "test.p12").to_s %>'
+
