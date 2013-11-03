@@ -63,7 +63,6 @@ module Dummy
 
     config.after_initialize do
       ActionController::Base.asset_host = nil
-      Debugger.start
     end
 
   end

@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.description = "Google Analytics and integration"
 
 
- s.files = Dir["{app,config,db,lib}/**/*"] + ["LICENSE.txt", "Rakefile", "README.rdoc"]
+ s.files = Dir["{app,config,db,lib}/**/*"] + ["LICENSE.txt", "Rakefile", "README.md"]
   s.test_files = Dir["spec/**/*"]
 
   s.add_dependency(%q<activesupport>, [">= 0"])
