@@ -9,7 +9,7 @@ require "sprockets/railtie"
 # require "rails/test_unit/railtie"
 
 Bundler.require(:default, :assets, Rails.env)
-require "moona"
+require "gxapi"
 
 module Dummy
   class Application < Rails::Application

@@ -1,29 +1,29 @@
 require 'spec_helper'
 
-describe Moona do
+describe Gxapi do
 
   before(:all) do
-    Moona.config_path = File.expand_path(
+    Gxapi.config_path = File.expand_path(
       "../../support/config.yml", __FILE__
     )
-    Moona.env = "test"
+    Gxapi.env = "test"
   end
 
   context ".cache" do
     it "should have a cache that gets defined by default" do
-      Moona.cache.should be_kind_of(ActiveSupport::Cache::Store)
+      Gxapi.cache.should be_kind_of(ActiveSupport::Cache::Store)
     end
 
     context "with Rails" do
 
       it "should use the Rails cache once it is available" do
-        Moona.cache.should be Rails.cache
+        Gxapi.cache.should be Rails.cache
       end
 
       it "should still allow you to override the cache" do
         my_cache = stub()
-        Moona.cache = my_cache
-        Moona.cache.should eql(my_cache)
+        Gxapi.cache = my_cache
+        Gxapi.cache.should eql(my_cache)
       end
 
     end

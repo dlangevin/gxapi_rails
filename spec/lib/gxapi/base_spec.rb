@@ -1,10 +1,10 @@
 require 'spec_helper'
 
-describe Moona::Base do
+describe Gxapi::Base do
 
   #We cache based on the id, so we need to get a random one.
   subject do
-    Moona::Base.new(user_key)
+    Gxapi::Base.new(user_key)
   end
 
   let(:user_key) do
@@ -21,7 +21,7 @@ describe Moona::Base do
 
   context "#env" do
     it "should delegate to its class" do
-      subject.env.should eql Moona.env
+      subject.env.should eql Gxapi.env
     end
   end
 
@@ -40,20 +40,20 @@ describe Moona::Base do
       variant.value
 
       cache_key = "#{user_key}_untitled_experiment"
-      Moona.cache.read(cache_key).should have_key("index")
+      Gxapi.cache.read(cache_key).should have_key("index")
 
     end
 
-    it "should time out after 1 second and return the default value" do
+    it "should time out after 2 seconds and return the default value" do
 
-      Moona.cache.stubs(:fetch).yields{sleep(2)}
+      Gxapi.cache.stubs(:fetch).yields{sleep(3)}
       start_time = Time.now
 
       variant = subject.get_variant(test_experiment_name)
 
       # make sure we return the default value
       variant.value.name.should eql("default")
-      (Time.now - start_time).should be < 1.5
+      (Time.now - start_time).should be < 2.5
     end
 
     it "should allow a user to override the chosen variant" do

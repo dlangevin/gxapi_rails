@@ -1,8 +1,8 @@
-module Moona
+module Gxapi
   class Ostruct
     # recursive open struct
     def initialize(hash)
-      
+
       @hash = {}
 
       self.send(:extend, self.generated_methods)
@@ -50,7 +50,7 @@ module Moona
     # define accessors for an attribute
     def define_accessors(field)
       # add the generated method
-      self.generated_methods.module_eval do 
+      self.generated_methods.module_eval do
         define_method(field) do
           @hash[field]
         end

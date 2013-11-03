@@ -14,8 +14,8 @@ require 'rake'
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = "moona"
-  gem.homepage = "http://github.com/LifebookerInc/moona"
+  gem.name = "gxapi"
+  gem.homepage = "http://github.com/LifebookerInc/gxapi"
   gem.license = "MIT"
   gem.summary = %Q{Myna integration}
   gem.description = %Q{Myna config and integration}
@@ -43,7 +43,7 @@ Rake::RDocTask.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "moona #{version}"
+  rdoc.title = "gxapi #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end

@@ -26,6 +26,11 @@
 
 <%= link_to 'New Post', new_post_path %>
 
+<% if gxapi_variant_name == 'fake_var' -%>
+  <h3>Fake Var Version</h3>
+<% end -%>
 
-<%= moona_experiment_js(:variant1) %>
-<%= moona_experiment_js(:test) %>
+
+<%= gxapi_experiment_js %>
+
+<%= gxapi_experiment_js(:test) %>

@@ -7,10 +7,11 @@ gemspec
 group :development, :test do
   gem "rails", "~> 3.2"
 
+  gem 'capybara'
   gem "coffee-rails"
-  gem "mocha", :require => false
+  gem "mocha", require: false
   gem "rspec-rails"
-  gem "ruby-debug19", :require => "ruby-debug"
+  gem "ruby-debug19", require: "ruby-debug"
   gem "sass-rails"
   gem "sqlite3"
 
