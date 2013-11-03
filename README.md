@@ -7,15 +7,22 @@ its API and determine which variant should be presented to a given user
 
 ## Installation
     % gem install gxapi_rails
-    % rails g gxapi_rails
+    % rails g gxapi:install
 
 ## Configuration
 
 First, you must create a Google Analytics Service Account.
 Information can be found here https://developers.google.com/accounts/docs/OAuth2ServiceAccount
 
-Gxapi uses `#{Rails.root}/config/gxapi.yml` to configure variables.  You can
-use different configurations per environment (development/test/production)
+Gxapi uses `#{Rails.root}/config/gxapi.yml` to configure variables.  
+You can use different configurations per environment 
+(development/test/production)
+
+### Service Account Private Key
+
+Gxapi looks for a Service Account Private Key in `config/google.p12` 
+by default.  It is best to not include the key in source control and
+to either drop it off where necessary with a script or symlink it.
 
 ### Example Configuration
     development:
@@ -26,6 +33,14 @@ use different configurations per environment (development/test/production)
       google:
         email: SERVICE_ACCOUNT_EMAIL
         private_key_path: 'PATH_TO_SERVICE_ACCOUNT_PRIVATE_KEY'
+
+These values can be specified in the installer if you have them ahead
+of time
+
+    % rails g gxapi:install --account-id=ACCOUNT_ID \
+      --profile-id=PROFILE_ID --web-property-id=WEB_PROPERTY_ID \
+      --email=EMAIL
+
 
 ### Where the F do I find all this stuff?
 
@@ -39,6 +54,25 @@ Google Analytics settings
 
 
 ## Usage
+
+### Loading Experiments
+
+We load experiment data either
+1. As needed if it's not in cache
+2. On demand if it is in cache
+
+Once the data for the experiment is loaded, its variant weights 
+(the percentage each variant is shown) will *not change* until the
+data is reloaded explicitly.  This is so we do not need to make an
+API call to Google each time a page loads.
+
+To refresh the experiment data, you can call a rake task either
+manually or at some interval on a schedular (such as cron)
+
+    % bundle exec rake gxapi:reload_experiments
+
+    # /etc/cron.d/gxapi
+    0 * * * * USER bundle exec rake gxapi:reload_experiments
 
 ### Layout
 
