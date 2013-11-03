@@ -18,6 +18,9 @@ doc
 # logs in dummy app
 spec/dummy/log/*.log
 
+# tmp files in dummy app
+spec/dummy/tmp/*
+
 # Have editor/IDE/OS specific files you need to ignore? Consider using a global gitignore:
 #
 # * Create a file at ~/.gitignore
