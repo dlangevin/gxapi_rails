@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.authors = ["Dan Langevin"]
   s.email = "dan.langevin@lifebooker.com"
 
-  s.homepage = "http://github.com/LifebookerInc/gxapi_rails"
+  s.homepage = "http://github.com/dlangevin/gxapi_rails"
   s.require_paths = ["lib"]
 
   s.summary = "Google Analytics"
