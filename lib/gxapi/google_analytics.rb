@@ -100,9 +100,13 @@ module Gxapi
       @client ||= begin
         client = Google::APIClient.new
         # key stuff is hardcoded for now
-        key = Google::APIClient::KeyUtils.load_from_pkcs12(
-          Gxapi.config.google.private_key_path, 'notasecret'
-        )
+        if encoded_key = Gxapi.config.google.private_key
+          key = OpenSSL::PKey::RSA.new Base64.decode64(encoded_key), 'notasecret'
+        else
+          key = Google::APIClient::KeyUtils.load_from_pkcs12(
+            Gxapi.config.google.private_key_path, 'notasecret'
+          )
+        end
         client.authorization = Signet::OAuth2::Client.new(
           token_credential_uri: 'https://accounts.google.com/o/oauth2/token',
           audience: 'https://accounts.google.com/o/oauth2/token',
