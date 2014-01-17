@@ -3,16 +3,3 @@ source "http://rubygems.org"
 # Example:
 #   gem "activesupport", ">= 2.3.5"
 gemspec
-
-group :development, :test do
-  gem "rails", "~> 3.2"
-  gem 'capybara'
-  gem "coffee-rails"
-  gem 'debugger'
-  gem 'guard-bundler'
-  gem 'guard-rspec'
-  gem "mocha", require: false
-  gem "rspec-rails"
-  gem "sass-rails"
-  gem "sqlite3"
-end
