@@ -5,6 +5,7 @@ require 'json'
 require 'yaml'
 
 require File.expand_path('../gxapi/base', __FILE__)
+require File.expand_path('../gxapi/experiment_identifier', __FILE__)
 require File.expand_path('../gxapi/google_analytics', __FILE__)
 require File.expand_path('../gxapi/ostruct', __FILE__)
 require File.expand_path('../gxapi/version', __FILE__)

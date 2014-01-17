@@ -14,13 +14,13 @@ its API and determine which variant should be presented to a given user
 First, you must create a Google Analytics Service Account.
 Information can be found here https://developers.google.com/accounts/docs/OAuth2ServiceAccount
 
-Gxapi uses `#{Rails.root}/config/gxapi.yml` to configure variables.  
-You can use different configurations per environment 
+Gxapi uses `#{Rails.root}/config/gxapi.yml` to configure variables.
+You can use different configurations per environment
 (development/test/production)
 
 ### Service Account Private Key
 
-Gxapi looks for a Service Account Private Key in `config/google.p12` 
+Gxapi looks for a Service Account Private Key in `config/google.p12`
 by default.  It is best to not include the key in source control and
 to either drop it off where necessary with a script or symlink it.
 
@@ -61,7 +61,7 @@ We load experiment data either
 1. As needed if it's not in cache
 2. On demand if it is in cache
 
-Once the data for the experiment is loaded, its variant weights 
+Once the data for the experiment is loaded, its variant weights
 (the percentage each variant is shown) will *not change* until the
 data is reloaded explicitly.  This is so we do not need to make an
 API call to Google each time a page loads.
@@ -101,12 +101,18 @@ call for each experiment in a view
 ### Controller
 
 Once you have set up an experiment in Google Analytics, you can reference
-it by name in your controller
+it by name or experiment_id in your controller
 
     class PostsController < ApplicationController
 
       def index
         gxapi_get_variant("My Experiment")
+      end
+
+      # OR
+
+      def other_action
+        gxapi_get_variant(id: 'long_hex_experiment_id')
       end
 
     end

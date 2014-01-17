@@ -27,20 +27,33 @@ module Gxapi
     end
 
     #
-    # return a variant value
+    # return a variant value by name or id
+    #
+    # @param identifier [String, Hash] The name of the experiment or a hash
+    # with the id of the experiment
+    # @param override [String] Override value returned from the experiment
     #
     # @example
     #   variant = @gxapi.get_variant("my_experiment")
     #   variant.value =>
     #     # Ostruct.new(experiment_id: "x", index: 1, name: "name")
     #
+    # @example
+    #   variant = @gxapi.get_variant(id: "x")
+    #   variant.value =>
+    #     # Ostruct.new(experiment_id: "x", index: 1, name: "name")
+    #
     # @return [Celluloid::Future]
-    def get_variant(experiment_name, override = nil)
+    def get_variant(identifier, override = nil)
+      # identifier object to handle finding and caching the
+      # experiment
+      identifier = GxApi::ExperimentIdentifier.new(identifier)
+
       Celluloid::Future.new do
         # allows us to override and get back a variant
         # easily that conforms to the api
         if override.nil?
-          self.get_variant_value(experiment_name)
+          self.get_variant_value(identifier)
         else
           Ostruct.new(self.default_values.merge(name: override))
         end
@@ -61,12 +74,12 @@ module Gxapi
     #
     # cache key for a given experiment and our user
     #
-    # @param experiment_name [String] The name of our experiment
+    # @param identifier [ExperimentIdentifier] The object that finds our
+    # experiment key
     #
     # @return [String] The cache key
-    def cache_key(experiment_name)
-      experiment_name = experiment_name.downcase.gsub(/\s+/,'_')
-      "#{Gxapi.cache_namespace}#{self.user_key}_#{experiment_name}"
+    def cache_key(identifier)
+      "#{Gxapi.cache_namespace}#{self.user_key}_#{identifier.to_key}"
     end
 
     #
@@ -81,14 +94,14 @@ module Gxapi
     # protected method to make the actual calls to get values
     # from the cache or from Google
     #
-    # @param experiment_name [String] Experiment name to look for
+    # @param identifier [ExperimentIdentifier] Experiment to look for
     #
     # @return [Gxapi::Ostruct] Experiment data
-    def get_variant_value(experiment_name)
+    def get_variant_value(identifier)
       data = Gxapi.with_error_handling do
         Timeout::timeout(2.0) do
-          Gxapi.cache.fetch(self.cache_key(experiment_name)) do
-            @interface.get_variant(experiment_name).to_hash
+          Gxapi.cache.fetch(self.cache_key(identifier)) do
+            @interface.get_variant(identifier).to_hash
           end
         end
       end

@@ -6,13 +6,14 @@ module Gxapi
     CACHE_KEY = "gxapi-google-analytics-experiments"
 
     #
-    # Gets the experiment that has this name
+    # Gets the experiment that has this name or ID
     #
-    # @param name [String] Name of the experiment
+    # @param identifier [ExperimentIdentifier] Identifier object for the
+    # experiment
     #
     # @return [Gxapi::Ostruct]
-    def get_experiment(name)
-      self.get_experiments.find{|experiment| experiment.name == name}
+    def get_experiment(identifier)
+      self.get_experiments.find { |e| identifier.matches_experiment?(e)}
     end
 
     #
@@ -34,12 +35,13 @@ module Gxapi
     #
     # get a variant for an experiment
     #
-    # @param experiment_name [String]
+    # @param identifier [String, Hash] Either the experiment name
+    # as a String or a hash of what to look for
     #
     # @return [Gxapi::Ostruct]
-    def get_variant(experiment_name)
+    def get_variant(identifier)
       # pull in an experiment
-      experiment = self.get_experiment(experiment_name)
+      experiment = self.get_experiment(identifier)
 
       if self.run_experiment?(experiment)
         # select variant for the experiment

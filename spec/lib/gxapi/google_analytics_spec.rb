@@ -21,7 +21,8 @@ module Gxapi
 
       it "should filter by name" do
         experiment = subject.get_experiments.first
-        subject.get_experiment(experiment.name).should eql(experiment)
+        identifier = GxApi::ExperimentIdentifier.new(experiment.name)
+        subject.get_experiment(identifier).should eql(experiment)
       end
 
     end
