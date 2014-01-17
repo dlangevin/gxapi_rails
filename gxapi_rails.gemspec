@@ -31,8 +31,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency('capybara')
   s.add_development_dependency("coffee-rails")
   s.add_development_dependency('debugger')
-  s.add_development_dependency('guard-rspec')
-  s.add_development_dependency('guard-bundler')
   s.add_development_dependency("mocha")
   s.add_development_dependency("rspec-rails")
   s.add_development_dependency("sass-rails")
