@@ -19,6 +19,10 @@ describe Gxapi::Base do
     "Untitled experiment"
   end
 
+  let(:test_experiment_id) do
+    "lj5s_ZvWSJSZLphnkpP-Xw"
+  end
+
   context "#env" do
     it "should delegate to its class" do
       subject.env.should eql Gxapi.env
@@ -27,7 +31,7 @@ describe Gxapi::Base do
 
   context "#get_variant" do
 
-    it "should make a call to myna and return a future" do
+    it "should make a call to Google Analytics and return a future" do
       variant = subject.get_variant(test_experiment_name)
       valid_variants.should include variant.value.name
       [0, 1].should include variant.value.index
@@ -41,6 +45,13 @@ describe Gxapi::Base do
 
       cache_key = "#{user_key}_untitled_experiment"
       Gxapi.cache.read(cache_key).should have_key("index")
+
+    end
+
+    it "lets us search by experiment id" do
+
+      variant = subject.get_variant(id: test_experiment_id)
+      expect(variant.value.experiment_id).to eql(test_experiment_id)
 
     end
 

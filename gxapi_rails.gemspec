@@ -26,5 +26,15 @@ Gem::Specification.new do |s|
   s.add_dependency(%q<json>, [">= 0"])
   s.add_dependency(%q<google-api-client>, [">= 0"])
 
+
+  s.add_development_dependency("rails", "~> 3.2")
+  s.add_development_dependency('capybara')
+  s.add_development_dependency("coffee-rails")
+  s.add_development_dependency('debugger')
+  s.add_development_dependency("mocha")
+  s.add_development_dependency("rspec-rails")
+  s.add_development_dependency("sass-rails")
+  s.add_development_dependency("sqlite3")
+
 end
 
