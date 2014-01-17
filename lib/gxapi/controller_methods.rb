@@ -33,7 +33,7 @@ module Gxapi
           }
         )
       else
-        val = self.gxapi_base.get_variant(experiment_name)
+        val = self.gxapi_base.get_variant(identifier)
       end
       return instance_variable_set("@#{ivar_name}", val)
     end
