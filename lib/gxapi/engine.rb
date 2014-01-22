@@ -4,6 +4,9 @@ if Rails::VERSION::MAJOR >= 3
 
       config.after_initialize do
         Gxapi.cache = Rails.cache
+      end
+
+      config.to_prepare do
         # add our helper
         ApplicationHelper.send(:include, GxapiHelper)
         ApplicationController.send(:include, Gxapi::ControllerMethods)
