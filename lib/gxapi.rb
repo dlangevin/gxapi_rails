@@ -11,11 +11,6 @@ require File.expand_path('../gxapi/ostruct', __FILE__)
 require File.expand_path('../gxapi/version', __FILE__)
 
 
-if defined?(::Rails)
-  require File.expand_path('../gxapi/controller_methods', __FILE__)
-  require File.expand_path('../gxapi/engine', __FILE__)
-end
-
 module Gxapi
 
   #
@@ -158,4 +153,9 @@ module Gxapi
       false
     end
   end
+end
+
+if defined?(::Rails)
+  require File.expand_path('../gxapi/controller_methods', __FILE__)
+  require File.expand_path('../gxapi/engine', __FILE__)
 end
