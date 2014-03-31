@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    gxapi_rails (0.0.5)
+    gxapi_rails (0.0.6)
       activesupport
       celluloid
       google-api-client
@@ -92,7 +92,7 @@ GEM
     i18n (0.6.1)
     journey (1.0.4)
     json (1.8.0)
-    jwt (0.1.8)
+    jwt (0.1.11)
       multi_json (>= 1.5)
     launchy (2.4.0)
       addressable (~> 2.3)
