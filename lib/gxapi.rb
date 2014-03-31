@@ -65,6 +65,14 @@ module Gxapi
   end
 
   #
+  # manual setter for for config settings
+  #
+  # @return [Gxapi::Ostruct]
+  def self.config=(settings={})
+    @config = Gxapi::Ostruct.new(settings)
+  end
+
+  #
   # get the config path for our config YAML file
   #
   # @return [String] defaults to #{Rails.root}/config/gxapi.yml

@@ -5,6 +5,25 @@
 Gxapi interfaces with Google Analytics Experiments to retrieve data from
 its API and determine which variant should be presented to a given user
 
+## Enhancements on this fork
+
+1. Config settings can be manually set instead of using a YML file.
+
+        # initializers/gxapi.rb
+        Gxapi.config {
+          google_analytics: {
+            account_id: ACCOUNT_ID,
+            profile_id: PROFILE_ID,
+            web_property_id: WEB_PROPERTY_ID,
+          },
+          google: {
+            email: SERVICE_ACCOUNT_EMAIL,
+            private_key_path: 'PATH_TO_SERVICE_ACCOUNT_PRIVATE_KEY'
+          }
+        }
+
+2. Private key can be passed as Base64 string instead of being read from a file. Use the `private_key` setting instead of `private_key_path` in the config.
+
 ## Installation
     % gem install gxapi_rails
     % rails g gxapi:install
