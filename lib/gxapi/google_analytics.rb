@@ -195,6 +195,10 @@ module Gxapi
         variation.index = i
         variation.experiment_id = experiment.id
 
+        unless variation.respond_to?(:weight)
+          variation.weight = 1.0 / experiment.variations.length.to_f
+        end
+
         # add the variation's weight to accum
         accum += variation.weight
 

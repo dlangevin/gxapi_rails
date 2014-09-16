@@ -1,6 +1,6 @@
 module Gxapi
   module ControllerMethods
-
+    protected
     #
     # Get the variant and set it as an instance variable, handling
     # overriding by passing in the URL
@@ -37,8 +37,6 @@ module Gxapi
       end
       return instance_variable_set("@#{ivar_name}", val)
     end
-
-    protected
 
     def gxapi_base
       @gxapi_base ||= begin
