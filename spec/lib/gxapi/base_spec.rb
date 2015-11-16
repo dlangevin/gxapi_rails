@@ -23,18 +23,42 @@ describe Gxapi::Base do
     "lj5s_ZvWSJSZLphnkpP-Xw"
   end
 
+  let(:stub_experiments) do
+    Gxapi::Ostruct.new({
+      id: test_experiment_id,
+      name: test_experiment_name,
+      traffic_coverage: 1.0,
+      variations: [
+        Gxapi::Ostruct.new(
+          name: 'original',
+          weight: 0.5,
+          status: 'ACTIVE'
+        ),
+        Gxapi::Ostruct.new(
+          name: 'variant1',
+          weight: 0.5,
+          status: 'ACTIVE'
+        )
+      ]
+    })
+  end
+
   context "#env" do
     it "should delegate to its class" do
-      subject.env.should eql Gxapi.env
+      expect(subject.env).to eql Gxapi.env
     end
+  end
+
+  before(:each) do
+    Gxapi::GoogleAnalytics.any_instance.stubs(:get_experiment).returns(stub_experiments)
   end
 
   context "#get_variant" do
 
     it "should make a call to Google Analytics and return a future" do
       variant = subject.get_variant(test_experiment_name)
-      valid_variants.should include variant.value.name
-      [0, 1].should include variant.value.index
+      expect(valid_variants).to include variant.value.name
+      expect([0, 1]).to include variant.value.index
     end
 
     it "should set a key in the rails cache for a given
@@ -44,7 +68,7 @@ describe Gxapi::Base do
       variant.value
 
       cache_key = "#{user_key}_untitled_experiment"
-      Gxapi.cache.read(cache_key).should have_key("index")
+      expect(Gxapi.cache.read(cache_key)).to include("index")
 
     end
 
@@ -63,17 +87,17 @@ describe Gxapi::Base do
       variant = subject.get_variant(test_experiment_name)
 
       # make sure we return the default value
-      variant.value.name.should eql("default")
-      (Time.now - start_time).should be < 2.5
+      expect(variant.value.name).to eql("default")
+      expect(Time.now - start_time).to be < 2.5
     end
 
     it "should allow a user to override the chosen variant" do
 
       variant = subject.get_variant(test_experiment_name, "fakeval")
 
-      variant.value.experiment_id.should be_nil
-      variant.value.name.should eql("fakeval")
-      variant.value.index.should eql -1
+      expect(variant.value.experiment_id).to be_nil
+      expect(variant.value.name).to eql("fakeval")
+      expect(variant.value.index).to eql -1
 
     end
 
@@ -84,7 +108,7 @@ describe Gxapi::Base do
   context "#user_key" do
 
     it "should set up its user_key" do
-      subject.user_key.should eql user_key
+      expect(subject.user_key).to eql user_key
     end
 
   end

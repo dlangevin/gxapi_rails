@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(File.dirname(__FILE__))
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../spec/dummy/config/environment", __FILE__)
 
-require 'debugger'
+require 'byebug'
 
 require 'gxapi'
 
@@ -12,6 +12,7 @@ require 'rspec/rails'
 require 'capybara/rails'
 require 'rails/engine'
 require 'mocha/setup'
+require 'webmock/rspec'
 
 # Requires supporting files with custom matchers and macros, etc,
 # in ./support/ and its subdirectories.
@@ -22,8 +23,9 @@ Mocha::Configuration.prevent(:stubbing_non_existent_method)
 RSpec.configure do |config|
   config.mock_with :mocha
 
-  config.treat_symbols_as_metadata_keys_with_true_values = true
   config.run_all_when_everything_filtered = true
+  config.include Rails.application.routes.url_helpers
+  config.infer_spec_type_from_file_location!
 
   config.filter_run focus: true
 
