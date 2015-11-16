@@ -27,6 +27,14 @@ module Gxapi
     end
 
     #
+    # list experiments 'live' from API, verifies configuration
+    #
+    # @return [Array<Ostruct>]
+    def list_experiments
+      @interface.list_experiments
+    end
+
+    #
     # return a variant value by name or id
     #
     # @param identifier [String, Hash] The name of the experiment or a hash

@@ -1,5 +1,5 @@
 require 'active_support'
-require 'celluloid'
+require 'celluloid/current'
 require 'erb'
 require 'json'
 require 'yaml'
@@ -135,6 +135,10 @@ module Gxapi
   def self.reload_experiments
     Base.new("").reload_experiments
     true
+  end
+
+  def self.verify
+    Base.new("").list_experiments
   end
 
 
