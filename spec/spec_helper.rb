@@ -4,7 +4,11 @@ $LOAD_PATH.unshift(File.dirname(__FILE__))
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../spec/dummy/config/environment", __FILE__)
 
-require 'byebug'
+if RUBY_VERSION.to_i >= 2
+  require 'byebug'
+else
+  require 'debugger'
+end
 
 require 'gxapi'
 

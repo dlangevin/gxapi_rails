@@ -12,6 +12,8 @@ doc
 # bundler
 .bundle
 
+.byebug_history
+
 # jeweler generated
 *.gem
 
