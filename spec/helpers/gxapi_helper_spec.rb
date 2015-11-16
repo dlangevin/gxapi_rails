@@ -5,17 +5,17 @@ describe GxapiHelper do
   context "#gxapi_variant_name" do
 
     it "returns default if the variable is not set" do
-      helper.gxapi_variant_name.should eql "default"
+      expect(helper.gxapi_variant_name).to eql "default"
     end
 
     it "returns the name of the vairant if it is set" do
       assign(:variant, stub(:value => stub(:name => "x")))
-      helper.gxapi_variant_name.should eql("x")
+      expect(helper.gxapi_variant_name).to eql("x")
     end
 
     it "handles different vairant names" do
       assign(:variantx, stub(:value => stub(:name => "x")))
-      helper.gxapi_variant_name(:variantx).should eql("x")
+      expect(helper.gxapi_variant_name(:variantx)).to eql("x")
     end
 
   end
@@ -42,20 +42,20 @@ describe GxapiHelper do
 
         ret = helper.gxapi_experiment_js + helper.gxapi_experiment_js
 
-        ret.scan(/google\-analytics\.com/).length.should eql(1)
-        ret.scan(/setChosenVariation/).length.should eql(2)
+        expect(ret.scan(/google\-analytics\.com/).length).to eql(1)
+        expect(ret.scan(/setChosenVariation/).length).to eql(2)
 
       end
 
       it "should add the domain if an option is passed" do
         ret = helper.gxapi_experiment_js(:domain => ".example.com")
-        ret.should =~ /setDomainName/
+        expect(ret).to match(/setDomainName/)
       end
 
     end
 
     it "should not do anything if the instance var is not defined" do
-      helper.gxapi_experiment_js.should eql("")
+      expect(helper.gxapi_experiment_js).to eql("")
     end
 
   end

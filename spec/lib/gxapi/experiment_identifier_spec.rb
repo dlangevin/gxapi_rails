@@ -35,7 +35,7 @@ module GxApi
 
         it 'matches by id' do
           experiment = stub(id: id)
-          expect(subject.matches_experiment?(experiment)).to be_true
+          expect(subject.matches_experiment?(experiment)).to be_truthy
         end
 
       end
@@ -67,7 +67,7 @@ module GxApi
 
         it 'matches by name' do
           experiment = stub(name: name)
-          expect(subject.matches_experiment?(experiment)).to be_true
+          expect(subject.matches_experiment?(experiment)).to be_truthy
         end
 
       end
