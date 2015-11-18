@@ -11,19 +11,19 @@ describe Gxapi do
 
   context ".cache" do
     it "should have a cache that gets defined by default" do
-      Gxapi.cache.should be_kind_of(ActiveSupport::Cache::Store)
+      expect(Gxapi.cache).to be_kind_of(ActiveSupport::Cache::Store)
     end
 
     context "with Rails" do
 
       it "should use the Rails cache once it is available" do
-        Gxapi.cache.should be Rails.cache
+        expect(Gxapi.cache).to be Rails.cache
       end
 
       it "should still allow you to override the cache" do
         my_cache = stub()
         Gxapi.cache = my_cache
-        Gxapi.cache.should eql(my_cache)
+        expect(Gxapi.cache).to eql(my_cache)
       end
 
     end
