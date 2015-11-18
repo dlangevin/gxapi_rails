@@ -16,8 +16,9 @@ Gem::Specification.new do |s|
   s.summary = "Google Analytics"
   s.description = "Google Analytics and integration"
 
+  s.required_ruby_version = '>= 1.9.3'
 
- s.files = Dir["{app,config,db,lib}/**/*"] + ["LICENSE.txt", "Rakefile", "README.md"]
+  s.files = Dir["{app,config,db,lib}/**/*"] + ["LICENSE.txt", "Rakefile", "README.md"]
   s.test_files = Dir["spec/**/*"]
 
   s.add_dependency(%q<activesupport>, [">= 0"])
