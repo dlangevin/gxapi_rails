@@ -67,6 +67,30 @@ module Gxapi
       self.get_experiments
     end
 
+    #
+    # Discovered definition of Analytics Experiments
+    #
+    # @return [Google::APIClient::API] Discovered Analytics endpoint
+    def analytics_experiments
+      self.analytics.management.experiments
+    end
+    #
+    # List all experiments for our account
+    #
+    # @return [Array<Gxapi::Ostruct>] Collection of Experiment data
+    # retrieved from Google's API
+    def list_experiments
+      response =  self.client.execute({
+        api_method: self.analytics_experiments.list,
+        parameters: {
+          accountId: self.config.account_id.to_s,
+          profileId: self.config.profile_id.to_s,
+          webPropertyId: self.config.web_property_id
+        }
+      })
+      response.data.items.collect(&:to_hash)
+    end
+
     protected
 
     #
@@ -77,14 +101,6 @@ module Gxapi
       @analytics ||= self.client.discovered_api('analytics', 'v3')
     end
 
-
-    #
-    # Discovered definition of Analytics Experiments
-    #
-    # @return [Google::APIClient::API] Discovered Analytics endpoint
-    def analytics_experiments
-      self.analytics.management.experiments
-    end
 
     #
     # Accessor for Google Analytics config
@@ -133,22 +149,6 @@ module Gxapi
       end
     end
 
-    #
-    # List all experiments for our account
-    #
-    # @return [Array<Gxapi::Ostruct>] Collection of Experiment data
-    # retrieved from Google's API
-    def list_experiments
-      response =  self.client.execute({
-        api_method: self.analytics_experiments.list,
-        parameters: {
-          accountId: self.config.account_id.to_s,
-          profileId: self.config.profile_id.to_s,
-          webPropertyId: self.config.web_property_id
-        }
-      })
-      response.data.items.collect(&:to_hash)
-    end
 
     #
     # List all experiments for our account, fetching from cache first

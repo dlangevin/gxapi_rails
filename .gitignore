@@ -12,6 +12,8 @@ doc
 # bundler
 .bundle
 
+.byebug_history
+
 # jeweler generated
 *.gem
 
@@ -20,6 +22,9 @@ spec/dummy/log/*.log
 
 # tmp files in dummy app
 spec/dummy/tmp/*
+
+# Don't include a Gemfile.lock
+Gemfile.lock
 
 # Have editor/IDE/OS specific files you need to ignore? Consider using a global gitignore:
 #
